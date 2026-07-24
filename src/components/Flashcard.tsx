@@ -17,13 +17,13 @@ export function Flashcard({ word, revealed, onReveal, onRate }: {
 }) {
   return (
     <div>
-      <button type="button" onClick={() => !revealed && onReveal()} className={`relative flex min-h-[24rem] w-full flex-col rounded-[2rem] border bg-white p-6 text-left shadow-[0_24px_60px_-25px_rgba(31,37,33,.28)] transition dark:bg-white/[.045] sm:min-h-[28rem] sm:p-9 ${revealed ? 'cursor-default border-ink/8 dark:border-white/10' : 'cursor-pointer border-ink/8 hover:-translate-y-1 hover:border-accent/40 dark:border-white/10'}`} aria-label={revealed ? `Answer for ${word.word}` : `Reveal answer for ${word.word}`}>
+      <article className="relative flex min-h-[24rem] w-full select-text flex-col rounded-[2rem] border border-ink/8 bg-white p-6 text-left shadow-[0_24px_60px_-25px_rgba(31,37,33,.28)] dark:border-white/10 dark:bg-white/[.045] sm:min-h-[28rem] sm:p-9" aria-label={revealed ? `Answer for ${word.word}` : `Review card for ${word.word}`}>
         <div className="absolute left-1/2 top-4 h-1 w-12 -translate-x-1/2 rounded-full bg-ink/8 dark:bg-white/10" />
         {!revealed ? (
           <div className="flex flex-1 flex-col items-center justify-center text-center">
             <p className="mb-5 text-[10px] font-black uppercase tracking-[.3em] text-accent">Do you know this word?</p>
             <h2 className="break-words font-display text-4xl font-black tracking-tight text-ink dark:text-white sm:text-6xl">{word.word}</h2>
-            <span className="mt-10 flex items-center gap-2 rounded-full bg-ink/[.05] px-4 py-2 text-xs font-bold text-muted dark:bg-white/[.07] dark:text-stone-300"><Eye size={15} />Tap to reveal</span>
+            <button type="button" onClick={onReveal} className="mt-10 flex items-center gap-2 rounded-full bg-ink/[.05] px-4 py-2 text-xs font-bold text-muted transition hover:bg-ink/10 hover:text-ink dark:bg-white/[.07] dark:text-stone-300 dark:hover:bg-white/10 dark:hover:text-white" aria-label={`Reveal answer for ${word.word}`}><Eye size={15} />Reveal answer</button>
           </div>
         ) : (
           <div className="animate-reveal flex flex-1 flex-col">
@@ -41,7 +41,7 @@ export function Flashcard({ word, revealed, onReveal, onRate }: {
             <div className="mt-5 flex flex-wrap items-center gap-2"><Tags size={14} className="text-muted" />{word.tags.slice(0, 4).map((tag) => <span key={tag} className="tag-pill">{tag}</span>)}</div>
           </div>
         )}
-      </button>
+      </article>
       {revealed && <div className="animate-slide-up mt-4 grid grid-cols-4 gap-2 sm:gap-3" aria-label="Rate your recall">{ratings.map((rating) => <button key={rating.id} type="button" onClick={() => onRate(rating.id)} className={`flex min-h-16 flex-col items-center justify-center rounded-2xl border px-1 text-sm font-black transition active:scale-95 ${rating.style}`}><span>{rating.label}</span><span className="mt-0.5 text-[9px] font-semibold opacity-70 sm:text-[10px]">{rating.hint}</span></button>)}</div>}
     </div>
   )

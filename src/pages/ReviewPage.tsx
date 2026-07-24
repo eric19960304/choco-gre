@@ -103,7 +103,7 @@ export function ReviewPage({ onGoToWords }: { onGoToWords: () => void }) {
           <div className="flex gap-4 text-right"><div><p className="text-lg font-black text-emerald-600 dark:text-emerald-400">{stats.correct}</p><p className="text-[9px] font-bold uppercase tracking-wider text-muted">Correct</p></div><div><p className="text-lg font-black text-red-600 dark:text-red-400">{stats.incorrect}</p><p className="text-[9px] font-bold uppercase tracking-wider text-muted">Again</p></div></div>
         </div>
         <Flashcard word={current} revealed={revealed} onReveal={() => setRevealed(true)} onRate={rate} />
-        {!revealed && <p className="mt-4 text-center text-xs text-muted">Press <kbd className="rounded border border-ink/15 px-1.5 py-0.5 dark:border-white/15">Space</kbd> or tap the card to reveal</p>}
+        {!revealed && <p className="mt-4 text-center text-xs text-muted">Press <kbd className="rounded border border-ink/15 px-1.5 py-0.5 dark:border-white/15">Space</kbd> or select Reveal answer</p>}
       </div>
     </main>
   )
