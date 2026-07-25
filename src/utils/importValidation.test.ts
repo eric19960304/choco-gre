@@ -19,20 +19,24 @@ describe('validateVocabularyImport', () => {
     expect(result.errors).toHaveLength(2)
   })
 
-  it('preserves only well-formed common affix clues', () => {
+  it('preserves only well-formed word parts and the memory hint', () => {
     const result = validateVocabularyImport([{
       word: 'fanciful',
       definition: 'Imaginative.',
       commonAffixes: [
         { type: 'suffix', form: '-ful', meaning: 'full of; having' },
-        { type: 'root', form: 'fanci', meaning: 'invalid type' },
+        { type: 'root', form: 'fanci', meaning: 'imagination' },
+        { type: 'origin', form: 'fanci', meaning: 'invalid type' },
         { type: 'prefix', form: '', meaning: 'missing form' },
       ],
+      affixMemoryHint: 'Connect fancy with imagination.',
     }])
 
     expect(result.valid[0].commonAffixes).toEqual([
       { type: 'suffix', form: '-ful', meaning: 'full of; having' },
+      { type: 'root', form: 'fanci', meaning: 'imagination' },
     ])
+    expect(result.valid[0].affixMemoryHint).toBe('Connect fancy with imagination.')
   })
 
   it('rejects a non-array payload', () => {

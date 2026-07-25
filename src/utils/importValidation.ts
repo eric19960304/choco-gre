@@ -18,7 +18,7 @@ function optionalCommonAffixes(value: unknown): CommonAffix[] | undefined {
   if (!Array.isArray(value)) return undefined
   return value.flatMap((affix) => {
     if (!isRecord(affix)) return []
-    if (affix.type !== 'prefix' && affix.type !== 'suffix') return []
+    if (affix.type !== 'prefix' && affix.type !== 'root' && affix.type !== 'suffix') return []
     const form = optionalString(affix.form)
     const meaning = optionalString(affix.meaning)
     return form && meaning ? [{ type: affix.type, form, meaning }] : []
@@ -60,6 +60,7 @@ export function validateVocabularyImport(input: unknown, now = new Date()): Impo
       tags: Array.isArray(raw.tags) ? raw.tags.filter((tag): tag is string => typeof tag === 'string') : [],
       priorityRank: typeof raw.priorityRank === 'number' && raw.priorityRank > 0 ? Math.floor(raw.priorityRank) : undefined,
       commonAffixes: optionalCommonAffixes(raw.commonAffixes),
+      affixMemoryHint: optionalString(raw.affixMemoryHint),
       createdAt: typeof raw.createdAt === 'string' ? raw.createdAt : timestamp,
       updatedAt: typeof raw.updatedAt === 'string' ? raw.updatedAt : timestamp,
       reviewLevel,

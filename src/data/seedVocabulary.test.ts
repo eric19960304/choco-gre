@@ -30,29 +30,38 @@ describe('ranked seed vocabulary', () => {
     expect(firstTwentyInitials.size).toBeGreaterThan(5)
   })
 
-  it('analyzes every word and stores only structured, useful affix clues', () => {
+  it('audits every word and stores only meaning-linked parts with memory hints', () => {
     expect(seedVocabulary.every((item) => Array.isArray(item.commonAffixes))).toBe(true)
-    expect(seedVocabulary.filter((item) => item.commonAffixes.length)).toHaveLength(438)
+    expect(seedVocabulary.filter((item) => item.commonAffixes.length)).toHaveLength(216)
+    expect(
+      seedVocabulary
+        .filter((item) => item.commonAffixes.length)
+        .every((item) => typeof item.affixMemoryHint === 'string' && item.affixMemoryHint.length > 0),
+    ).toBe(true)
     const affixMeanings = seedVocabulary.flatMap((item) => item.commonAffixes).map((affix) => affix.meaning).join(' ')
     expect(affixMeanings).not.toContain('asunder')
     expect(affixMeanings).not.toMatch(/\bor\b/i)
+    expect(seedVocabulary.find((item) => item.word === 'capricious')?.commonAffixes).toEqual([])
+    expect(seedVocabulary.find((item) => item.word === 'loquacious')?.commonAffixes).toContainEqual({
+      type: 'root',
+      form: 'loqu',
+      meaning: 'speak; talk',
+    })
 
     expect(seedVocabulary.find((item) => item.word === 'antipathy')?.commonAffixes).toEqual([
       {
         type: 'prefix',
         form: 'anti-',
-        meaning: 'against; opposite to',
+        meaning: 'against',
       },
       {
         type: 'suffix',
         form: '-pathy',
-        meaning: 'feeling; disease',
+        meaning: 'feeling',
       },
     ])
-    expect(seedVocabulary.find((item) => item.word === 'fanciful')?.commonAffixes).toContainEqual({
-      type: 'suffix',
-      form: '-ful',
-      meaning: 'full of; having',
-    })
+    expect(seedVocabulary.find((item) => item.word === 'antipathy')?.affixMemoryHint).toBe(
+      'Put “against” + “feeling” together: antipathy means an intense feeling of dislike or aversion.',
+    )
   })
 })

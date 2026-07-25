@@ -1,14 +1,15 @@
 import type { CommonAffix } from '../types/vocabulary'
 
-export function CommonAffixes({ affixes, compact = false }: {
+export function CommonAffixes({ affixes, memoryHint, compact = false }: {
   affixes?: CommonAffix[]
+  memoryHint?: string
   compact?: boolean
 }) {
   if (!affixes?.length) return null
 
   return (
     <section>
-      <p className="detail-label">Common prefix and suffix</p>
+      <p className="detail-label">Meaningful word parts</p>
       <div className={`mt-2 ${compact ? 'grid gap-2 sm:grid-cols-2' : 'space-y-2'}`}>
         {affixes.map((affix) => (
           <div key={`${affix.type}-${affix.form}`} className="rounded-2xl border border-ink/8 bg-ink/[.025] p-3.5 dark:border-white/8 dark:bg-white/[.035]">
@@ -22,6 +23,11 @@ export function CommonAffixes({ affixes, compact = false }: {
           </div>
         ))}
       </div>
+      {memoryHint && (
+        <p className="mt-2 rounded-2xl border border-accent/15 bg-accent/[.07] p-3.5 text-sm leading-relaxed text-ink dark:border-accent-light/15 dark:bg-accent-light/[.07] dark:text-stone-100">
+          <span className="font-semibold">Memory link:</span> {memoryHint}
+        </p>
+      )}
     </section>
   )
 }

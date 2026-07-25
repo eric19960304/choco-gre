@@ -15,13 +15,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 6
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 2,
@@ -39,7 +33,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 4
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "robor",
+        "meaning": "strength"
+      }
+    ],
+    "affix_memory_hint": "Use “strength” as the anchor: corroborate means to confirm or lend support to (usually an idea or claim)."
   },
   {
     "rank": 3,
@@ -59,11 +60,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
+        "type": "root",
+        "form": "eso",
+        "meaning": "inner; within"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “inner” as the anchor: esoteric means confined to and understandable by only an enlightened inner circle."
   },
   {
     "rank": 4,
@@ -83,11 +85,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
+        "type": "root",
+        "form": "hemer",
+        "meaning": "day"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “day” as the anchor: ephemeral means lasting a very short time."
   },
   {
     "rank": 5,
@@ -125,11 +128,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "loqu",
+        "meaning": "speak; talk"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “speak” as the anchor: loquacious means full of trivial conversation."
   },
   {
     "rank": 7,
@@ -149,11 +153,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
+        "type": "root",
+        "form": "pragmat",
+        "meaning": "action; deed"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “action” as the anchor: pragmatic means guided by practical experience and observation rather than theory."
   },
   {
     "rank": 8,
@@ -171,7 +176,14 @@
       "core_list_count": 3,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "nerv",
+        "meaning": "strength; nerve"
+      }
+    ],
+    "affix_memory_hint": "Use “strength” as the anchor: enervate means to sap energy from."
   },
   {
     "rank": 9,
@@ -191,11 +203,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
+        "type": "root",
+        "form": "sopor",
+        "meaning": "sleep"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “sleep” as the anchor: soporific means inducing mental lethargy; sleep inducing."
   },
   {
     "rank": 10,
@@ -212,7 +225,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 3
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "sanguin",
+        "meaning": "blood; rosy complexion"
+      }
+    ],
+    "affix_memory_hint": "Picture a rosy, blood-rich complexion—historically linked with a cheerful, optimistic temperament."
   },
   {
     "rank": 11,
@@ -229,13 +249,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 3
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 12,
@@ -269,13 +283,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 14,
@@ -292,7 +300,14 @@
       "core_list_count": 1,
       "ets_guide_matches": 2
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "bell",
+        "meaning": "war"
+      }
+    ],
+    "affix_memory_hint": "Use “war” as the anchor: belligerent means characteristic of one eager to fight."
   },
   {
     "rank": 15,
@@ -309,7 +324,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "prefix",
+        "form": "ambi-",
+        "meaning": "both"
+      }
+    ],
+    "affix_memory_hint": "Use “both” as the anchor: ambivalent means mixed or conflicting emotions about something."
   },
   {
     "rank": 16,
@@ -328,11 +350,17 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "magn",
+        "meaning": "great"
+      },
+      {
+        "type": "root",
+        "form": "anim",
+        "meaning": "spirit; mind"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “great” + “spirit” together: magnanimous means noble and generous in spirit, especially towards a rival or someone less powerful."
   },
   {
     "rank": 17,
@@ -366,13 +394,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 19,
@@ -391,11 +413,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
+        "type": "root",
+        "form": "prol",
+        "meaning": "offspring; produce"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “offspring” as the anchor: prolific means intellectually productive."
   },
   {
     "rank": 20,
@@ -412,7 +435,14 @@
       "core_list_count": 0,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "culp",
+        "meaning": "blame; guilt"
+      }
+    ],
+    "affix_memory_hint": "Use “blame” as the anchor: inculpate means to accuse or implicate someone in wrongdoing."
   },
   {
     "rank": 21,
@@ -430,7 +460,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 14
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "voc",
+        "meaning": "voice; call"
+      }
+    ],
+    "affix_memory_hint": "Use “voice” as the anchor: advocate means a person who pleads for a cause or propounds an idea."
   },
   {
     "rank": 22,
@@ -449,11 +486,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
+        "type": "root",
+        "form": "dogma",
+        "meaning": "fixed belief"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “fixed belief” as the anchor: dogmatic means highly opinionated, not accepting that your belief may not be correct."
   },
   {
     "rank": 23,
@@ -472,11 +510,12 @@
     },
     "common_affixes": [
       {
-        "type": "prefix",
-        "form": "en-",
-        "meaning": "in; into; make"
+        "type": "root",
+        "form": "gen",
+        "meaning": "produce; give birth"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “produce” as the anchor: engender means give rise to."
   },
   {
     "rank": 24,
@@ -495,11 +534,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "sequ",
+        "meaning": "follow"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “follow” as the anchor: obsequious means attentive in an ingratiating or servile manner; attempting to win favor from influential people by flattery."
   },
   {
     "rank": 25,
@@ -533,7 +573,19 @@
       "core_list_count": 2,
       "ets_guide_matches": 3
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "prefix",
+        "form": "dis-",
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "par",
+        "meaning": "equal"
+      }
+    ],
+    "affix_memory_hint": "Put “not” + “equal” together: disparate means two things are fundamentally different."
   },
   {
     "rank": 27,
@@ -550,7 +602,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 3
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "tacit",
+        "meaning": "silent"
+      }
+    ],
+    "affix_memory_hint": "Use “silent” as the anchor: taciturn means habitually reserved and uncommunicative."
   },
   {
     "rank": 28,
@@ -569,11 +628,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "garr",
+        "meaning": "chatter"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “chatter” as the anchor: garrulous means full of trivial conversation."
   },
   {
     "rank": 29,
@@ -592,16 +652,12 @@
     },
     "common_affixes": [
       {
-        "type": "prefix",
-        "form": "in-",
-        "meaning": "not; without"
-      },
-      {
-        "type": "suffix",
-        "form": "-ical",
-        "meaning": "related to; characterized by"
+        "type": "root",
+        "form": "inimic",
+        "meaning": "enemy"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “enemy” as the anchor: inimical means hostile (usually describes conditions or environments)."
   },
   {
     "rank": 30,
@@ -620,11 +676,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
+        "type": "root",
+        "form": "lacon",
+        "meaning": "Sparta; famous for brief speech"
       }
-    ]
+    ],
+    "affix_memory_hint": "Think of ancient Sparta, whose people were famous for brief speech: laconic means using very few words."
   },
   {
     "rank": 31,
@@ -641,13 +698,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 32,
@@ -664,7 +715,19 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "prefix",
+        "form": "in-",
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "sapid",
+        "meaning": "taste; flavor"
+      }
+    ],
+    "affix_memory_hint": "Put “not” + “taste” together: insipid means dull and uninteresting."
   },
   {
     "rank": 33,
@@ -681,13 +744,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 34,
@@ -721,7 +778,14 @@
       "core_list_count": 3,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "plac",
+        "meaning": "calm; please"
+      }
+    ],
+    "affix_memory_hint": "Use “calm” as the anchor: placate means cause to be more favorably inclined; gain the good will of."
   },
   {
     "rank": 36,
@@ -740,11 +804,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "aud",
+        "meaning": "dare; be bold"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “dare” as the anchor: audacious means willing to be bold in social situations or to take risks."
   },
   {
     "rank": 37,
@@ -761,7 +826,14 @@
       "core_list_count": 3,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "vener",
+        "meaning": "respect"
+      }
+    ],
+    "affix_memory_hint": "Use “respect” as the anchor: venerate means to respect deeply."
   },
   {
     "rank": 38,
@@ -778,7 +850,14 @@
       "core_list_count": 3,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "vacill",
+        "meaning": "sway; waver"
+      }
+    ],
+    "affix_memory_hint": "Use “sway” as the anchor: vacillate means be undecided about something; waver between conflicting positions or courses of action."
   },
   {
     "rank": 39,
@@ -795,7 +874,14 @@
       "core_list_count": 3,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "rid",
+        "meaning": "laugh at"
+      }
+    ],
+    "affix_memory_hint": "Use “laugh at” as the anchor: deride means treat or speak of with contempt."
   },
   {
     "rank": 40,
@@ -829,7 +915,19 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "icon",
+        "meaning": "image; cherished symbol"
+      },
+      {
+        "type": "root",
+        "form": "clast",
+        "meaning": "break"
+      }
+    ],
+    "affix_memory_hint": "Put “image” + “break” together: iconoclast means somebody who attacks cherished beliefs or institutions."
   },
   {
     "rank": 42,
@@ -846,7 +944,19 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "prefix",
+        "form": "miso-",
+        "meaning": "hatred"
+      },
+      {
+        "type": "root",
+        "form": "anthrop",
+        "meaning": "humanity; people"
+      }
+    ],
+    "affix_memory_hint": "Put “hatred” + “humanity” together: misanthrope means a hater of mankind."
   },
   {
     "rank": 43,
@@ -882,11 +992,17 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ance",
-        "meaning": "a state; quality; action"
+        "type": "prefix",
+        "form": "dis-",
+        "meaning": "apart"
+      },
+      {
+        "type": "root",
+        "form": "son",
+        "meaning": "sound"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “apart” + “sound” together: dissonance means disagreeable sounds."
   },
   {
     "rank": 45,
@@ -908,8 +1024,14 @@
         "type": "prefix",
         "form": "eu-",
         "meaning": "good; pleasant"
+      },
+      {
+        "type": "root",
+        "form": "log",
+        "meaning": "speech; words"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “good” + “speech” together: eulogy means a formal expression of praise for someone who has died."
   },
   {
     "rank": 46,
@@ -943,7 +1065,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "chron",
+        "meaning": "time"
+      }
+    ],
+    "affix_memory_hint": "Use “time” as the anchor: anachronism means something that is inappropriate for the given time period (usually something old)."
   },
   {
     "rank": 48,
@@ -960,7 +1089,19 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "caco",
+        "meaning": "bad; unpleasant"
+      },
+      {
+        "type": "root",
+        "form": "phon",
+        "meaning": "sound"
+      }
+    ],
+    "affix_memory_hint": "Put “bad” + “sound” together: cacophony means harsh, discordant, or meaningless mixture of sounds."
   },
   {
     "rank": 49,
@@ -1011,13 +1152,7 @@
       "core_list_count": 0,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 52,
@@ -1034,7 +1169,14 @@
       "core_list_count": 0,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "ferv",
+        "meaning": "boil; intense heat"
+      }
+    ],
+    "affix_memory_hint": "Use “boil” as the anchor: fervid means intensely enthusiastic or passionate."
   },
   {
     "rank": 53,
@@ -1084,7 +1226,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 12
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "fund",
+        "meaning": "bottom; depth"
+      }
+    ],
+    "affix_memory_hint": "Use “bottom” as the anchor: profound means situated at or extending to great depth."
   },
   {
     "rank": 56,
@@ -1116,13 +1265,7 @@
       "core_list_count": 0,
       "ets_guide_matches": 8
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 58,
@@ -1140,11 +1283,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
+        "type": "root",
+        "form": "didact",
+        "meaning": "teach"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “teach” as the anchor: didactic means instructive (especially excessively)."
   },
   {
     "rank": 59,
@@ -1162,11 +1306,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "spec",
+        "meaning": "look; appearance"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “look” as the anchor: conspicuous means without any attempt at concealment; completely obvious."
   },
   {
     "rank": 60,
@@ -1182,13 +1327,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 5
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 61,
@@ -1208,14 +1347,15 @@
       {
         "type": "prefix",
         "form": "in-",
-        "meaning": "not; without"
+        "meaning": "not"
       },
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "noc",
+        "meaning": "harm"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “not” + “harm” together: innocuous means harmless and doesn\"t produce any ill effects."
   },
   {
     "rank": 62,
@@ -1231,7 +1371,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 5
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "prefix",
+        "form": "bene-",
+        "meaning": "good; well"
+      }
+    ],
+    "affix_memory_hint": "Use “good” as the anchor: benign means not dangerous to health; not recurrent or progressive."
   },
   {
     "rank": 63,
@@ -1256,9 +1403,10 @@
       {
         "type": "suffix",
         "form": "-pathy",
-        "meaning": "feeling; disease"
+        "meaning": "feeling"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “not” + “feeling” together: apathy means an absence of emotion or enthusiasm."
   },
   {
     "rank": 64,
@@ -1290,13 +1438,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 4
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 66,
@@ -1328,7 +1470,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 4
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "melior",
+        "meaning": "better"
+      }
+    ],
+    "affix_memory_hint": "Use “better” as the anchor: ameliorate means make something bad better."
   },
   {
     "rank": 68,
@@ -1369,11 +1518,12 @@
         "meaning": "same"
       },
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "gen",
+        "meaning": "kind; origin"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “same” + “kind” together: homogeneous means of the same kind; uniform throughout."
   },
   {
     "rank": 70,
@@ -1421,13 +1571,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 3
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 73,
@@ -1445,11 +1589,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
+        "type": "root",
+        "form": "prose",
+        "meaning": "ordinary writing"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “ordinary writing” as the anchor: prosaic means dull and lacking imagination."
   },
   {
     "rank": 74,
@@ -1483,11 +1628,17 @@
     },
     "common_affixes": [
       {
+        "type": "root",
+        "form": "laud",
+        "meaning": "praise"
+      },
+      {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “praise” + “can be” together: laudable means worthy of high praise."
   },
   {
     "rank": 76,
@@ -1503,7 +1654,14 @@
       "core_list_count": 1,
       "ets_guide_matches": 3
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "luc",
+        "meaning": "light; clarity"
+      }
+    ],
+    "affix_memory_hint": "Use “light” as the anchor: pellucid means transparently clear; easily understandable."
   },
   {
     "rank": 77,
@@ -1519,13 +1677,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 3
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 78,
@@ -1545,9 +1697,15 @@
       {
         "type": "prefix",
         "form": "in-",
-        "meaning": "not; without"
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "transig",
+        "meaning": "compromise"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “not” + “compromise” together: intransigent means unwilling to change one's beliefs or course of action."
   },
   {
     "rank": 79,
@@ -1563,7 +1721,19 @@
       "core_list_count": 1,
       "ets_guide_matches": 3
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "prefix",
+        "form": "dif-",
+        "meaning": "lacking; away from"
+      },
+      {
+        "type": "root",
+        "form": "fid",
+        "meaning": "trust; faith"
+      }
+    ],
+    "affix_memory_hint": "Put “lacking” + “trust” together: diffident means showing modest reserve; lacking self-confidence."
   },
   {
     "rank": 80,
@@ -1580,7 +1750,14 @@
       "core_list_count": 0,
       "ets_guide_matches": 3
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "prefix",
+        "form": "mal-",
+        "meaning": "bad; harmful"
+      }
+    ],
+    "affix_memory_hint": "Use “bad” as the anchor: malign means harmful or evil; to speak harmful untruths about."
   },
   {
     "rank": 81,
@@ -1596,13 +1773,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 82,
@@ -1672,14 +1843,15 @@
       {
         "type": "prefix",
         "form": "anti-",
-        "meaning": "against; opposite to"
+        "meaning": "against"
       },
       {
         "type": "suffix",
         "form": "-pathy",
-        "meaning": "feeling; disease"
+        "meaning": "feeling"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “against” + “feeling” together: antipathy means an intense feeling of dislike or aversion."
   },
   {
     "rank": 86,
@@ -1695,13 +1867,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ence",
-        "meaning": "a state; quality; action"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 87,
@@ -1719,11 +1885,17 @@
     },
     "common_affixes": [
       {
+        "type": "root",
+        "form": "estim",
+        "meaning": "esteem; value"
+      },
+      {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “esteem” + “can be” together: estimable means deserving of esteem and respect."
   },
   {
     "rank": 88,
@@ -1741,11 +1913,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "fortun",
+        "meaning": "chance; luck"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “chance” as the anchor: fortuitous means occurring by happy chance; having no cause or apparent cause."
   },
   {
     "rank": 89,
@@ -1763,11 +1936,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "scrup",
+        "meaning": "moral concern"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “moral concern” as the anchor: scrupulous means having a sense of right and wrong; principled."
   },
   {
     "rank": 90,
@@ -1783,13 +1957,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 91,
@@ -1805,7 +1973,14 @@
       "core_list_count": 0,
       "ets_guide_matches": 2
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "flor",
+        "meaning": "flower; bloom"
+      }
+    ],
+    "affix_memory_hint": "Use “flower” as the anchor: florid means excessively elaborate or ornate; reddish in complexion."
   },
   {
     "rank": 92,
@@ -1826,13 +2001,9 @@
         "type": "prefix",
         "form": "eu-",
         "meaning": "good; pleasant"
-      },
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “good” as the anchor: euphoric means characterized by intense happiness or excitement."
   },
   {
     "rank": 93,
@@ -1848,13 +2019,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 94,
@@ -1872,11 +2037,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "type": "root",
+        "form": "mall",
+        "meaning": "hammer; shape"
       }
-    ]
+    ],
+    "affix_memory_hint": "Metal that a hammer can shape is malleable; figuratively, a malleable person is easily influenced."
   },
   {
     "rank": 95,
@@ -1908,7 +2074,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "hackney",
+        "meaning": "a horse worn out by repeated use"
+      }
+    ],
+    "affix_memory_hint": "Use “a horse worn out by repeated use” as the anchor: hackneyed means lacking significance through having been overused."
   },
   {
     "rank": 97,
@@ -1925,7 +2098,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "vol",
+        "meaning": "fly; move rapidly"
+      }
+    ],
+    "affix_memory_hint": "Picture a substance that “flies off” as vapor: volatile things can change suddenly and unpredictably."
   },
   {
     "rank": 98,
@@ -1941,13 +2121,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ory",
-        "meaning": "related to; used for"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 99,
@@ -1966,11 +2140,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "onus",
+        "meaning": "burden"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “burden” as the anchor: onerous means burdensome or difficult to endure."
   },
   {
     "rank": 100,
@@ -1988,11 +2163,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "voc",
+        "meaning": "voice; call"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “voice” as the anchor: vociferous means conspicuously and offensively loud; given to vehement outcry."
   },
   {
     "rank": 101,
@@ -2010,11 +2186,17 @@
     },
     "common_affixes": [
       {
+        "type": "root",
+        "form": "lion",
+        "meaning": "a celebrated figure"
+      },
+      {
         "type": "suffix",
         "form": "-ize",
-        "meaning": "make; become; treat as"
+        "meaning": "make; treat as"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “a celebrated figure” + “make” together: lionize means assign great social importance to."
   },
   {
     "rank": 102,
@@ -2030,13 +2212,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 103,
@@ -2054,11 +2230,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
+        "type": "root",
+        "form": "ver",
+        "meaning": "truth"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “truth” as the anchor: veracity means truthfulness, accuracy; habitual adherence to the truth."
   },
   {
     "rank": 104,
@@ -2076,11 +2253,17 @@
     },
     "common_affixes": [
       {
+        "type": "root",
+        "form": "grand",
+        "meaning": "great; large"
+      },
+      {
         "type": "suffix",
         "form": "-ize",
-        "meaning": "make; become; treat as"
+        "meaning": "make; treat as"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “great” + “make” together: aggrandize means make greater; exaggerate."
   },
   {
     "rank": 105,
@@ -2100,14 +2283,15 @@
       {
         "type": "prefix",
         "form": "super-",
-        "meaning": "above; excessive"
+        "meaning": "excessive"
       },
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "flu",
+        "meaning": "flow"
       }
-    ]
+    ],
+    "affix_memory_hint": "If something overflows beyond what is needed, it is superfluous: excessive or unnecessary."
   },
   {
     "rank": 106,
@@ -2123,13 +2307,7 @@
       "core_list_count": 0,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 107,
@@ -2161,7 +2339,14 @@
       "core_list_count": 3,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "luc",
+        "meaning": "light; clarity"
+      }
+    ],
+    "affix_memory_hint": "Use “light” as the anchor: lucid means transparently clear; easily understandable."
   },
   {
     "rank": 109,
@@ -2227,11 +2412,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "spec",
+        "meaning": "look; appearance"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “look” as the anchor: specious means plausible but false."
   },
   {
     "rank": 113,
@@ -2249,11 +2435,17 @@
     },
     "common_affixes": [
       {
+        "type": "root",
+        "form": "moll",
+        "meaning": "soft"
+      },
+      {
         "type": "suffix",
         "form": "-ify",
-        "meaning": "make; become"
+        "meaning": "make"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “soft” + “make” together: mollify means to make someone angry less angry; placate."
   },
   {
     "rank": 114,
@@ -2289,9 +2481,10 @@
       {
         "type": "prefix",
         "form": "dis-",
-        "meaning": "apart; not; remove"
+        "meaning": "remove; deprive"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “remove” as the anchor: disabuse means to persuade somebody that his/her belief is not valid."
   },
   {
     "rank": 116,
@@ -2323,7 +2516,14 @@
       "core_list_count": 3,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "torp",
+        "meaning": "numb; inactive"
+      }
+    ],
+    "affix_memory_hint": "Use “numb” as the anchor: torpor means inactivity resulting from lethargy and lack of vigor or energy."
   },
   {
     "rank": 118,
@@ -2339,13 +2539,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "a-/an-",
-        "meaning": "not; without"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 119,
@@ -2367,7 +2561,8 @@
         "form": "ab-",
         "meaning": "away from"
       }
-    ]
+    ],
+    "affix_memory_hint": "Think “stay away from”: to abstain is to choose not to take part or consume something."
   },
   {
     "rank": 120,
@@ -2383,7 +2578,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "sicc",
+        "meaning": "dry"
+      }
+    ],
+    "affix_memory_hint": "Use “dry” as the anchor: desiccate means lacking vitality or spirit; lifeless."
   },
   {
     "rank": 121,
@@ -2399,7 +2601,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "idio",
+        "meaning": "one’s own; distinctive"
+      }
+    ],
+    "affix_memory_hint": "Use “one’s own” as the anchor: idiosyncrasy means a behavioral attribute that is distinctive and peculiar to an individual."
   },
   {
     "rank": 122,
@@ -2433,11 +2642,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "copi",
+        "meaning": "abundance"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “abundance” as the anchor: copious means in abundant supply."
   },
   {
     "rank": 124,
@@ -2457,9 +2667,10 @@
       {
         "type": "prefix",
         "form": "dis-",
-        "meaning": "apart; not; remove"
+        "meaning": "not"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: dispassionate means unaffected by strong emotion or prejudice."
   },
   {
     "rank": 125,
@@ -2573,11 +2784,17 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
+        "type": "root",
+        "form": "voc",
+        "meaning": "voice; call"
+      },
+      {
+        "type": "root",
+        "form": "equ",
+        "meaning": "equal; balanced"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “voice” + “equal” together: equivocal means confusing or ambiguous."
   },
   {
     "rank": 132,
@@ -2593,7 +2810,14 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "dox",
+        "meaning": "belief; opinion"
+      }
+    ],
+    "affix_memory_hint": "Use “belief” as the anchor: orthodox means adhering to a traditional, established faith, or to anything customary or commonly accepted."
   },
   {
     "rank": 133,
@@ -2626,13 +2850,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ible",
-        "meaning": "able to be; likely to be"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 135,
@@ -2664,7 +2882,19 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "prefix",
+        "form": "para-",
+        "meaning": "contrary to"
+      },
+      {
+        "type": "root",
+        "form": "dox",
+        "meaning": "belief; opinion"
+      }
+    ],
+    "affix_memory_hint": "Put “contrary to” + “belief” together: paradox means contradiction, or seeming contradiction that is actually true."
   },
   {
     "rank": 137,
@@ -2696,13 +2926,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 139,
@@ -2720,11 +2944,17 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ence",
-        "meaning": "a state; quality; action"
+        "type": "prefix",
+        "form": "dif-",
+        "meaning": "lacking; away from"
+      },
+      {
+        "type": "root",
+        "form": "fid",
+        "meaning": "trust; faith"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “lacking” + “trust” together: diffidence means lack of self-assurance."
   },
   {
     "rank": 140,
@@ -2756,13 +2986,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ible",
-        "meaning": "able to be; likely to be"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 142,
@@ -2830,11 +3054,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "luc",
+        "meaning": "light; clarity"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “light” as the anchor: luminous means softly bright or radiant."
   },
   {
     "rank": 146,
@@ -2933,15 +3158,16 @@
     "common_affixes": [
       {
         "type": "prefix",
-        "form": "phil-/philo-",
-        "meaning": "love; liking"
+        "form": "phil-",
+        "meaning": "love; care for"
       },
       {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
+        "type": "root",
+        "form": "anthrop",
+        "meaning": "humanity; people"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “love” + “humanity” together: philanthropic means seeking to promote the welfare of others."
   },
   {
     "rank": 152,
@@ -2990,13 +3216,7 @@
       "core_list_count": 0,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 155,
@@ -3028,13 +3248,7 @@
       "core_list_count": 0,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 157,
@@ -3066,13 +3280,7 @@
       "core_list_count": 0,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 159,
@@ -3106,9 +3314,10 @@
       {
         "type": "prefix",
         "form": "under-",
-        "meaning": "below; not enough"
+        "meaning": "below; insufficiently"
       }
-    ]
+    ],
+    "affix_memory_hint": "Attacking from under a foundation weakens it; to undermine something is to weaken it."
   },
   {
     "rank": 161,
@@ -3137,13 +3346,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 12
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 163,
@@ -3172,13 +3375,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 10
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 165,
@@ -3210,9 +3407,15 @@
       {
         "type": "prefix",
         "form": "re-",
-        "meaning": "again; back"
+        "meaning": "again"
+      },
+      {
+        "type": "root",
+        "form": "concil",
+        "meaning": "bring together"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “again” + “bring together” together: reconcile means make (one thing) compatible with (another)."
   },
   {
     "rank": 167,
@@ -3226,13 +3429,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 7
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 168,
@@ -3246,13 +3443,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 7
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ancy",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 169,
@@ -3266,13 +3457,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 6
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 170,
@@ -3290,9 +3475,10 @@
       {
         "type": "prefix",
         "form": "dis-",
-        "meaning": "apart; not; remove"
+        "meaning": "not"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: disinterested means unbiased; neutral."
   },
   {
     "rank": 171,
@@ -3351,13 +3537,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 6
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-sion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 175,
@@ -3385,13 +3565,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 6
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 177,
@@ -3419,13 +3593,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 5
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 179,
@@ -3455,11 +3623,17 @@
     },
     "common_affixes": [
       {
+        "type": "root",
+        "form": "tract",
+        "meaning": "pull; handle"
+      },
+      {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “pull” + “can be” together: tractable means readily reacting to suggestions and influences; easily managed (controlled or taught or molded)."
   },
   {
     "rank": 181,
@@ -3474,13 +3648,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 5
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 182,
@@ -3498,9 +3666,10 @@
       {
         "type": "prefix",
         "form": "under-",
-        "meaning": "below; not enough"
+        "meaning": "below; insufficiently"
       }
-    ]
+    ],
+    "affix_memory_hint": "A line under words gives them emphasis; to underscore something is to emphasize it."
   },
   {
     "rank": 183,
@@ -3575,8 +3744,14 @@
         "type": "prefix",
         "form": "pre-",
         "meaning": "before"
+      },
+      {
+        "type": "root",
+        "form": "clud",
+        "meaning": "close; shut out"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “before” + “close” together: preclude means keep from happening or arising; make impossible."
   },
   {
     "rank": 188,
@@ -3591,13 +3766,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 5
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 189,
@@ -3653,13 +3822,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 4
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 193,
@@ -3687,13 +3850,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 4
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 195,
@@ -3707,7 +3864,19 @@
       "core_list_count": 3,
       "ets_guide_matches": 4
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "art",
+        "meaning": "skill; cunning"
+      },
+      {
+        "type": "suffix",
+        "form": "-less",
+        "meaning": "without"
+      }
+    ],
+    "affix_memory_hint": "Put “skill” + “without” together: artless means without cunning or deceit."
   },
   {
     "rank": 196,
@@ -3735,13 +3904,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 4
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 198,
@@ -3812,13 +3975,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 4
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 203,
@@ -3847,13 +4004,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 4
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "dis-",
-        "meaning": "apart; not; remove"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 205,
@@ -3871,9 +4022,10 @@
       {
         "type": "prefix",
         "form": "de-",
-        "meaning": "down; away; remove"
+        "meaning": "away"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “away” as the anchor: deflect means cause to curve; turn aside, esp."
   },
   {
     "rank": 206,
@@ -3887,13 +4039,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 4
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 207,
@@ -3912,9 +4058,10 @@
       {
         "type": "prefix",
         "form": "fore-",
-        "meaning": "before; in front"
+        "meaning": "before"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “before” as the anchor: forestall means keep from happening or arising; make impossible."
   },
   {
     "rank": 208,
@@ -3970,13 +4117,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 3
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "com-",
-        "meaning": "together; with"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 212,
@@ -3990,13 +4131,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 3
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 213,
@@ -4013,15 +4148,11 @@
     "common_affixes": [
       {
         "type": "prefix",
-        "form": "com-",
-        "meaning": "together; with"
-      },
-      {
-        "type": "suffix",
-        "form": "-ary",
-        "meaning": "related to; connected with"
+        "form": "co-/con-",
+        "meaning": "together"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “together” as the anchor: complementary means enhancing each other's qualities (for two things or more)."
   },
   {
     "rank": 214,
@@ -4035,13 +4166,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 3
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 215,
@@ -4055,13 +4180,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 3
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 216,
@@ -4077,16 +4196,12 @@
     },
     "common_affixes": [
       {
-        "type": "prefix",
-        "form": "trans-",
-        "meaning": "across; through"
-      },
-      {
-        "type": "suffix",
-        "form": "-ory",
-        "meaning": "related to; used for"
+        "type": "root",
+        "form": "transit",
+        "meaning": "pass; move through"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “pass” as the anchor: transitory means lasting a very short time."
   },
   {
     "rank": 217,
@@ -4115,13 +4230,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 3
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ible",
-        "meaning": "able to be; likely to be"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 219,
@@ -4137,16 +4246,12 @@
     },
     "common_affixes": [
       {
-        "type": "prefix",
-        "form": "dicho-",
-        "meaning": "two; divided"
-      },
-      {
         "type": "suffix",
         "form": "-tomy",
-        "meaning": "cutting; division"
+        "meaning": "division; cutting"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “division” as the anchor: dichotomy means a classification into two opposed parts or subclasses."
   },
   {
     "rank": 220,
@@ -4174,13 +4279,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 3
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ful",
-        "meaning": "full of; having"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 222,
@@ -4194,13 +4293,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 3
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 223,
@@ -4220,13 +4313,9 @@
         "type": "prefix",
         "form": "extra-",
         "meaning": "outside; beyond"
-      },
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “outside” as the anchor: extraneous means irrelevant; foreign, coming from without, not belonging."
   },
   {
     "rank": 224,
@@ -4241,13 +4330,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 225,
@@ -4303,13 +4386,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 229,
@@ -4327,9 +4404,10 @@
       {
         "type": "prefix",
         "form": "un-",
-        "meaning": "not; the opposite of"
+        "meaning": "not; opposite"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: unprecedented means having never been done or known before; novel."
   },
   {
     "rank": 230,
@@ -4357,7 +4435,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 2
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "equ",
+        "meaning": "equal; balanced"
+      }
+    ],
+    "affix_memory_hint": "Use “equal” as the anchor: equitable means fair to all parties as dictated by reason and conscience."
   },
   {
     "rank": 232,
@@ -4376,9 +4461,10 @@
       {
         "type": "prefix",
         "form": "super-",
-        "meaning": "above; excessive"
+        "meaning": "above"
       }
-    ]
+    ],
+    "affix_memory_hint": "Think of taking a position above someone else: to supersede is to replace or outrank."
   },
   {
     "rank": 233,
@@ -4392,13 +4478,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 234,
@@ -4412,13 +4492,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 235,
@@ -4446,18 +4520,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "a-/an-",
-        "meaning": "not; without"
-      },
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 237,
@@ -4505,7 +4568,8 @@
         "form": "extra-",
         "meaning": "outside; beyond"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “outside” as the anchor: extrapolate means draw from specific cases for more general cases."
   },
   {
     "rank": 240,
@@ -4519,18 +4583,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "in-",
-        "meaning": "not; without"
-      },
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 241,
@@ -4590,14 +4643,20 @@
       {
         "type": "prefix",
         "form": "im-",
-        "meaning": "not; without"
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "mut",
+        "meaning": "change"
       },
       {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Read it as “not able to change”: immutable means unchangeable."
   },
   {
     "rank": 245,
@@ -4611,13 +4670,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 246,
@@ -4631,13 +4684,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 247,
@@ -4665,13 +4712,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 249,
@@ -4689,9 +4730,10 @@
       {
         "type": "prefix",
         "form": "ir-",
-        "meaning": "not; without"
+        "meaning": "not"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: irresolute means uncertain how to act or proceed."
   },
   {
     "rank": 250,
@@ -4705,13 +4747,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ary",
-        "meaning": "related to; connected with"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 251,
@@ -4730,9 +4766,10 @@
       {
         "type": "prefix",
         "form": "dis-",
-        "meaning": "apart; not; remove"
+        "meaning": "apart"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “apart” as the anchor: disperse means scatter, spread widely, cause to vanish."
   },
   {
     "rank": 252,
@@ -4746,7 +4783,14 @@
       "core_list_count": 1,
       "ets_guide_matches": 2
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "robor",
+        "meaning": "strength"
+      }
+    ],
+    "affix_memory_hint": "Use “strength” as the anchor: robust means sturdy and strong in form, constitution, or construction."
   },
   {
     "rank": 253,
@@ -4802,13 +4846,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 257,
@@ -4824,11 +4862,12 @@
     },
     "common_affixes": [
       {
-        "type": "prefix",
-        "form": "trans-",
-        "meaning": "across; through"
+        "type": "root",
+        "form": "transit",
+        "meaning": "pass; move through"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “pass” as the anchor: transient means lasting a very short time."
   },
   {
     "rank": 258,
@@ -4842,13 +4881,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 259,
@@ -4880,14 +4913,15 @@
       {
         "type": "prefix",
         "form": "para-",
-        "meaning": "beside; beyond; against"
+        "meaning": "contrary to"
       },
       {
-        "type": "suffix",
-        "form": "-ical",
-        "meaning": "related to; characterized by"
+        "type": "root",
+        "form": "dox",
+        "meaning": "belief; opinion"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “contrary to” + “belief” together: paradoxical means seemingly contradictory but nonetheless possibly true."
   },
   {
     "rank": 261,
@@ -4901,13 +4935,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "en-",
-        "meaning": "in; into; make"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 262,
@@ -4929,11 +4957,12 @@
         "meaning": "different"
       },
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "gen",
+        "meaning": "kind; origin"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “different” + “kind” together: heterogeneous means different in type, incongruous; composed of different types of elements."
   },
   {
     "rank": 263,
@@ -4951,9 +4980,15 @@
       {
         "type": "prefix",
         "form": "in-",
-        "meaning": "not; without"
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "cess",
+        "meaning": "stop"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “not” + “stop” together: incessant means uninterrupted in time and indefinitely long continuing."
   },
   {
     "rank": 264,
@@ -4967,13 +5002,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 265,
@@ -4994,11 +5023,12 @@
         "meaning": "not; without"
       },
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "morph",
+        "meaning": "shape; form"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “not” + “shape” together: amorphous means shapeless."
   },
   {
     "rank": 266,
@@ -5018,7 +5048,8 @@
         "form": "circum-",
         "meaning": "around"
       }
-    ]
+    ],
+    "affix_memory_hint": "Picture drawing a circle around something: the boundary restricts or confines it."
   },
   {
     "rank": 267,
@@ -5032,13 +5063,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 268,
@@ -5052,13 +5077,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 2
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 269,
@@ -5088,11 +5107,17 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
+        "type": "root",
+        "form": "icon",
+        "meaning": "image; cherished symbol"
+      },
+      {
+        "type": "root",
+        "form": "clast",
+        "meaning": "break"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “image” + “break” together: iconoclastic means defying tradition or convention."
   },
   {
     "rank": 271,
@@ -5134,13 +5159,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 274,
@@ -5186,14 +5205,10 @@
       {
         "type": "prefix",
         "form": "dis-",
-        "meaning": "apart; not; remove"
-      },
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "meaning": "not"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: disingenuous means not straightforward; giving a false appearance of frankness."
   },
   {
     "rank": 277,
@@ -5207,13 +5222,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 278,
@@ -5242,13 +5251,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ical",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 280,
@@ -5267,13 +5270,9 @@
         "type": "prefix",
         "form": "per-",
         "meaning": "through"
-      },
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “through” as the anchor: pervasive means spreading or spread throughout."
   },
   {
     "rank": 281,
@@ -5343,7 +5342,14 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": []
+    "common_affixes": [
+      {
+        "type": "root",
+        "form": "prol",
+        "meaning": "offspring; produce"
+      }
+    ],
+    "affix_memory_hint": "Use “offspring” as the anchor: proliferate means grow rapidly."
   },
   {
     "rank": 286,
@@ -5360,10 +5366,11 @@
     "common_affixes": [
       {
         "type": "prefix",
-        "form": "co-",
-        "meaning": "together; with"
+        "form": "co-/con-",
+        "meaning": "together"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “together” as the anchor: coalesce means fuse or cause to grow together."
   },
   {
     "rank": 287,
@@ -5377,13 +5384,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 288,
@@ -5397,13 +5398,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 289,
@@ -5417,13 +5412,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ory",
-        "meaning": "related to; used for"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 290,
@@ -5465,13 +5454,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "de-",
-        "meaning": "down; away; remove"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 293,
@@ -5485,13 +5468,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 294,
@@ -5523,9 +5500,10 @@
       {
         "type": "prefix",
         "form": "un-",
-        "meaning": "not; the opposite of"
+        "meaning": "not; opposite"
       }
-    ]
+    ],
+    "affix_memory_hint": "The prefix “un-” reverses “seemly” (proper): unseemly behavior is improper or socially unacceptable."
   },
   {
     "rank": 296,
@@ -5539,13 +5517,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 297,
@@ -5559,13 +5531,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 298,
@@ -5594,13 +5560,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 300,
@@ -5615,13 +5575,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 301,
@@ -5650,13 +5604,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 303,
@@ -5741,13 +5689,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 309,
@@ -5859,13 +5801,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 317,
@@ -5879,13 +5815,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 318,
@@ -5931,14 +5861,15 @@
       {
         "type": "prefix",
         "form": "trans-",
-        "meaning": "across; through"
+        "meaning": "across; beyond"
       },
       {
-        "type": "suffix",
-        "form": "-sion",
-        "meaning": "an action; process; result"
+        "type": "root",
+        "form": "gress",
+        "meaning": "step; cross a boundary"
       }
-    ]
+    ],
+    "affix_memory_hint": "Crossing a boundary or line is a transgression: a violation of a rule or duty."
   },
   {
     "rank": 321,
@@ -5995,13 +5926,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ize",
-        "meaning": "make; become; treat as"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 325,
@@ -6033,9 +5958,10 @@
       {
         "type": "prefix",
         "form": "ex-",
-        "meaning": "out of; free from"
+        "meaning": "out; free from"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “out” as the anchor: exonerate means pronounce not guilty of criminal charges."
   },
   {
     "rank": 327,
@@ -6055,7 +5981,8 @@
         "form": "eu-",
         "meaning": "good; pleasant"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “good” as the anchor: euphemism means an inoffensive expression substituted for an offensive one."
   },
   {
     "rank": 328,
@@ -6168,13 +6095,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 336,
@@ -6188,13 +6109,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ary",
-        "meaning": "related to; connected with"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 337,
@@ -6212,14 +6127,20 @@
       {
         "type": "prefix",
         "form": "in-",
-        "meaning": "not; without"
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "scrut",
+        "meaning": "examine; understand"
       },
       {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Read it as “not able to be examined or understood”: inscrutable things are impossible to understand."
   },
   {
     "rank": 338,
@@ -6247,13 +6168,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 340,
@@ -6309,13 +6224,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 344,
@@ -6329,13 +6238,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-sion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 345,
@@ -6377,13 +6280,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "im-",
-        "meaning": "not; without"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 348,
@@ -6397,13 +6294,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 349,
@@ -6417,13 +6308,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 350,
@@ -6498,14 +6383,20 @@
       {
         "type": "prefix",
         "form": "im-",
-        "meaning": "not; without"
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "perturb",
+        "meaning": "disturb"
       },
       {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Read it as “not able to be disturbed”: an imperturbable person remains extremely calm."
   },
   {
     "rank": 355,
@@ -6533,13 +6424,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 1
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 357,
@@ -6595,13 +6480,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 361,
@@ -6629,13 +6508,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ical",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 363,
@@ -6705,13 +6578,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 368,
@@ -6739,13 +6606,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 370,
@@ -6760,13 +6621,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 371,
@@ -6814,7 +6669,8 @@
         "form": "ab-",
         "meaning": "away from"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “away from” as the anchor: aberrant means markedly different from an accepted norm."
   },
   {
     "rank": 374,
@@ -6842,13 +6698,7 @@
       "core_list_count": 3,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 376,
@@ -6904,13 +6754,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 380,
@@ -6924,13 +6768,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "in-",
-        "meaning": "in; into"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 381,
@@ -6945,13 +6783,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "dis-",
-        "meaning": "apart; not; remove"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 382,
@@ -7150,18 +6982,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "dis-",
-        "meaning": "apart; not; remove"
-      },
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 396,
@@ -7235,10 +7056,11 @@
     "common_affixes": [
       {
         "type": "prefix",
-        "form": "con-",
-        "meaning": "together; with"
+        "form": "co-/con-",
+        "meaning": "together"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “together” as the anchor: converge means be adjacent or come together."
   },
   {
     "rank": 401,
@@ -7312,9 +7134,10 @@
       {
         "type": "prefix",
         "form": "sub-",
-        "meaning": "under; below"
+        "meaning": "down"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “down” as the anchor: subside means wear off or die down."
   },
   {
     "rank": 406,
@@ -7328,13 +7151,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 407,
@@ -7352,9 +7169,15 @@
       {
         "type": "prefix",
         "form": "dis-",
-        "meaning": "apart; not; remove"
+        "meaning": "remove; deprive"
+      },
+      {
+        "type": "root",
+        "form": "cred",
+        "meaning": "trust; belief"
       }
-    ]
+    ],
+    "affix_memory_hint": "Removing trust or credibility from someone brings them into discredit."
   },
   {
     "rank": 408,
@@ -7402,7 +7225,8 @@
         "form": "pre-",
         "meaning": "before"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “before” as the anchor: precursor means something indicating the approach of something or someone."
   },
   {
     "rank": 411,
@@ -7416,13 +7240,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 412,
@@ -7450,13 +7268,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ling",
-        "meaning": "young; small; lesser"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 414,
@@ -7471,13 +7283,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 415,
@@ -7495,14 +7301,10 @@
       {
         "type": "prefix",
         "form": "im-",
-        "meaning": "not; without"
-      },
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
+        "meaning": "not"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: impartial means free from undue bias or preconceived opinions."
   },
   {
     "rank": 416,
@@ -7554,9 +7356,10 @@
       {
         "type": "suffix",
         "form": "-archy",
-        "meaning": "rule; an ordered system"
+        "meaning": "rule; governing order"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “not” + “rule” together: anarchy means a state of lawlessness and disorder."
   },
   {
     "rank": 419,
@@ -7574,14 +7377,20 @@
       {
         "type": "prefix",
         "form": "un-",
-        "meaning": "not; the opposite of"
+        "meaning": "not; opposite"
       },
       {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
+        "type": "root",
+        "form": "voc",
+        "meaning": "voice; call"
+      },
+      {
+        "type": "root",
+        "form": "equ",
+        "meaning": "equal; balanced"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “not” + “voice” + “equal” together: unequivocal means admitting of no doubt or misunderstanding; having only one meaning or interpretation and leading to only one conclusion."
   },
   {
     "rank": 420,
@@ -7609,13 +7418,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ary",
-        "meaning": "related to; connected with"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 422,
@@ -7643,13 +7446,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 424,
@@ -7693,13 +7490,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ical",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 427,
@@ -7760,14 +7551,20 @@
       {
         "type": "prefix",
         "form": "in-",
-        "meaning": "not; without"
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "tract",
+        "meaning": "pull; handle"
       },
       {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Read it as “not able to be handled”: an intractable problem is difficult to manage."
   },
   {
     "rank": 431,
@@ -7787,7 +7584,8 @@
         "form": "pre-",
         "meaning": "before"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “before” as the anchor: preamble means a preliminary introduction, as to a statute or constitution."
   },
   {
     "rank": 432,
@@ -7805,14 +7603,15 @@
       {
         "type": "prefix",
         "form": "im-",
-        "meaning": "not; without"
+        "meaning": "not"
       },
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "pervi",
+        "meaning": "pass through"
       }
-    ]
+    ],
+    "affix_memory_hint": "Something no path can pass through is impervious; figuratively, it is unaffected."
   },
   {
     "rank": 433,
@@ -7844,9 +7643,15 @@
       {
         "type": "prefix",
         "form": "meta-",
-        "meaning": "change; beyond"
+        "meaning": "change"
+      },
+      {
+        "type": "root",
+        "form": "morph",
+        "meaning": "shape; form"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “change” + “shape” together: metamorphosis means striking change in appearance or character or circumstances."
   },
   {
     "rank": 435,
@@ -7908,9 +7713,10 @@
       {
         "type": "prefix",
         "form": "in-",
-        "meaning": "not; without"
+        "meaning": "not"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: indeterminate means not fixed or known in advance."
   },
   {
     "rank": 439,
@@ -7938,13 +7744,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 441,
@@ -7962,14 +7762,20 @@
       {
         "type": "prefix",
         "form": "im-",
-        "meaning": "not; without"
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "plac",
+        "meaning": "calm; please"
       },
       {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Read it as “not able to be calmed”: implacable anger or hostility cannot be softened."
   },
   {
     "rank": 442,
@@ -8015,14 +7821,10 @@
       {
         "type": "prefix",
         "form": "in-",
-        "meaning": "not; without"
-      },
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
+        "meaning": "not"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: inconsequential means lacking worth or importance."
   },
   {
     "rank": 445,
@@ -8036,13 +7838,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ance",
-        "meaning": "a state; quality; action"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 446,
@@ -8113,13 +7909,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 451,
@@ -8152,8 +7942,14 @@
         "type": "prefix",
         "form": "hyper-",
         "meaning": "over; excessive"
+      },
+      {
+        "type": "root",
+        "form": "bol",
+        "meaning": "throw beyond"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “over” + “throw beyond” together: hyperbole means extravagant exaggeration."
   },
   {
     "rank": 453,
@@ -8182,13 +7978,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "im-",
-        "meaning": "in; inward"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 455,
@@ -8203,13 +7993,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 456,
@@ -8257,9 +8041,10 @@
       {
         "type": "prefix",
         "form": "dis-",
-        "meaning": "apart; not; remove"
+        "meaning": "apart"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “apart” as the anchor: disjointed means taken apart at the points of connection."
   },
   {
     "rank": 459,
@@ -8287,13 +8072,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ism",
-        "meaning": "a belief; system; practice"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 461,
@@ -8307,13 +8086,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 462,
@@ -8425,13 +8198,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 470,
@@ -8473,13 +8240,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 473,
@@ -8526,9 +8287,10 @@
       {
         "type": "prefix",
         "form": "de-",
-        "meaning": "down; away; remove"
+        "meaning": "lower; remove"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “lower” as the anchor: debase means reduce the quality or value of something."
   },
   {
     "rank": 476,
@@ -8570,13 +8332,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 479,
@@ -8647,13 +8403,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ible",
-        "meaning": "able to be; likely to be"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 484,
@@ -8667,13 +8417,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 485,
@@ -8687,13 +8431,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ory",
-        "meaning": "related to; used for"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 486,
@@ -8739,14 +8477,15 @@
       {
         "type": "prefix",
         "form": "im-",
-        "meaning": "not; without"
+        "meaning": "not"
       },
       {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Read it as “not able to be passed through”: impermeable material blocks fluids and gases."
   },
   {
     "rank": 489,
@@ -8762,11 +8501,17 @@
     },
     "common_affixes": [
       {
+        "type": "root",
+        "form": "guile",
+        "meaning": "deceit"
+      },
+      {
         "type": "suffix",
         "form": "-less",
         "meaning": "without"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “deceit” + “without” together: guileless means free of deceit."
   },
   {
     "rank": 490,
@@ -8780,13 +8525,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 491,
@@ -8814,13 +8553,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ish",
-        "meaning": "somewhat like; having the quality of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 493,
@@ -8848,13 +8581,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "ab-",
-        "meaning": "away from"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 495,
@@ -8883,13 +8610,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 497,
@@ -8931,13 +8652,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 500,
@@ -8951,13 +8666,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 501,
@@ -8976,9 +8685,15 @@
       {
         "type": "prefix",
         "form": "ex-",
-        "meaning": "out of; free from"
+        "meaning": "out; free from"
+      },
+      {
+        "type": "root",
+        "form": "culp",
+        "meaning": "blame; guilt"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “out” + “blame” together: exculpate means pronounce not guilty of criminal charges."
   },
   {
     "rank": 502,
@@ -9006,13 +8721,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ence",
-        "meaning": "a state; quality; action"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 504,
@@ -9054,13 +8763,7 @@
       "core_list_count": 2,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 507,
@@ -9090,11 +8793,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "ver",
+        "meaning": "truth"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “truth” as the anchor: veracious means truthful."
   },
   {
     "rank": 509,
@@ -9193,13 +8897,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 516,
@@ -9213,13 +8911,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 517,
@@ -9261,13 +8953,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 520,
@@ -9366,13 +9052,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ify",
-        "meaning": "make; become"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 527,
@@ -9386,13 +9066,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 528,
@@ -9434,13 +9108,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 531,
@@ -9454,13 +9122,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 532,
@@ -9516,13 +9178,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "com-",
-        "meaning": "together; with"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 536,
@@ -9540,9 +9196,10 @@
       {
         "type": "suffix",
         "form": "-archy",
-        "meaning": "rule; an ordered system"
+        "meaning": "rule; governing order"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “rule” as the anchor: hierarchy means a ranked series; a classification of people according to rank, ability, etc.; a ruling body."
   },
   {
     "rank": 537,
@@ -9558,11 +9215,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "gen",
+        "meaning": "kind; origin"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “kind” as the anchor: indigenous means originating in a certain area."
   },
   {
     "rank": 538,
@@ -9604,13 +9262,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 541,
@@ -9696,11 +9348,17 @@
     },
     "common_affixes": [
       {
+        "type": "root",
+        "form": "bureau",
+        "meaning": "office; administration"
+      },
+      {
         "type": "suffix",
         "form": "-cracy",
-        "meaning": "rule; government"
+        "meaning": "government; rule"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “office” + “government” together: bureaucracy means government characterized by many bureaus and petty administrators or by excessive, seemingly meaningless requirements."
   },
   {
     "rank": 547,
@@ -9714,13 +9372,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-wise",
-        "meaning": "in the manner of; regarding"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 548,
@@ -9833,13 +9485,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ance",
-        "meaning": "a state; quality; action"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 556,
@@ -9859,7 +9505,8 @@
         "form": "pre-",
         "meaning": "before"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “before” as the anchor: precedent means an example that is used to justify similar occurrences at a later time."
   },
   {
     "rank": 557,
@@ -9907,13 +9554,9 @@
         "type": "prefix",
         "form": "auto-",
         "meaning": "self"
-      },
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “self” as the anchor: autonomous means self-governing, independent."
   },
   {
     "rank": 560,
@@ -9927,13 +9570,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 561,
@@ -9975,13 +9612,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "pro-",
-        "meaning": "forward; in favor of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 564,
@@ -10051,13 +9682,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 569,
@@ -10089,10 +9714,11 @@
     "common_affixes": [
       {
         "type": "prefix",
-        "form": "con-",
-        "meaning": "together; with"
+        "form": "co-/con-",
+        "meaning": "together"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “together” as the anchor: consolidate means unite, combine, solidify, make coherent."
   },
   {
     "rank": 571,
@@ -10106,13 +9732,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 572,
@@ -10126,18 +9746,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "en-",
-        "meaning": "in; into; make"
-      },
-      {
-        "type": "suffix",
-        "form": "-ment",
-        "meaning": "an action; result; state"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 573,
@@ -10151,13 +9760,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ical",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 574,
@@ -10213,13 +9816,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 578,
@@ -10275,13 +9872,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 582,
@@ -10295,13 +9886,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ism",
-        "meaning": "a belief; system; practice"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 583,
@@ -10329,13 +9914,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 585,
@@ -10391,13 +9970,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ify",
-        "meaning": "make; become"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 589,
@@ -10425,13 +9998,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 591,
@@ -10464,9 +10031,10 @@
       {
         "type": "prefix",
         "form": "in-",
-        "meaning": "not; without"
+        "meaning": "not"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: indifferent means not caring, having no interest; unbiased, impartial."
   },
   {
     "rank": 593,
@@ -10485,9 +10053,10 @@
       {
         "type": "prefix",
         "form": "de-",
-        "meaning": "down; away; remove"
+        "meaning": "away"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “away” as the anchor: detached means impartial, disinterested; unconcerned, distant, aloof."
   },
   {
     "rank": 594,
@@ -10529,13 +10098,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ence",
-        "meaning": "a state; quality; action"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 597,
@@ -10563,13 +10126,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 599,
@@ -10671,9 +10228,10 @@
       {
         "type": "prefix",
         "form": "de-",
-        "meaning": "down; away; remove"
+        "meaning": "lower; remove"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “lower” as the anchor: degrade means reduce in worth or character, usually verbally."
   },
   {
     "rank": 606,
@@ -10687,13 +10245,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ical",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 607,
@@ -10722,13 +10274,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ible",
-        "meaning": "able to be; likely to be"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 609,
@@ -10756,13 +10302,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "il-",
-        "meaning": "not; without"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 611,
@@ -10804,13 +10344,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 614,
@@ -10899,10 +10433,11 @@
     "common_affixes": [
       {
         "type": "prefix",
-        "form": "con-",
-        "meaning": "together; with"
+        "form": "co-/con-",
+        "meaning": "together"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “together” as the anchor: concur means approve, agree."
   },
   {
     "rank": 620,
@@ -11058,13 +10593,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 631,
@@ -11078,13 +10607,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 632,
@@ -11100,11 +10623,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ence",
-        "meaning": "a state; quality; action"
+        "type": "prefix",
+        "form": "ambi-",
+        "meaning": "both"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “both” as the anchor: ambivalence means mixed feelings or emotions."
   },
   {
     "rank": 633,
@@ -11132,13 +10656,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 635,
@@ -11196,11 +10714,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
+        "type": "root",
+        "form": "fid",
+        "meaning": "trust; faith"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “trust” as the anchor: fidelity means faithful, loyalty; strict observance of duty; accuracy in reproducing a sound or image."
   },
   {
     "rank": 639,
@@ -11312,13 +10831,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "un-",
-        "meaning": "not; the opposite of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 647,
@@ -11360,13 +10873,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-some",
-        "meaning": "having a quality; causing a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 650,
@@ -11423,13 +10930,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ary",
-        "meaning": "related to; connected with"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 654,
@@ -11447,14 +10948,20 @@
       {
         "type": "prefix",
         "form": "im-",
-        "meaning": "not; without"
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "pecc",
+        "meaning": "fault; error"
       },
       {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Read it as “not capable of fault”: impeccable means flawless."
   },
   {
     "rank": 655,
@@ -11472,14 +10979,10 @@
       {
         "type": "prefix",
         "form": "sub-",
-        "meaning": "under; below"
-      },
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
+        "meaning": "under"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “under” as the anchor: subversive means in opposition to a civil authority or government."
   },
   {
     "rank": 656,
@@ -11497,9 +11000,10 @@
       {
         "type": "prefix",
         "form": "inter-",
-        "meaning": "between; among"
+        "meaning": "between"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “between” as the anchor: intermittent means stopping and starting at irregular intervals."
   },
   {
     "rank": 657,
@@ -11560,9 +11064,10 @@
       {
         "type": "prefix",
         "form": "un-",
-        "meaning": "not; the opposite of"
+        "meaning": "not; opposite"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: uncompromising means not making concessions."
   },
   {
     "rank": 661,
@@ -11590,13 +11095,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 663,
@@ -11643,13 +11142,9 @@
         "type": "prefix",
         "form": "counter-",
         "meaning": "against; opposite"
-      },
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “against” as the anchor: counterproductive means defeating the purpose; preventing the intended goal."
   },
   {
     "rank": 666,
@@ -11663,13 +11158,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 667,
@@ -11689,7 +11178,8 @@
         "form": "eu-",
         "meaning": "good; pleasant"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “good” as the anchor: euphoria means a feeling of great (usually exaggerated) elation."
   },
   {
     "rank": 668,
@@ -11707,9 +11197,10 @@
       {
         "type": "prefix",
         "form": "re-",
-        "meaning": "again; back"
+        "meaning": "again"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “again” as the anchor: redress means an act of making something right."
   },
   {
     "rank": 669,
@@ -11723,13 +11214,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 670,
@@ -11799,13 +11284,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ize",
-        "meaning": "make; become; treat as"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 675,
@@ -11852,9 +11331,10 @@
       {
         "type": "prefix",
         "form": "un-",
-        "meaning": "not; the opposite of"
+        "meaning": "not; opposite"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: unruly means noisy and lacking in restraint or discipline; unwilling to submit to authority."
   },
   {
     "rank": 678,
@@ -11888,7 +11368,8 @@
         "form": "circum-",
         "meaning": "around"
       }
-    ]
+    ],
+    "affix_memory_hint": "Picture going around an obstacle instead of through it: circumvent means avoid it."
   },
   {
     "rank": 680,
@@ -11916,13 +11397,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "de-",
-        "meaning": "down; away; remove"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 682,
@@ -11939,11 +11414,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ical",
-        "meaning": "related to; characterized by"
+        "type": "root",
+        "form": "chron",
+        "meaning": "time"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “time” as the anchor: chronological means arranged in or relating to time order."
   },
   {
     "rank": 683,
@@ -11957,13 +11433,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 684,
@@ -11995,9 +11465,15 @@
       {
         "type": "prefix",
         "form": "un-",
-        "meaning": "not; the opposite of"
+        "meaning": "not; opposite"
+      },
+      {
+        "type": "root",
+        "form": "nerv",
+        "meaning": "strength; nerve"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “not” + “strength” together: unnerve means to make nervous or upset."
   },
   {
     "rank": 686,
@@ -12054,13 +11530,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 690,
@@ -12074,18 +11544,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "col-",
-        "meaning": "together; with"
-      },
-      {
-        "type": "suffix",
-        "form": "-sion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 691,
@@ -12102,15 +11561,11 @@
     "common_affixes": [
       {
         "type": "prefix",
-        "form": "co-",
-        "meaning": "together; with"
-      },
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
+        "form": "co-/con-",
+        "meaning": "together"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “together” as the anchor: cohesive means well integrated, forming a united whole."
   },
   {
     "rank": 692,
@@ -12129,13 +11584,9 @@
         "type": "prefix",
         "form": "ab-",
         "meaning": "away from"
-      },
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “away from” as the anchor: aberration means a deviation from what is normal or expected."
   },
   {
     "rank": 693,
@@ -12150,13 +11601,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 694,
@@ -12184,13 +11629,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 696,
@@ -12204,13 +11643,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-arian",
-        "meaning": "a person connected with something; a supporter"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 697,
@@ -12226,11 +11659,17 @@
     },
     "common_affixes": [
       {
+        "type": "root",
+        "form": "fort",
+        "meaning": "strong"
+      },
+      {
         "type": "suffix",
         "form": "-ify",
-        "meaning": "make; become"
+        "meaning": "make"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “strong” + “make” together: fortify means strengthen, invigorate, encourage."
   },
   {
     "rank": 698,
@@ -12456,13 +11895,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 714,
@@ -12550,14 +11983,15 @@
       {
         "type": "prefix",
         "form": "un-",
-        "meaning": "not; the opposite of"
+        "meaning": "not; opposite"
       },
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "scrup",
+        "meaning": "moral concern"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “not” + “moral concern” together: unscrupulous means without scruples or principles."
   },
   {
     "rank": 720,
@@ -12641,13 +12075,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ence",
-        "meaning": "a state; quality; action"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 726,
@@ -12679,9 +12107,10 @@
       {
         "type": "prefix",
         "form": "re-",
-        "meaning": "again; back"
+        "meaning": "back"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “back” as the anchor: retract means pull inward or towards a center; formally reject or disavow a formerly held belief, usually under pressure."
   },
   {
     "rank": 728,
@@ -12715,7 +12144,8 @@
         "form": "counter-",
         "meaning": "against; opposite"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “against” as the anchor: counterpoint means contrasting item, opposite; a complement; the use of contrast or interplay in a work of art."
   },
   {
     "rank": 730,
@@ -12785,13 +12215,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ical",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 735,
@@ -12853,7 +12277,8 @@
         "form": "pre-",
         "meaning": "before"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “before” as the anchor: preempt means take the place of or have precedence over."
   },
   {
     "rank": 739,
@@ -12867,13 +12292,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 740,
@@ -12887,13 +12306,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 741,
@@ -12908,13 +12321,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ical",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 742,
@@ -12956,18 +12363,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "in-",
-        "meaning": "not; without"
-      },
-      {
-        "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 745,
@@ -13037,13 +12433,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 750,
@@ -13075,14 +12465,10 @@
       {
         "type": "prefix",
         "form": "im-",
-        "meaning": "not; without"
-      },
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
+        "meaning": "not"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: immaterial means not relevant."
   },
   {
     "rank": 752,
@@ -13110,13 +12496,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 754,
@@ -13159,13 +12539,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-sion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 757,
@@ -13179,13 +12553,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 758,
@@ -13199,13 +12567,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 759,
@@ -13223,9 +12585,10 @@
       {
         "type": "prefix",
         "form": "sub-",
-        "meaning": "under; below"
+        "meaning": "under"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “under” as the anchor: subsume means consider (an instance of something) as part of a general rule or principle."
   },
   {
     "rank": 760,
@@ -13253,13 +12616,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 762,
@@ -13315,13 +12672,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ible",
-        "meaning": "able to be; likely to be"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 766,
@@ -13364,13 +12715,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ancy",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 769,
@@ -13384,13 +12729,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 770,
@@ -13464,14 +12803,20 @@
       {
         "type": "prefix",
         "form": "im-",
-        "meaning": "not; without"
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "plaus",
+        "meaning": "believable; acceptable"
       },
       {
         "type": "suffix",
-        "form": "-ible",
-        "meaning": "able to be; likely to be"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Read it as “not able to be believed”: an implausible claim is not believable."
   },
   {
     "rank": 775,
@@ -13504,8 +12849,14 @@
         "type": "prefix",
         "form": "mono-",
         "meaning": "one; single"
+      },
+      {
+        "type": "root",
+        "form": "ton",
+        "meaning": "tone; sound"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “one” + “tone” together: monotony means sameness or repetitiousness to the point of being boring; lack of variation, uniformity, esp."
   },
   {
     "rank": 777,
@@ -13519,13 +12870,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 778,
@@ -13541,11 +12886,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ism",
-        "meaning": "a belief; system; practice"
+        "type": "root",
+        "form": "altru",
+        "meaning": "other people"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “other people” as the anchor: altruism means the quality of unselfish concern for the welfare of others."
   },
   {
     "rank": 779,
@@ -13564,13 +12910,9 @@
         "type": "prefix",
         "form": "pre-",
         "meaning": "before"
-      },
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “before” as the anchor: precocious means characterized by or characteristic of exceptionally early development or maturity (especially in mental aptitude)."
   },
   {
     "rank": 780,
@@ -13658,9 +13000,10 @@
       {
         "type": "prefix",
         "form": "fore-",
-        "meaning": "before; in front"
+        "meaning": "before"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “before” as the anchor: foreshadow means indicate or suggest beforehand, presage."
   },
   {
     "rank": 786,
@@ -13764,7 +13107,8 @@
         "form": "mal-",
         "meaning": "bad; harmful"
       }
-    ]
+    ],
+    "affix_memory_hint": "Let “mal-” signal harm: malevolent means wishing evil or harm to others."
   },
   {
     "rank": 793,
@@ -13792,13 +13136,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ize",
-        "meaning": "make; become; treat as"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 795,
@@ -13812,13 +13150,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 796,
@@ -13904,11 +13236,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
+        "type": "root",
+        "form": "aud",
+        "meaning": "dare; be bold"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “dare” as the anchor: audacity means aggressive boldness in social situations."
   },
   {
     "rank": 802,
@@ -13955,9 +13288,15 @@
       {
         "type": "prefix",
         "form": "in-",
-        "meaning": "not; without"
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "solv",
+        "meaning": "pay; settle"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “not” + “pay” together: insolvent means unable to pay one's bills; bankrupt."
   },
   {
     "rank": 805,
@@ -13989,14 +13328,15 @@
       {
         "type": "prefix",
         "form": "im-",
-        "meaning": "not; without"
+        "meaning": "not"
       },
       {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
+        "type": "root",
+        "form": "pass",
+        "meaning": "feel; suffer"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “not” + “feel” together: impassive means having or revealing little emotion or sensibility."
   },
   {
     "rank": 807,
@@ -14010,13 +13350,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "dis-",
-        "meaning": "apart; not; remove"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 808,
@@ -14086,13 +13420,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 813,
@@ -14120,13 +13448,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 815,
@@ -14141,13 +13463,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 816,
@@ -14175,13 +13491,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 818,
@@ -14252,13 +13562,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 823,
@@ -14286,13 +13590,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 825,
@@ -14310,9 +13608,10 @@
       {
         "type": "prefix",
         "form": "de-",
-        "meaning": "down; away; remove"
+        "meaning": "lower; remove"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “lower” as the anchor: demean means to insult; to cause someone to lose dignity or respect."
   },
   {
     "rank": 826,
@@ -14330,14 +13629,10 @@
       {
         "type": "prefix",
         "form": "anti-",
-        "meaning": "against; opposite to"
-      },
-      {
-        "type": "suffix",
-        "form": "-ical",
-        "meaning": "related to; characterized by"
+        "meaning": "against"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “against” as the anchor: antithetical means sharply contrasted in character or purpose."
   },
   {
     "rank": 827,
@@ -14351,13 +13646,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ize",
-        "meaning": "make; become; treat as"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 828,
@@ -14441,13 +13730,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 834,
@@ -14461,13 +13744,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ize",
-        "meaning": "make; become; treat as"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 835,
@@ -14481,13 +13758,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 836,
@@ -14501,13 +13772,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ency",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 837,
@@ -14535,13 +13800,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 839,
@@ -14573,14 +13832,20 @@
       {
         "type": "prefix",
         "form": "un-",
-        "meaning": "not; the opposite of"
+        "meaning": "not; opposite"
+      },
+      {
+        "type": "root",
+        "form": "conscion",
+        "meaning": "conscience; moral sense"
       },
       {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Think “not acceptable to the conscience”: unconscionable behavior is shockingly unreasonable or immoral."
   },
   {
     "rank": 841,
@@ -14594,13 +13859,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 842,
@@ -14619,8 +13878,14 @@
         "type": "prefix",
         "form": "neo-",
         "meaning": "new"
+      },
+      {
+        "type": "root",
+        "form": "phyte",
+        "meaning": "new growth; beginner"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “new” + “new growth” together: neophyte means any new participant in some activity."
   },
   {
     "rank": 843,
@@ -14704,13 +13969,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "ab-",
-        "meaning": "away from"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 849,
@@ -14724,13 +13983,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 850,
@@ -14744,13 +13997,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 851,
@@ -14768,14 +14015,20 @@
       {
         "type": "prefix",
         "form": "ir-",
-        "meaning": "not; without"
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "revoc",
+        "meaning": "call back; cancel"
       },
       {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Read it as “not able to be called back”: an irrevocable decision cannot be canceled."
   },
   {
     "rank": 852,
@@ -14794,13 +14047,9 @@
         "type": "prefix",
         "form": "a-/an-",
         "meaning": "not; without"
-      },
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: apathetic means marked by a lack of interest."
   },
   {
     "rank": 853,
@@ -14814,13 +14063,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 854,
@@ -14838,14 +14081,20 @@
       {
         "type": "prefix",
         "form": "im-",
-        "meaning": "not; without"
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "pregn",
+        "meaning": "capture; take"
       },
       {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Read it as “not able to be captured”: an impregnable place resists attack."
   },
   {
     "rank": 855,
@@ -14891,14 +14140,15 @@
       {
         "type": "prefix",
         "form": "in-",
-        "meaning": "not; without"
+        "meaning": "not"
       },
       {
-        "type": "suffix",
-        "form": "-ence",
-        "meaning": "a state; quality; action"
+        "type": "root",
+        "form": "transig",
+        "meaning": "compromise"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “not” + “compromise” together: intransigence means stubborn refusal to compromise or change."
   },
   {
     "rank": 858,
@@ -14914,11 +14164,17 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
+        "type": "root",
+        "form": "anim",
+        "meaning": "spirit; mind"
+      },
+      {
+        "type": "root",
+        "form": "equ",
+        "meaning": "equal; balanced"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “spirit” + “equal” together: equanimity means steadiness of mind under stress."
   },
   {
     "rank": 859,
@@ -14937,9 +14193,10 @@
       {
         "type": "prefix",
         "form": "de-",
-        "meaning": "down; away; remove"
+        "meaning": "lower; remove"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “lower” as the anchor: deface means vandalize, mar the appearance of."
   },
   {
     "rank": 860,
@@ -14958,13 +14215,9 @@
         "type": "prefix",
         "form": "counter-",
         "meaning": "against; opposite"
-      },
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “against” as the anchor: counterintuitive means against what one would intuitively expect."
   },
   {
     "rank": 861,
@@ -14980,11 +14233,12 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
+        "type": "root",
+        "form": "culp",
+        "meaning": "blame; guilt"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “blame” as the anchor: culpability means a state of guilt."
   },
   {
     "rank": 862,
@@ -14998,13 +14252,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 863,
@@ -15018,13 +14266,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ical",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 864,
@@ -15042,9 +14284,10 @@
       {
         "type": "prefix",
         "form": "re-",
-        "meaning": "again; back"
+        "meaning": "back"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “back” as the anchor: recant means formally reject or disavow a formerly held belief."
   },
   {
     "rank": 865,
@@ -15058,13 +14301,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ance",
-        "meaning": "a state; quality; action"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 866,
@@ -15078,13 +14315,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 867,
@@ -15200,9 +14431,10 @@
       {
         "type": "prefix",
         "form": "dis-",
-        "meaning": "apart; not; remove"
+        "meaning": "remove; deprive"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “remove” as the anchor: disenfranchise means deprive of voting rights."
   },
   {
     "rank": 875,
@@ -15230,18 +14462,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "in-",
-        "meaning": "not; without"
-      },
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 877,
@@ -15255,13 +14476,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ist",
-        "meaning": "a follower; someone who practices something"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 878,
@@ -15303,13 +14518,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 881,
@@ -15323,13 +14532,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "dis-",
-        "meaning": "apart; not; remove"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 882,
@@ -15347,9 +14550,10 @@
       {
         "type": "prefix",
         "form": "re-",
-        "meaning": "again; back"
+        "meaning": "again"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “again” as the anchor: resurgent means rising again as to new life and vigor."
   },
   {
     "rank": 883,
@@ -15377,13 +14581,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-al",
-        "meaning": "related to; having a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 885,
@@ -15397,13 +14595,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 886,
@@ -15417,13 +14609,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ency",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 887,
@@ -15437,13 +14623,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ory",
-        "meaning": "related to; used for"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 888,
@@ -15485,13 +14665,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "in-",
-        "meaning": "in; into"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 891,
@@ -15537,9 +14711,10 @@
       {
         "type": "prefix",
         "form": "in-",
-        "meaning": "not; without"
+        "meaning": "not"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: inarticulate means without or deprived of the use of speech or words."
   },
   {
     "rank": 894,
@@ -15558,13 +14733,9 @@
         "type": "prefix",
         "form": "extra-",
         "meaning": "outside; beyond"
-      },
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “outside” as the anchor: extrapolation means an inference about the future based on known facts."
   },
   {
     "rank": 895,
@@ -15592,13 +14763,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 897,
@@ -15612,13 +14777,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 898,
@@ -15632,13 +14791,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 899,
@@ -15652,13 +14805,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 900,
@@ -15672,13 +14819,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ence",
-        "meaning": "a state; quality; action"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 901,
@@ -15734,13 +14875,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 905,
@@ -15782,13 +14917,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 908,
@@ -15804,11 +14933,17 @@
     },
     "common_affixes": [
       {
+        "type": "root",
+        "form": "carto",
+        "meaning": "map"
+      },
+      {
         "type": "suffix",
         "form": "-graphy",
-        "meaning": "writing; recording; describing"
+        "meaning": "writing; mapping"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “map” + “writing” together: cartography means mapmaking."
   },
   {
     "rank": 909,
@@ -15843,7 +14978,8 @@
         "form": "ab-",
         "meaning": "away from"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “away from” as the anchor: abscond means run away, often taking something or somebody along."
   },
   {
     "rank": 911,
@@ -15857,13 +14993,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 912,
@@ -15891,13 +15021,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 914,
@@ -15962,10 +15086,11 @@
       },
       {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “through” + “can be” together: permeable means allowing fluids or gases to pass or diffuse through."
   },
   {
     "rank": 918,
@@ -16026,9 +15151,15 @@
       {
         "type": "prefix",
         "form": "mis-",
-        "meaning": "wrongly; badly"
+        "meaning": "wrongly"
+      },
+      {
+        "type": "root",
+        "form": "constru",
+        "meaning": "interpret"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “wrongly” + “interpret” together: misconstrue means interpret in the wrong way."
   },
   {
     "rank": 922,
@@ -16042,13 +15173,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 923,
@@ -16076,13 +15201,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 925,
@@ -16100,9 +15219,15 @@
       {
         "type": "prefix",
         "form": "de-",
-        "meaning": "down; away; remove"
+        "meaning": "lower; remove"
+      },
+      {
+        "type": "root",
+        "form": "secr",
+        "meaning": "sacred"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “lower” + “sacred” together: desecrate means to willfully violate or destroy a sacred place."
   },
   {
     "rank": 926,
@@ -16186,13 +15311,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 932,
@@ -16206,13 +15325,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 933,
@@ -16240,13 +15353,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 935,
@@ -16266,7 +15373,8 @@
         "form": "bene-",
         "meaning": "good; well"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “good” as the anchor: beneficent means doing or producing good."
   },
   {
     "rank": 936,
@@ -16298,9 +15406,10 @@
       {
         "type": "prefix",
         "form": "im-",
-        "meaning": "not; without"
+        "meaning": "not"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “not” as the anchor: imprudent means not wise."
   },
   {
     "rank": 938,
@@ -16328,13 +15437,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 940,
@@ -16348,13 +15451,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ic",
-        "meaning": "related to; characterized by"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 941,
@@ -16368,13 +15465,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 942,
@@ -16402,13 +15493,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-some",
-        "meaning": "having a quality; causing a quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 944,
@@ -16442,7 +15527,8 @@
         "form": "auto-",
         "meaning": "self"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “self” as the anchor: autonomously means In an autonomous or self-governing manner."
   },
   {
     "rank": 946,
@@ -16456,18 +15542,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "in-",
-        "meaning": "not; without"
-      },
-      {
-        "type": "suffix",
-        "form": "-ible",
-        "meaning": "able to be; likely to be"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 947,
@@ -16516,11 +15591,17 @@
         "meaning": "hatred"
       },
       {
+        "type": "root",
+        "form": "gyn",
+        "meaning": "woman"
+      },
+      {
         "type": "suffix",
         "form": "-ist",
-        "meaning": "a follower; someone who practices something"
+        "meaning": "a person characterized by"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “hatred” + “woman” + “a person characterized by” together: misogynist means a person who dislikes women in particular."
   },
   {
     "rank": 950,
@@ -16548,13 +15629,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "mis-",
-        "meaning": "wrongly; badly"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 952,
@@ -16625,13 +15700,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 957,
@@ -16759,11 +15828,17 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
+        "type": "root",
+        "form": "magn",
+        "meaning": "great"
+      },
+      {
+        "type": "root",
+        "form": "anim",
+        "meaning": "spirit; mind"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “great” + “spirit” together: magnanimity means nobility and generosity of spirit."
   },
   {
     "rank": 966,
@@ -16777,13 +15852,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 967,
@@ -16811,13 +15880,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "prefix",
-        "form": "co-",
-        "meaning": "together; with"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 969,
@@ -16887,13 +15950,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 974,
@@ -16907,13 +15964,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 975,
@@ -16948,11 +15999,12 @@
         "meaning": "before"
       },
       {
-        "type": "suffix",
-        "form": "-ence",
-        "meaning": "a state; quality; action"
+        "type": "root",
+        "form": "sci",
+        "meaning": "know"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “before” + “know” together: prescience means the power to foresee the future."
   },
   {
     "rank": 977,
@@ -16973,11 +16025,12 @@
         "meaning": "bad; harmful"
       },
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "odor",
+        "meaning": "smell"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “bad” + “smell” together: malodorous means having an unpleasant smell."
   },
   {
     "rank": 978,
@@ -17019,13 +16072,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 981,
@@ -17044,14 +16091,15 @@
       {
         "type": "prefix",
         "form": "in-",
-        "meaning": "not; without"
+        "meaning": "not"
       },
       {
-        "type": "suffix",
-        "form": "-ible",
-        "meaning": "able to be; likely to be"
+        "type": "root",
+        "form": "sens",
+        "meaning": "feel; perceive"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “not” + “feel” together: insensible means barely able to be perceived."
   },
   {
     "rank": 982,
@@ -17065,13 +16113,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 983,
@@ -17085,13 +16127,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ish",
-        "meaning": "somewhat like; having the quality of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 984,
@@ -17105,13 +16141,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-tion",
-        "meaning": "an action; process; result"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 985,
@@ -17127,11 +16157,17 @@
     },
     "common_affixes": [
       {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
+        "type": "root",
+        "form": "caco",
+        "meaning": "bad; unpleasant"
+      },
+      {
+        "type": "root",
+        "form": "phon",
+        "meaning": "sound"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “bad” + “sound” together: cacophonous means having an unpleasant sound."
   },
   {
     "rank": 986,
@@ -17145,13 +16181,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ory",
-        "meaning": "related to; used for"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 987,
@@ -17167,11 +16197,17 @@
     },
     "common_affixes": [
       {
+        "type": "root",
+        "form": "hedon",
+        "meaning": "pleasure"
+      },
+      {
         "type": "suffix",
         "form": "-ist",
-        "meaning": "a follower; someone who practices something"
+        "meaning": "a person characterized by"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “pleasure” + “a person characterized by” together: hedonist means person devoted to pleasure."
   },
   {
     "rank": 988,
@@ -17185,13 +16221,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ish",
-        "meaning": "somewhat like; having the quality of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 989,
@@ -17233,13 +16263,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ous",
-        "meaning": "having; full of"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 992,
@@ -17267,13 +16291,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ism",
-        "meaning": "a belief; system; practice"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 994,
@@ -17289,11 +16307,17 @@
     },
     "common_affixes": [
       {
+        "type": "root",
+        "form": "ego",
+        "meaning": "self"
+      },
+      {
         "type": "suffix",
         "form": "-ist",
-        "meaning": "a follower; someone who practices something"
+        "meaning": "a person characterized by"
       }
-    ]
+    ],
+    "affix_memory_hint": "Put “self” + “a person characterized by” together: egotist means a conceited and self-centered person."
   },
   {
     "rank": 995,
@@ -17307,13 +16331,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ity",
-        "meaning": "a state; quality"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 996,
@@ -17341,13 +16359,7 @@
       "core_list_count": 1,
       "ets_guide_matches": 0
     },
-    "common_affixes": [
-      {
-        "type": "suffix",
-        "form": "-ive",
-        "meaning": "having a quality; having a tendency"
-      }
-    ]
+    "common_affixes": []
   },
   {
     "rank": 998,
@@ -17365,14 +16377,20 @@
       {
         "type": "prefix",
         "form": "im-",
-        "meaning": "not; without"
+        "meaning": "not"
+      },
+      {
+        "type": "root",
+        "form": "ponder",
+        "meaning": "weigh; consider"
       },
       {
         "type": "suffix",
-        "form": "-able",
-        "meaning": "able to be; suitable for"
+        "form": "-able/-ible",
+        "meaning": "can be"
       }
-    ]
+    ],
+    "affix_memory_hint": "Read it as “not able to be weighed or assessed”: imponderable things are impossible to estimate."
   },
   {
     "rank": 999,
@@ -17390,9 +16408,10 @@
       {
         "type": "prefix",
         "form": "dis-",
-        "meaning": "apart; not; remove"
+        "meaning": "remove; deprive"
       }
-    ]
+    ],
+    "affix_memory_hint": "Use “remove” as the anchor: disheartened means made less hopeful or enthusiastic."
   },
   {
     "rank": 1000,

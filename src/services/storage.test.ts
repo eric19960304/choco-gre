@@ -13,15 +13,18 @@ describe('vocabularyStorage seed ranking', () => {
     expect(data.words.map((word) => word.priorityRank)).toEqual(
       Array.from({ length: 1_000 }, (_, index) => index + 1),
     )
-    expect(data.words.find((word) => word.word === 'antipathy')?.commonAffixes).toHaveLength(2)
+    expect(data.words.find((word) => word.word === 'antipathy')).toMatchObject({
+      commonAffixes: expect.any(Array),
+      affixMemoryHint: expect.stringContaining('antipathy means'),
+    })
   })
 
   it('migrates an existing seed word to the audited rank without losing progress', () => {
     const oldData: StoredVocabularyData = {
       version: 1,
-      seedRevision: 4,
+      seedRevision: 5,
       words: [makeWord({
-        word: 'capricious',
+        word: 'loquacious',
         tags: ['GRE 1000', 'Top 300', 'adjective'],
         correctCount: 7,
         reviewLevel: 4,
@@ -35,16 +38,17 @@ describe('vocabularyStorage seed ranking', () => {
     const migrated = vocabularyStorage.load()
 
     expect(migrated.words[0]).toMatchObject({
-      word: 'capricious',
-      priorityRank: 1,
+      word: 'loquacious',
+      priorityRank: 6,
       correctCount: 7,
       reviewLevel: 4,
     })
     expect(migrated.words[0].commonAffixes).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ type: 'suffix', form: '-ous' }),
+        expect.objectContaining({ type: 'root', form: 'loqu' }),
       ]),
     )
+    expect(migrated.words[0].affixMemoryHint).toContain('loquacious means')
     expect(migrated.words[0].tags).toContain('Top 100')
     expect(migrated.words[0].tags).not.toContain('Top 300')
   })

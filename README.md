@@ -76,9 +76,9 @@ The app is intentionally client-only and holds a small personal study dataset. l
 
 ## First-run data and persistence
 
-`src/data/seedVocabulary.json` contains the app-ready 1,000-word list with rank, part of speech, English definition, Traditional Chinese meaning, available example sentence, and a `commonAffixes` array. Each affix clue records whether it is a prefix or suffix, its displayed form, and its plain-English meaning. Words without a reliable, learner-useful clue have an empty array. The source dataset, including evidence signals used during ranking and an equivalent `common_affixes` field, is `gre_vocabulary_1000_zh_TW.json` in the project root.
+`src/data/seedVocabulary.json` contains the app-ready 1,000-word list with rank, part of speech, English definition, Traditional Chinese meaning, available example sentence, a `commonAffixes` array, and an optional `affixMemoryHint`. Despite the legacy field name, each retained item may be a meaning-bearing prefix, root, or suffix. The memory hint connects those parts to that specific word's definition. Words without an honest, learner-useful breakdown have an empty array and no hint. The source dataset, including evidence signals used during ranking and equivalent `common_affixes` and `affix_memory_hint` fields, is `gre_vocabulary_1000_zh_TW.json` in the project root.
 
-Run `npm run annotate:affixes` to validate both 1,000-word files and regenerate their affix annotations from the curated, offline rules in `scripts/annotate-vocabulary-affixes.mjs`. The current audit annotates 438 words with 500 useful clues. Alternative senses use semicolons for quick scanning. The generator rejects duplicate clues, malformed affix notation, overly long explanations, “or” separators, and a small denylist of unnecessarily uncommon wording. The annotation process does not call an external dictionary or web service.
+Run `npm run annotate:affixes` to validate both 1,000-word files and regenerate their word-part annotations from the curated, offline rules in `scripts/annotate-vocabulary-affixes.mjs`. The current audit examines all 1,000 entries and retains 305 meaning-linked parts for 216 words. Broad grammar-only endings such as `-ous`, `-al`, `-ive`, and `-tion` are deliberately excluded. Alternative senses use semicolons for quick scanning. The generator rejects duplicate clues, malformed notation, overly long explanations, and “or” separators, and it requires a word-specific memory link for every annotated word. The annotation process does not call an external dictionary or web service.
 
 On the first visit, the storage service:
 
@@ -86,7 +86,7 @@ On the first visit, the storage service:
 2. Adds IDs, timestamps, review counters, and useful starter tags.
 3. Saves the result under the versioned `lexilo:vocabulary:v1` localStorage key.
 
-Every later visit loads that saved snapshot instead of rebuilding the seed. Edits, review results, mastery state, imports, and deletions persist across refreshes. When bundled seed metadata is revised, the storage migration updates seed-word priority ranks, affix clues, and `Top 100`/`Top 300` tags while preserving the learner's review history and edits. Clearing site data in the browser resets the app to the bundled seed on the next launch.
+Every later visit loads that saved snapshot instead of rebuilding the seed. Edits, review results, mastery state, imports, and deletions persist across refreshes. When bundled seed metadata is revised, the storage migration updates seed-word priority ranks, meaning-linked word parts, memory hints, and `Top 100`/`Top 300` tags while preserving the learner's review history and edits. Clearing site data in the browser resets the app to the bundled seed on the next launch.
 
 The light/dark preference is stored separately under `lexilo:theme`.
 

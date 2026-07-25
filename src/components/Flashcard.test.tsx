@@ -4,12 +4,13 @@ import { makeWord } from '../test/fixtures'
 import { Flashcard } from './Flashcard'
 
 const word = makeWord({
-  word: 'fanciful',
+  word: 'loquacious',
   commonAffixes: [{
-    type: 'suffix',
-    form: '-ful',
-    meaning: 'full of; having',
+    type: 'root',
+    form: 'loqu',
+    meaning: 'speak; talk',
   }],
+  affixMemoryHint: 'Use “speak” as the anchor: loquacious means full of conversation.',
 })
 
 describe('Flashcard', () => {
@@ -18,20 +19,21 @@ describe('Flashcard', () => {
   it('shows affix clues after the answer is revealed', () => {
     render(<Flashcard word={word} revealed onReveal={vi.fn()} onRate={vi.fn()} />)
 
-    expect(screen.getByText('Common prefix and suffix')).toBeInTheDocument()
-    expect(screen.getByText('-ful')).toBeInTheDocument()
-    expect(screen.getByText('Meaning:').closest('p')).toHaveTextContent('Meaning: full of; having.')
+    expect(screen.getByText('Meaningful word parts')).toBeInTheDocument()
+    expect(screen.getByText('loqu')).toBeInTheDocument()
+    expect(screen.getByText('Meaning:').closest('p')).toHaveTextContent('Meaning: speak; talk.')
+    expect(screen.getByText('Memory link:').closest('p')).toHaveTextContent('loquacious means full of conversation.')
   })
 
   it('keeps affix clues hidden before reveal', () => {
     const onReveal = vi.fn()
     render(<Flashcard word={word} revealed={false} onReveal={onReveal} onRate={vi.fn()} />)
 
-    expect(screen.queryByText('Common prefix and suffix')).not.toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: 'fanciful' }).closest('button')).toBeNull()
-    expect(screen.getByRole('article', { name: 'Review card for fanciful' })).toHaveClass('select-text')
+    expect(screen.queryByText('Meaningful word parts')).not.toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'loquacious' }).closest('button')).toBeNull()
+    expect(screen.getByRole('article', { name: 'Review card for loquacious' })).toHaveClass('select-text')
 
-    fireEvent.click(screen.getByRole('button', { name: 'Reveal answer for fanciful' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Reveal answer for loquacious' }))
     expect(onReveal).toHaveBeenCalledOnce()
   })
 })

@@ -1,5 +1,5 @@
 export type CommonAffix = {
-  type: 'prefix' | 'suffix'
+  type: 'prefix' | 'root' | 'suffix'
   form: string
   meaning: string
 }
@@ -14,6 +14,7 @@ export type VocabularyWord = {
   tags: string[]
   priorityRank?: number
   commonAffixes?: CommonAffix[]
+  affixMemoryHint?: string
   createdAt: string
   updatedAt: string
   reviewLevel: number
@@ -38,6 +39,7 @@ export type SeedVocabularyWord = {
   chineseMeaning: string
   exampleSentence: string
   commonAffixes: CommonAffix[]
+  affixMemoryHint?: string
 }
 
 export type ReviewRating = 'again' | 'hard' | 'good' | 'easy'

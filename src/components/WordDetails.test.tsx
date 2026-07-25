@@ -13,7 +13,7 @@ const callbacks = {
 describe('WordDetails', () => {
   afterEach(cleanup)
 
-  it('shows learner-useful common prefix and suffix clues', () => {
+  it('shows meaning-linked word parts and a word-specific memory link', () => {
     render(
       <WordDetails
         word={makeWord({
@@ -22,29 +22,31 @@ describe('WordDetails', () => {
             {
               type: 'prefix',
               form: 'anti-',
-              meaning: 'against; opposite to',
+              meaning: 'against',
             },
             {
               type: 'suffix',
               form: '-pathy',
-              meaning: 'feeling; disease',
+              meaning: 'feeling',
             },
           ],
+          affixMemoryHint: 'Put “against” + “feeling” together: antipathy means intense dislike.',
         })}
         {...callbacks}
       />,
     )
 
-    const section = screen.getByText('Common prefix and suffix').closest('section')
+    const section = screen.getByText('Meaningful word parts').closest('section')
     expect(section).toHaveTextContent('anti-')
-    expect(section).toHaveTextContent('Meaning: against; opposite to.')
+    expect(section).toHaveTextContent('Meaning: against.')
     expect(section).toHaveTextContent('-pathy')
-    expect(section).toHaveTextContent('Meaning: feeling; disease.')
+    expect(section).toHaveTextContent('Meaning: feeling.')
+    expect(section).toHaveTextContent('Memory link: Put “against” + “feeling” together: antipathy means intense dislike.')
   })
 
   it('hides the section when a word has no reliable affix clue', () => {
     render(<WordDetails word={makeWord({ commonAffixes: [] })} {...callbacks} />)
 
-    expect(screen.queryByText('Common prefix and suffix')).not.toBeInTheDocument()
+    expect(screen.queryByText('Meaningful word parts')).not.toBeInTheDocument()
   })
 })

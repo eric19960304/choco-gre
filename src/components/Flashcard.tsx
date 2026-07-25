@@ -34,7 +34,7 @@ export function Flashcard({ word, revealed, onReveal, onRate }: {
             <div className="flex-1 space-y-5 pt-5">
               <section><p className="detail-label">Definition</p><p className="mt-1 text-base leading-relaxed text-ink dark:text-stone-100 sm:text-lg">{word.definition}</p></section>
               {word.chineseMeaning && <section><p className="detail-label">Traditional Chinese</p><p lang="zh-Hant" className="mt-1 text-base leading-relaxed text-ink dark:text-stone-100">{word.chineseMeaning}</p></section>}
-              <CommonAffixes affixes={word.commonAffixes} compact />
+              <CommonAffixes affixes={word.commonAffixes} memoryHint={word.affixMemoryHint} compact />
               {word.exampleSentence && <p className="border-l-3 border-accent pl-4 font-display italic leading-relaxed text-muted dark:text-stone-300">“{word.exampleSentence}”</p>}
               {word.notes && <p className="rounded-xl bg-amber-50 p-3 text-sm text-amber-900 dark:bg-amber-950/30 dark:text-amber-100">{word.notes}</p>}
             </div>
