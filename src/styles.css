@@ -253,6 +253,10 @@ select:focus-visible {
   font-weight: 400 !important;
 }
 
+.practice-page .practice-eyebrow {
+  font-weight: 700 !important;
+}
+
 .practice-intro {
   font-size: 1.05rem;
   line-height: 1.8;
