@@ -51,8 +51,8 @@ export function WordsPage() {
     <main className="page-container pb-28 md:pb-12">
       <div className="mb-6 flex min-w-0 items-end justify-between gap-4">
         <div className="min-w-0">
-          <p className="eyebrow"><Sparkles size={13} />High-frequency vocabulary for GRE</p>
-          <h1 className="page-title">Words worth knowing.</h1>
+          <p className="eyebrow"><Sparkles size={13} />Words worth knowing.</p>
+          <h1 className="page-title">High-frequency vocabulary for GRE</h1>
         </div>
         <div className="hidden items-center gap-2 sm:flex">
           <button type="button" className="button-primary gap-2 px-5" onClick={() => setMode('add')}><Plus size={18} />Add word</button>
