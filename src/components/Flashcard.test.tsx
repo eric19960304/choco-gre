@@ -27,7 +27,7 @@ describe('Flashcard', () => {
     expect(screen.getByRole('button', { name: 'Play pronunciation for the example sentence' })).toBeInTheDocument()
     expect(screen.getByText('What each rating means')).toBeInTheDocument()
     expect(screen.getByText('You forgot it. Review in 10 minutes and move down one level.')).toBeInTheDocument()
-    expect(screen.getByText('You recalled it immediately. Move up two levels and review much later.')).toBeInTheDocument()
+    expect(screen.getByText('You know it well. Mark it as mastered and remove it from future reviews.')).toBeInTheDocument()
   })
 
   it('keeps affix clues hidden before reveal', () => {
@@ -43,5 +43,14 @@ describe('Flashcard', () => {
 
     fireEvent.click(screen.getByRole('button', { name: 'Reveal answer for loquacious' }))
     expect(onReveal).toHaveBeenCalledOnce()
+  })
+
+  it('uses Master as the fourth rating', () => {
+    const onRate = vi.fn()
+    render(<Flashcard word={word} revealed onReveal={vi.fn()} onRate={onRate} />)
+
+    fireEvent.click(screen.getByRole('button', { name: /Master/ }))
+    expect(onRate).toHaveBeenCalledWith('master')
+    expect(screen.queryByRole('button', { name: /Easy/ })).not.toBeInTheDocument()
   })
 })

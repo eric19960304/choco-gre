@@ -49,10 +49,17 @@ describe('calculateReviewUpdate', () => {
     expect(result.correctCount).toBe(1)
   })
 
-  it('caps Easy at the final interval and marks the word mastered', () => {
-    const result = calculateReviewUpdate(makeWord({ reviewLevel: 6 }), 'easy', now)
-    expect(result.reviewLevel).toBe(7)
-    expect(result.nextReviewAt).toBe('2026-06-01T12:00:00.000Z')
+  it('marks Master immediately without changing review progress or counters', () => {
+    const result = calculateReviewUpdate(makeWord({
+      reviewLevel: 2,
+      nextReviewAt: '2026-02-03T12:00:00.000Z',
+      correctCount: 4,
+      incorrectCount: 2,
+    }), 'master', now)
+    expect(result.reviewLevel).toBe(2)
+    expect(result.nextReviewAt).toBe('2026-02-03T12:00:00.000Z')
+    expect(result.correctCount).toBe(4)
+    expect(result.incorrectCount).toBe(2)
     expect(result.isMastered).toBe(true)
   })
 })

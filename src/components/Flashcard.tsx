@@ -7,7 +7,7 @@ const ratings: { id: ReviewRating; label: string; hint: string; description: str
   { id: 'again', label: 'Again', hint: '10 min', description: 'You forgot it. Review in 10 minutes and move down one level.', style: 'border-red-200 bg-red-50 text-red-800 hover:bg-red-100 dark:border-red-900 dark:bg-red-950/35 dark:text-red-200' },
   { id: 'hard', label: 'Hard', hint: '1 day', description: 'You recalled it with difficulty. Review tomorrow and keep this level.', style: 'border-amber-200 bg-amber-50 text-amber-800 hover:bg-amber-100 dark:border-amber-900 dark:bg-amber-950/35 dark:text-amber-200' },
   { id: 'good', label: 'Good', hint: 'Next step', description: 'You remembered it. Move up one level to the next review interval.', style: 'border-blue-200 bg-blue-50 text-blue-800 hover:bg-blue-100 dark:border-blue-900 dark:bg-blue-950/35 dark:text-blue-200' },
-  { id: 'easy', label: 'Easy', hint: '+2 levels', description: 'You recalled it immediately. Move up two levels and review much later.', style: 'border-emerald-200 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 dark:border-emerald-900 dark:bg-emerald-950/35 dark:text-emerald-200' },
+  { id: 'master', label: 'Master', hint: 'Remove', description: 'You know it well. Mark it as mastered and remove it from future reviews.', style: 'border-emerald-200 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 dark:border-emerald-900 dark:bg-emerald-950/35 dark:text-emerald-200' },
 ]
 
 export function Flashcard({ word, revealed, onReveal, onRate }: {

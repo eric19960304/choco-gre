@@ -6,7 +6,7 @@ import { useVocabulary } from '../hooks/useVocabulary'
 import type { ReviewRating, VocabularyWord } from '../types/vocabulary'
 import { isWordDue, isWordReviewEligible, shuffleWords } from '../utils/review'
 
-type SessionStats = { correct: number; incorrect: number; hard: number }
+type SessionStats = { correct: number; incorrect: number; hard: number; mastered: number }
 
 export function ReviewPage({ onGoToWords }: { onGoToWords: () => void }) {
   const { words, reviewWord } = useVocabulary()
@@ -15,14 +15,14 @@ export function ReviewPage({ onGoToWords }: { onGoToWords: () => void }) {
   const [queue, setQueue] = useState<VocabularyWord[] | null>(null)
   const [index, setIndex] = useState(0)
   const [revealed, setRevealed] = useState(false)
-  const [stats, setStats] = useState<SessionStats>({ correct: 0, incorrect: 0, hard: 0 })
+  const [stats, setStats] = useState<SessionStats>({ correct: 0, incorrect: 0, hard: 0, mastered: 0 })
   const [completed, setCompleted] = useState(false)
 
   const startSession = () => {
     setQueue(shuffleWords(dueWords))
     setIndex(0)
     setRevealed(false)
-    setStats({ correct: 0, incorrect: 0, hard: 0 })
+    setStats({ correct: 0, incorrect: 0, hard: 0, mastered: 0 })
     setCompleted(false)
   }
 
@@ -31,9 +31,10 @@ export function ReviewPage({ onGoToWords }: { onGoToWords: () => void }) {
     const current = queue[index]
     reviewWord(current.id, rating)
     setStats((value) => ({
-      correct: value.correct + Number(rating === 'good' || rating === 'easy'),
+      correct: value.correct + Number(rating === 'good'),
       incorrect: value.incorrect + Number(rating === 'again'),
       hard: value.hard + Number(rating === 'hard'),
+      mastered: value.mastered + Number(rating === 'master'),
     }))
     if (index + 1 >= queue.length) setCompleted(true)
     else { setIndex((value) => value + 1); setRevealed(false) }
@@ -48,7 +49,7 @@ export function ReviewPage({ onGoToWords }: { onGoToWords: () => void }) {
       }
       if (revealed && ['Digit1', 'Digit2', 'Digit3', 'Digit4'].includes(event.code)) {
         event.preventDefault()
-        const rating = ({ Digit1: 'again', Digit2: 'hard', Digit3: 'good', Digit4: 'easy' } as const)[event.code as 'Digit1' | 'Digit2' | 'Digit3' | 'Digit4']
+        const rating = ({ Digit1: 'again', Digit2: 'hard', Digit3: 'good', Digit4: 'master' } as const)[event.code as 'Digit1' | 'Digit2' | 'Digit3' | 'Digit4']
         rate(rating)
       }
     }
@@ -82,10 +83,11 @@ export function ReviewPage({ onGoToWords }: { onGoToWords: () => void }) {
           <p className="eyebrow mt-6 justify-center">Session complete</p>
           <h1 className="mt-2 font-display text-4xl font-black text-ink dark:text-white">Excellent work.</h1>
           <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted dark:text-stone-400">You reviewed {total} {total === 1 ? 'word' : 'words'}. Every pass makes recall a little faster.</p>
-          <div className="mt-8 grid grid-cols-3 gap-2">
+          <div className="mt-8 grid grid-cols-4 gap-2">
             <div className="summary-stat"><strong className="text-emerald-600 dark:text-emerald-400">{stats.correct}</strong><span>Correct</span></div>
             <div className="summary-stat"><strong className="text-amber-600 dark:text-amber-400">{stats.hard}</strong><span>Hard</span></div>
             <div className="summary-stat"><strong className="text-red-600 dark:text-red-400">{stats.incorrect}</strong><span>Again</span></div>
+            <div className="summary-stat"><strong className="text-accent-deep dark:text-accent-light">{stats.mastered}</strong><span>Mastered</span></div>
           </div>
           <div className="mt-8 grid gap-3 sm:grid-cols-2"><button type="button" className="button-secondary gap-2" onClick={() => setQueue(null)}><Trophy size={17} />Finish</button><button type="button" className="button-primary gap-2" onClick={startSession}><RotateCcw size={17} />Review due cards</button></div>
         </section>
@@ -100,7 +102,7 @@ export function ReviewPage({ onGoToWords }: { onGoToWords: () => void }) {
       <div className="mx-auto max-w-2xl">
         <div className="mb-5 flex items-end justify-between gap-4">
           <div><p className="text-xs font-bold uppercase tracking-wider text-muted">Card {index + 1} of {queue.length}</p><div className="mt-2 h-2 w-44 overflow-hidden rounded-full bg-ink/8 dark:bg-white/10" role="progressbar" aria-valuenow={Math.round(progress)} aria-valuemin={0} aria-valuemax={100}><div className="h-full rounded-full bg-accent transition-all" style={{ width: `${progress}%` }} /></div></div>
-          <div className="flex gap-4 text-right"><div><p className="text-lg font-black text-emerald-600 dark:text-emerald-400">{stats.correct}</p><p className="text-[9px] font-bold uppercase tracking-wider text-muted">Correct</p></div><div><p className="text-lg font-black text-red-600 dark:text-red-400">{stats.incorrect}</p><p className="text-[9px] font-bold uppercase tracking-wider text-muted">Again</p></div></div>
+          <div className="flex gap-4 text-right"><div><p className="text-lg font-black text-emerald-600 dark:text-emerald-400">{stats.correct}</p><p className="text-[9px] font-bold uppercase tracking-wider text-muted">Correct</p></div><div><p className="text-lg font-black text-accent-deep dark:text-accent-light">{stats.mastered}</p><p className="text-[9px] font-bold uppercase tracking-wider text-muted">Mastered</p></div><div><p className="text-lg font-black text-red-600 dark:text-red-400">{stats.incorrect}</p><p className="text-[9px] font-bold uppercase tracking-wider text-muted">Again</p></div></div>
         </div>
         <Flashcard word={current} revealed={revealed} onReveal={() => setRevealed(true)} onRate={rate} />
         {!revealed && <p className="mt-4 text-center text-xs text-muted">Press <kbd className="rounded border border-ink/15 px-1.5 py-0.5 dark:border-white/15">Space</kbd> or select Reveal answer</p>}

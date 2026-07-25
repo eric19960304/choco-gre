@@ -42,14 +42,14 @@ export type SeedVocabularyWord = {
   affixMemoryHint?: string
 }
 
-export type ReviewRating = 'again' | 'hard' | 'good' | 'easy'
+export type ReviewRating = 'again' | 'hard' | 'good' | 'master'
 export type WordStatus = 'all' | 'due' | 'new' | 'learning' | 'mastered'
 export type SortOption = 'priority' | 'alphabetical' | 'recent' | 'nextReview' | 'incorrect'
 
 export type ReviewEvent = {
   id: string
   wordId: string
-  rating: ReviewRating
+  rating: ReviewRating | 'easy'
   reviewedAt: string
 }
 

@@ -29,21 +29,24 @@ export function calculateReviewUpdate(
   now = new Date(),
 ): VocabularyWord {
   let reviewLevel = word.reviewLevel
-  let nextReviewAt = new Date(now)
+  let nextReviewAt = new Date(word.nextReviewAt)
   let correctCount = word.correctCount
   let incorrectCount = word.incorrectCount
+  let isMastered = word.isMastered
 
-  if (rating === 'again') {
+  if (rating === 'master') {
+    isMastered = true
+  } else if (rating === 'again') {
     reviewLevel = Math.max(reviewLevel - 1, 0)
+    nextReviewAt = new Date(now)
     nextReviewAt.setMinutes(nextReviewAt.getMinutes() + 10)
     incorrectCount += 1
   } else if (rating === 'hard') {
+    nextReviewAt = new Date(now)
     nextReviewAt.setDate(nextReviewAt.getDate() + 1)
   } else {
-    reviewLevel = Math.min(
-      reviewLevel + (rating === 'easy' ? 2 : 1),
-      MAX_REVIEW_LEVEL,
-    )
+    reviewLevel = Math.min(reviewLevel + 1, MAX_REVIEW_LEVEL)
+    nextReviewAt = new Date(now)
     nextReviewAt.setDate(nextReviewAt.getDate() + REVIEW_INTERVALS_IN_DAYS[reviewLevel])
     correctCount += 1
   }
@@ -56,7 +59,7 @@ export function calculateReviewUpdate(
     updatedAt: now.toISOString(),
     correctCount,
     incorrectCount,
-    isMastered: reviewLevel === MAX_REVIEW_LEVEL,
+    isMastered: isMastered || reviewLevel === MAX_REVIEW_LEVEL,
   }
 }
 

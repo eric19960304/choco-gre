@@ -151,9 +151,9 @@ Opening a word from the Words page marks it as viewed and adds it to the learner
 | Again | Decrease by 1, minimum 0 | 10 minutes | Incorrect +1 |
 | Hard | No change | 1 day | No graded counter change |
 | Good | Increase by 1 | Interval for the new level | Correct +1 |
-| Easy | Increase by 2 | Interval for the new level | Correct +1 |
+| Master | No change | Removed from future review sessions | No graded counter change |
 
-Good and Easy use these level intervals in days:
+Good uses these level intervals in days:
 
 ```text
 [0, 1, 3, 7, 14, 30, 60, 120]
