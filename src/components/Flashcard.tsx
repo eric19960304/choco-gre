@@ -3,11 +3,11 @@ import type { ReviewRating, VocabularyWord } from '../types/vocabulary'
 import { CommonAffixes } from './CommonAffixes'
 import { PronunciationButton } from './PronunciationButton'
 
-const ratings: { id: ReviewRating; label: string; hint: string; style: string }[] = [
-  { id: 'again', label: 'Again', hint: '10 min', style: 'border-red-200 bg-red-50 text-red-800 hover:bg-red-100 dark:border-red-900 dark:bg-red-950/35 dark:text-red-200' },
-  { id: 'hard', label: 'Hard', hint: '1 day', style: 'border-amber-200 bg-amber-50 text-amber-800 hover:bg-amber-100 dark:border-amber-900 dark:bg-amber-950/35 dark:text-amber-200' },
-  { id: 'good', label: 'Good', hint: 'Next step', style: 'border-blue-200 bg-blue-50 text-blue-800 hover:bg-blue-100 dark:border-blue-900 dark:bg-blue-950/35 dark:text-blue-200' },
-  { id: 'easy', label: 'Easy', hint: '+2 levels', style: 'border-emerald-200 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 dark:border-emerald-900 dark:bg-emerald-950/35 dark:text-emerald-200' },
+const ratings: { id: ReviewRating; label: string; hint: string; description: string; style: string }[] = [
+  { id: 'again', label: 'Again', hint: '10 min', description: 'You forgot it. Review in 10 minutes and move down one level.', style: 'border-red-200 bg-red-50 text-red-800 hover:bg-red-100 dark:border-red-900 dark:bg-red-950/35 dark:text-red-200' },
+  { id: 'hard', label: 'Hard', hint: '1 day', description: 'You recalled it with difficulty. Review tomorrow and keep this level.', style: 'border-amber-200 bg-amber-50 text-amber-800 hover:bg-amber-100 dark:border-amber-900 dark:bg-amber-950/35 dark:text-amber-200' },
+  { id: 'good', label: 'Good', hint: 'Next step', description: 'You remembered it. Move up one level to the next review interval.', style: 'border-blue-200 bg-blue-50 text-blue-800 hover:bg-blue-100 dark:border-blue-900 dark:bg-blue-950/35 dark:text-blue-200' },
+  { id: 'easy', label: 'Easy', hint: '+2 levels', description: 'You recalled it immediately. Move up two levels and review much later.', style: 'border-emerald-200 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 dark:border-emerald-900 dark:bg-emerald-950/35 dark:text-emerald-200' },
 ]
 
 export function Flashcard({ word, revealed, onReveal, onRate }: {
@@ -49,7 +49,24 @@ export function Flashcard({ word, revealed, onReveal, onRate }: {
           </div>
         )}
       </article>
-      {revealed && <div className="animate-slide-up mt-4 grid grid-cols-4 gap-2 sm:gap-3" aria-label="Rate your recall">{ratings.map((rating) => <button key={rating.id} type="button" onClick={() => onRate(rating.id)} className={`flex min-h-16 flex-col items-center justify-center rounded-2xl border px-1 text-sm font-black transition active:scale-95 ${rating.style}`}><span>{rating.label}</span><span className="mt-0.5 text-[9px] font-semibold opacity-70 sm:text-[10px]">{rating.hint}</span></button>)}</div>}
+      {revealed && (
+        <div className="animate-slide-up">
+          <div className="mt-4 grid grid-cols-4 gap-2 sm:gap-3" aria-label="Rate your recall">
+            {ratings.map((rating) => <button key={rating.id} type="button" onClick={() => onRate(rating.id)} className={`flex min-h-16 flex-col items-center justify-center rounded-2xl border px-1 text-sm font-black transition active:scale-95 ${rating.style}`}><span>{rating.label}</span><span className="mt-0.5 text-[9px] font-semibold opacity-70 sm:text-[10px]">{rating.hint}</span></button>)}
+          </div>
+          <section className="mt-3 rounded-2xl border border-ink/8 bg-white/55 p-4 dark:border-white/8 dark:bg-white/[.035]" aria-labelledby="rating-guide-title">
+            <p id="rating-guide-title" className="detail-label">What each rating means</p>
+            <dl className="mt-3 grid gap-x-5 gap-y-3 sm:grid-cols-2">
+              {ratings.map((rating) => (
+                <div key={rating.id} className="grid grid-cols-[3.25rem_1fr] gap-2">
+                  <dt className="text-xs font-bold text-ink dark:text-stone-100">{rating.label}</dt>
+                  <dd className="text-xs leading-relaxed text-muted dark:text-stone-300">{rating.description}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        </div>
+      )}
     </div>
   )
 }
