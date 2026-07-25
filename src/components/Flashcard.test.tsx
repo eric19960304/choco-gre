@@ -23,6 +23,8 @@ describe('Flashcard', () => {
     expect(screen.getByText('loqu')).toBeInTheDocument()
     expect(screen.getByText('Meaning:').closest('p')).toHaveTextContent('Meaning: speak; talk.')
     expect(screen.getByText('Memory link:').closest('p')).toHaveTextContent('loquacious means full of conversation.')
+    expect(screen.getByRole('button', { name: 'Play pronunciation for the word loquacious' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Play pronunciation for the example sentence' })).toBeInTheDocument()
   })
 
   it('keeps affix clues hidden before reveal', () => {
@@ -30,6 +32,8 @@ describe('Flashcard', () => {
     render(<Flashcard word={word} revealed={false} onReveal={onReveal} onRate={vi.fn()} />)
 
     expect(screen.queryByText('Meaningful word parts')).not.toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Play pronunciation for the example sentence' })).not.toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Play pronunciation for the word loquacious' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'loquacious' }).closest('button')).toBeNull()
     expect(screen.getByRole('article', { name: 'Review card for loquacious' })).toHaveClass('select-text')
 

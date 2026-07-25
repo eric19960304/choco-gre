@@ -42,6 +42,8 @@ describe('WordDetails', () => {
     expect(section).toHaveTextContent('-pathy')
     expect(section).toHaveTextContent('Meaning: feeling.')
     expect(section).toHaveTextContent('Memory link: Put “against” + “feeling” together: antipathy means intense dislike.')
+    expect(screen.getByRole('button', { name: 'Play pronunciation for the word antipathy' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Play pronunciation for the example sentence' })).toBeInTheDocument()
   })
 
   it('hides the section when a word has no reliable affix clue', () => {

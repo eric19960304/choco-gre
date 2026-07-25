@@ -53,6 +53,7 @@ Vite preview uses **http://localhost:4173** by default.
 - **Tailwind CSS:** mobile-first layout and a custom warm editorial design system. Tailwind is connected with the official Vite plugin.
 - **React Context + custom hooks:** a vocabulary context owns learning state, while a focused practice-history hook records Verbal Reasoning attempts. No external state-management library is needed for this dataset size.
 - **localStorage:** dedicated service modules handle vocabulary data and practice history. Components do not access persistence directly.
+- **Web Speech API:** word and example-sentence pronunciation uses Chrome's built-in `speechSynthesis` engine. The app prefers a Google US English voice when Chrome exposes one, falls back to another English voice, and does not download or store audio files.
 - **Vitest:** tests vocabulary scheduling and validation as well as all question-bank structures, GRE answer rules, history persistence, and the end-to-end submit/reveal flow.
 
 The main source layout is:

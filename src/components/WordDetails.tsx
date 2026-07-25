@@ -3,6 +3,7 @@ import type { VocabularyWord } from '../types/vocabulary'
 import { formatReviewDate } from '../utils/date'
 import { CommonAffixes } from './CommonAffixes'
 import { Modal } from './Modal'
+import { PronunciationButton } from './PronunciationButton'
 
 export function WordDetails({ word, onClose, onEdit, onDelete, onToggleMastered }: {
   word: VocabularyWord
@@ -14,12 +15,17 @@ export function WordDetails({ word, onClose, onEdit, onDelete, onToggleMastered 
   const attempts = word.correctCount + word.incorrectCount
   const accuracy = attempts ? Math.round((word.correctCount / attempts) * 100) : 0
   return (
-    <Modal title={word.word} description={`${word.priorityRank ? `Study priority #${word.priorityRank} · ` : ''}${word.isMastered ? 'Mastered word' : `Review level ${word.reviewLevel} of 7`}`} onClose={onClose}>
+    <Modal
+      title={word.word}
+      titleAction={<PronunciationButton text={word.word} label={`the word ${word.word}`} rate={0.78} />}
+      description={`${word.priorityRank ? `Study priority #${word.priorityRank} · ` : ''}${word.isMastered ? 'Mastered word' : `Review level ${word.reviewLevel} of 7`}`}
+      onClose={onClose}
+    >
       <div className="space-y-6 p-5 md:p-7">
         {word.chineseMeaning && <section><p className="detail-label">Chinese meaning</p><p lang="zh-Hant" className="mt-1 text-lg leading-relaxed text-ink dark:text-white">{word.chineseMeaning}</p></section>}
         <section><p className="detail-label">Definition</p><p className="mt-1 leading-relaxed text-ink dark:text-stone-100">{word.definition}</p></section>
         <CommonAffixes affixes={word.commonAffixes} memoryHint={word.affixMemoryHint} />
-        {word.exampleSentence && <section className="rounded-2xl border-l-4 border-accent bg-accent/7 p-4"><p className="detail-label">In context</p><p className="mt-1 font-display text-lg italic leading-relaxed text-ink dark:text-stone-100">“{word.exampleSentence}”</p></section>}
+        {word.exampleSentence && <section className="rounded-2xl border-l-4 border-accent bg-accent/7 p-4"><div className="flex items-center justify-between gap-3"><p className="detail-label">In context</p><PronunciationButton text={word.exampleSentence} label="the example sentence" rate={0.9} /></div><p className="mt-2 font-display text-lg italic leading-relaxed text-ink dark:text-stone-100">“{word.exampleSentence}”</p></section>}
         {word.notes && <section><p className="detail-label">Notes</p><p className="mt-1 whitespace-pre-wrap leading-relaxed text-ink dark:text-stone-100">{word.notes}</p></section>}
         <div className="flex flex-wrap gap-2">{word.tags.map((tag) => <span key={tag} className="tag-pill">{tag}</span>)}</div>
         <section className="grid grid-cols-3 gap-2 rounded-2xl bg-ink/[.035] p-4 text-center dark:bg-white/[.05]">
