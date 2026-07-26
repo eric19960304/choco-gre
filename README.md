@@ -1,6 +1,6 @@
 # Choco GRE — Vocabulary & Verbal Practice
 
-Choco GRE is a mobile-first, browser-based GRE preparation tool. It ships with a prepared list of 1,000 GRE words ranked by study priority and 100 original Verbal Reasoning practice questions. It stores learning progress locally, schedules vocabulary reviews, records question attempts, and works without a backend or account.
+Choco GRE is a mobile-first, browser-based GRE preparation tool. It ships with a prepared list of 1,000 GRE words ranked by study priority and 100 original Verbal Reasoning practice questions. It schedules vocabulary reviews, records question attempts, and uses Firebase Authentication plus Cloud Firestore to synchronize vocabulary progress for signed-in users. Anonymous use still works without an account.
 
 ## Run it locally
 
@@ -52,8 +52,8 @@ Vite preview uses **http://localhost:4173** by default.
 - **Vite:** development server, module bundling, and production builds.
 - **Tailwind CSS:** mobile-first layout and a custom warm editorial design system. Tailwind is connected with the official Vite plugin.
 - **React Context + custom hooks:** a vocabulary context owns learning state, while a focused practice-history hook records Verbal Reasoning attempts. No external state-management library is needed for this dataset size.
-- **localStorage:** dedicated service modules handle vocabulary data and practice history. Components do not access persistence directly.
-- **Firebase Authentication:** optional Google sign-in runs through the Firebase browser SDK and persists the authenticated session without a custom application server. Learning data remains device-local until cloud synchronization is added.
+- **localStorage:** keeps an immediate offline cache and anonymous progress. Each Firebase user gets a separate local cache so accounts cannot accidentally inherit another account's state on a shared browser.
+- **Firebase Authentication + Cloud Firestore:** Google sign-in identifies the learner. Firestore stores only per-word learning fields and review events under that user's UID; the bundled definitions and sentences are not uploaded.
 - **Web Speech API:** word and example-sentence pronunciation uses Chrome's built-in `speechSynthesis` engine. The app prefers a Google US English voice when Chrome exposes one, falls back to another English voice, and does not download or store audio files.
 - **Vitest:** tests vocabulary scheduling and validation as well as all question-bank structures, GRE answer rules, history persistence, and the end-to-end submit/reveal flow.
 
@@ -66,15 +66,15 @@ src/
   data/           Bundled vocabulary and Verbal Reasoning datasets
   hooks/          Vocabulary, practice-history, and theme state
   pages/          Words, Review, Practice, and Progress screens
-  services/       Device-local persistence and import/export boundaries
+  services/       Device cache, Firestore synchronization, and import/export boundaries
   test/           Shared test setup and fixtures
   types/          Vocabulary and review TypeScript models
   utils/          Pure date, filtering, validation, ID, and scheduling functions
 ```
 
-### Why localStorage instead of SQLite?
+### Why localStorage and Firestore instead of SQLite?
 
-The app is intentionally client-only and holds a small personal study dataset. localStorage keeps startup immediate after the first load, needs no database server, and satisfies offline personal use. History is tied to the current browser and device rather than an account. All storage access is isolated, so persistence can be replaced later if multi-device synchronization is required.
+The static GitHub Pages app cannot run a server-side SQLite database. localStorage keeps startup immediate and preserves changes when the browser is temporarily offline. For a signed-in user, Cloud Firestore is the account-level source shared by devices. The app merges newer per-word progress, uploads existing local progress on first sign-in, and keeps signed-out data local to that browser.
 
 ## First-run data and persistence
 
@@ -88,7 +88,7 @@ On the first visit, the storage service:
 2. Adds IDs, timestamps, review counters, and useful starter tags.
 3. Saves the result under the versioned `lexilo:vocabulary:v1` localStorage key.
 
-Every later visit loads that saved snapshot instead of rebuilding the seed. Edits, review results, mastery state, imports, and deletions persist across refreshes. When bundled seed metadata is revised, the storage migration updates seed-word priority ranks, meaning-linked word parts, memory hints, and `Top 100`/`Top 300` tags while preserving the learner's review history and edits. Clearing site data in the browser resets the app to the bundled seed on the next launch.
+Every later visit loads that saved snapshot instead of rebuilding the seed. Edits, review results, mastery state, imports, and deletions persist across refreshes. When a Google user signs in, viewed state, review scheduling, mastery, correct/incorrect counters, and review history synchronize through Firestore. Each device retains a user-scoped local cache for fast startup and offline fallback. When bundled seed metadata is revised, the storage migration updates seed-word priority ranks, meaning-linked word parts, memory hints, and `Top 100`/`Top 300` tags while preserving the learner's review history and edits.
 
 The light/dark preference is stored separately under `lexilo:theme`.
 
@@ -141,7 +141,7 @@ On the Practice page, the user can:
 5. Retry a question or move between questions.
 6. Open History to review every saved attempt and its original response.
 
-Attempts are stored under `lexilo:practice:v1`. Each history record contains the question ID, selected response, correctness, and answer time. History survives refreshes on the same browser and device. Clearing site data removes it.
+Attempts are stored under `lexilo:practice:v1`. Each history record contains the question ID, selected response, correctness, and answer time. Practice-question history remains device-local; the current Firestore sync is intentionally limited to vocabulary progress and vocabulary review history.
 
 ## Spaced-repetition behavior
 
@@ -200,15 +200,35 @@ In the GitHub repository:
 3. Under **Build and deployment**, select **Deploy from a branch**.
 4. Choose the `main` branch and `/docs` folder, then save.
 
-GitHub Pages will publish the contents of `docs/`. No custom server, database, or API routes are required. Firebase Authentication is initialized from its public web configuration; vocabulary progress and question history remain stored in each visitor's browser.
+GitHub Pages will publish the contents of `docs/`. No custom application server or API routes are required. The static client communicates directly with Firebase Authentication and Cloud Firestore, with Firestore Security Rules restricting each learner to documents under their own Firebase UID.
 
-### Firebase Google sign-in setup
+### Firebase Google sign-in and progress-sync setup
 
-The Firebase web SDK and the `choco-gre` Firebase app configuration are bundled into the static build. Before Google sign-in works in production:
+The Firebase web SDK and the `choco-gre` Firebase app configuration are bundled into the static build. Configure the project as follows:
 
 1. Open **Firebase Console → Authentication → Sign-in method** and enable **Google**.
 2. Open **Authentication → Settings → Authorized domains** and add `eric19960304.github.io`.
 3. Keep `localhost` authorized if local sign-in testing is required.
+4. Open **Build → Firestore Database**, choose **Create database**, select the **Standard** edition and **Production mode**, and choose the database location carefully. The location cannot be changed later.
+5. In **Firestore Database → Rules**, replace the default deny-all rules with the contents of `firestore.rules`, then click **Publish**.
+
+The checked-in rules allow reads and writes only when `request.auth.uid` matches the UID segment in `/users/{uid}/...`. They also validate the fields and bounds accepted by word-progress and review-history documents. Do not use Firestore test mode for the deployed site.
+
+Firestore creates these paths automatically on the first successful sync:
+
+```text
+users/{uid}/wordProgress/{wordKey}
+users/{uid}/reviewHistory/{reviewEventId}
+```
+
+The same rules can be deployed from the repository with the Firebase CLI:
+
+```bash
+npx firebase-tools login
+npx firebase-tools deploy --only firestore:rules
+```
+
+The `.firebaserc` file targets the `choco-gre` Firebase project, and `firebase.json` points the CLI at `firestore.rules`.
 
 The header uses Firebase's popup flow, which avoids redirect-helper complications on GitHub Pages. The Firebase web configuration is public by design; never commit a Firebase service-account key or another private server credential.
 

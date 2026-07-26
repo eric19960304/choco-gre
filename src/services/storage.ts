@@ -6,6 +6,10 @@ import { validateVocabularyImport } from '../utils/importValidation'
 const STORAGE_KEY = 'lexilo:vocabulary:v1'
 const SEED_REVISION = 6
 
+function storageKey(userId?: string | null): string {
+  return userId ? `${STORAGE_KEY}:user:${userId}` : STORAGE_KEY
+}
+
 const seedByWord = new Map(
   (seedVocabulary as SeedVocabularyWord[]).map((seed) => [seed.word.toLocaleLowerCase(), seed]),
 )
@@ -39,8 +43,12 @@ function createSeedData(now = new Date()): StoredVocabularyData {
 }
 
 export const vocabularyStorage = {
-  load(): StoredVocabularyData {
-    const stored = localStorage.getItem(STORAGE_KEY)
+  has(userId?: string | null): boolean {
+    return localStorage.getItem(storageKey(userId)) !== null
+  },
+
+  load(userId?: string | null): StoredVocabularyData {
+    const stored = localStorage.getItem(storageKey(userId))
     if (stored) {
       try {
         const parsed = JSON.parse(stored) as StoredVocabularyData
@@ -64,7 +72,7 @@ export const vocabularyStorage = {
                 }
               }),
             }
-            this.save(migrated)
+            this.save(migrated, userId)
             return migrated
           }
           return parsed
@@ -74,12 +82,12 @@ export const vocabularyStorage = {
       }
     }
     const seeded = createSeedData()
-    this.save(seeded)
+    this.save(seeded, userId)
     return seeded
   },
 
-  save(data: StoredVocabularyData): void {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
+  save(data: StoredVocabularyData, userId?: string | null): void {
+    localStorage.setItem(storageKey(userId), JSON.stringify(data))
   },
 
   parseImport(text: string) {

@@ -1,0 +1,105 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOwner(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+
+    function validWordProgress() {
+      let data = request.resource.data;
+      return data.keys().hasAll([
+          'wordKey',
+          'word',
+          'reviewLevel',
+          'nextReviewAt',
+          'viewedAt',
+          'lastReviewedAt',
+          'correctCount',
+          'incorrectCount',
+          'isMastered',
+          'updatedAt',
+          'serverUpdatedAt'
+        ])
+        && data.keys().hasOnly([
+          'wordKey',
+          'word',
+          'reviewLevel',
+          'nextReviewAt',
+          'viewedAt',
+          'lastReviewedAt',
+          'correctCount',
+          'incorrectCount',
+          'isMastered',
+          'updatedAt',
+          'serverUpdatedAt'
+        ])
+        && data.wordKey is string
+        && data.wordKey.size() > 0
+        && data.wordKey.size() <= 200
+        && data.word is string
+        && data.word.size() > 0
+        && data.word.size() <= 200
+        && data.reviewLevel is int
+        && data.reviewLevel >= 0
+        && data.reviewLevel <= 7
+        && data.nextReviewAt is string
+        && data.nextReviewAt.size() <= 40
+        && (data.viewedAt == null || (data.viewedAt is string && data.viewedAt.size() <= 40))
+        && (data.lastReviewedAt == null || (data.lastReviewedAt is string && data.lastReviewedAt.size() <= 40))
+        && data.correctCount is int
+        && data.correctCount >= 0
+        && data.incorrectCount is int
+        && data.incorrectCount >= 0
+        && data.isMastered is bool
+        && data.updatedAt is string
+        && data.updatedAt.size() <= 40
+        && data.serverUpdatedAt is timestamp;
+    }
+
+    function validReviewEvent(reviewId) {
+      let data = request.resource.data;
+      return data.keys().hasAll([
+          'id',
+          'wordKey',
+          'rating',
+          'reviewedAt',
+          'serverCreatedAt'
+        ])
+        && data.keys().hasOnly([
+          'id',
+          'wordKey',
+          'rating',
+          'reviewedAt',
+          'serverCreatedAt'
+        ])
+        && data.id == reviewId
+        && data.id is string
+        && data.id.size() > 0
+        && data.id.size() <= 200
+        && data.wordKey is string
+        && data.wordKey.size() > 0
+        && data.wordKey.size() <= 200
+        && data.rating in ['again', 'hard', 'good', 'master', 'easy']
+        && data.reviewedAt is string
+        && data.reviewedAt.size() <= 40
+        && data.serverCreatedAt is timestamp;
+    }
+
+    match /users/{userId}/wordProgress/{wordKey} {
+      allow read: if isOwner(userId);
+      allow create, update: if isOwner(userId) && validWordProgress();
+      allow delete: if isOwner(userId);
+    }
+
+    match /users/{userId}/reviewHistory/{reviewId} {
+      allow read: if isOwner(userId);
+      allow create, update: if isOwner(userId) && validReviewEvent(reviewId);
+      allow delete: if isOwner(userId);
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

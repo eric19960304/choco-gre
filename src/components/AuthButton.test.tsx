@@ -20,6 +20,10 @@ vi.mock('../hooks/useAuth', () => ({
   useAuth: () => mocks.auth,
 }))
 
+vi.mock('../hooks/useVocabulary', () => ({
+  useVocabulary: () => ({ syncStatus: 'synced' }),
+}))
+
 vi.mock('./Toast', () => ({
   useToast: () => ({ showToast: mocks.showToast }),
 }))
@@ -46,7 +50,7 @@ describe('AuthButton', () => {
 
     await waitFor(() => expect(mocks.auth.signInWithGoogle).toHaveBeenCalledOnce())
     expect(mocks.showToast).toHaveBeenCalledWith(
-      'Signed in as Eric. Progress remains on this device.',
+      'Signed in as Eric. Vocabulary progress will sync across your devices.',
     )
   })
 

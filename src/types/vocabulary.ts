@@ -49,6 +49,7 @@ export type SortOption = 'priority' | 'alphabetical' | 'recent' | 'nextReview' |
 export type ReviewEvent = {
   id: string
   wordId: string
+  wordKey?: string
   rating: ReviewRating | 'easy'
   reviewedAt: string
 }
@@ -66,3 +67,5 @@ export type WordFilters = {
   status: WordStatus
   sort: SortOption
 }
+
+export type SyncStatus = 'local' | 'connecting' | 'synced' | 'error'

@@ -52,4 +52,16 @@ describe('vocabularyStorage seed ranking', () => {
     expect(migrated.words[0].tags).toContain('Top 100')
     expect(migrated.words[0].tags).not.toContain('Top 300')
   })
+
+  it('keeps signed-in account caches separate from anonymous progress', () => {
+    const anonymous = vocabularyStorage.load()
+    anonymous.words[0].reviewLevel = 2
+    vocabularyStorage.save(anonymous)
+
+    const account = vocabularyStorage.load('firebase-user-1')
+
+    expect(account.words[0].reviewLevel).toBe(0)
+    expect(vocabularyStorage.has('firebase-user-1')).toBe(true)
+    expect(vocabularyStorage.load().words[0].reviewLevel).toBe(2)
+  })
 })

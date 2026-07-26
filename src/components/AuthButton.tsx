@@ -2,6 +2,7 @@ import { FirebaseError } from 'firebase/app'
 import { LoaderCircle, LogIn, LogOut } from 'lucide-react'
 import { useState } from 'react'
 import { useAuth } from '../hooks/useAuth'
+import { useVocabulary } from '../hooks/useVocabulary'
 import { useToast } from './Toast'
 
 function authErrorMessage(error: unknown) {
@@ -18,6 +19,7 @@ function authErrorMessage(error: unknown) {
 
 export function AuthButton() {
   const { user, loading, signInWithGoogle, signOut } = useAuth()
+  const { syncStatus } = useVocabulary()
   const { showToast } = useToast()
   const [busy, setBusy] = useState(false)
 
@@ -30,7 +32,7 @@ export function AuthButton() {
         showToast('Signed out.', 'info')
       } else {
         const signedInUser = await signInWithGoogle()
-        showToast(`Signed in as ${signedInUser.displayName || signedInUser.email || 'Google user'}. Progress remains on this device.`)
+        showToast(`Signed in as ${signedInUser.displayName || signedInUser.email || 'Google user'}. Vocabulary progress will sync across your devices.`)
       }
     } catch (error) {
       const message = authErrorMessage(error)
@@ -43,6 +45,12 @@ export function AuthButton() {
   const disabled = loading || busy
   if (user) {
     const label = user.displayName || user.email || 'Google user'
+    const syncLabel = {
+      local: 'Preparing progress sync',
+      connecting: 'Syncing progress',
+      synced: 'Progress synced',
+      error: 'Progress sync unavailable',
+    }[syncStatus]
     return (
       <button
         type="button"
@@ -50,7 +58,7 @@ export function AuthButton() {
         onClick={handleClick}
         disabled={disabled}
         aria-label={`Sign out ${label}`}
-        title={`Signed in as ${label}. Sign out`}
+        title={`Signed in as ${label}. ${syncLabel}. Sign out`}
       >
         {user.photoURL
           ? <img src={user.photoURL} alt="" referrerPolicy="no-referrer" className="size-7 rounded-full object-cover" />
