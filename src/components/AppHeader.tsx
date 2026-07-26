@@ -1,4 +1,5 @@
 import { Moon, Sun } from 'lucide-react'
+import { AuthButton } from './AuthButton'
 import type { AppPage } from './BottomNavigation'
 import { Navigation } from './BottomNavigation'
 
@@ -18,6 +19,7 @@ export function AppHeader({ page, onPageChange, dueCount, theme, onToggleTheme }
         </button>
         <div className="flex items-center gap-3">
           <Navigation page={page} onChange={onPageChange} dueCount={dueCount} variant="desktop" />
+          <AuthButton />
           <button type="button" className="icon-button" onClick={onToggleTheme} aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}>
             {theme === 'light' ? <Moon size={19} /> : <Sun size={19} />}
           </button>

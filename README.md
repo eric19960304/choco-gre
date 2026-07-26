@@ -53,6 +53,7 @@ Vite preview uses **http://localhost:4173** by default.
 - **Tailwind CSS:** mobile-first layout and a custom warm editorial design system. Tailwind is connected with the official Vite plugin.
 - **React Context + custom hooks:** a vocabulary context owns learning state, while a focused practice-history hook records Verbal Reasoning attempts. No external state-management library is needed for this dataset size.
 - **localStorage:** dedicated service modules handle vocabulary data and practice history. Components do not access persistence directly.
+- **Firebase Authentication:** optional Google sign-in runs through the Firebase browser SDK and persists the authenticated session without a custom application server. Learning data remains device-local until cloud synchronization is added.
 - **Web Speech API:** word and example-sentence pronunciation uses Chrome's built-in `speechSynthesis` engine. The app prefers a Google US English voice when Chrome exposes one, falls back to another English voice, and does not download or store audio files.
 - **Vitest:** tests vocabulary scheduling and validation as well as all question-bank structures, GRE answer rules, history persistence, and the end-to-end submit/reveal flow.
 
@@ -190,7 +191,7 @@ The production build is configured for GitHub Pages and writes directly to the r
 npm run build
 ```
 
-The Vite base path is relative (`./`), so generated assets work for a project site such as `https://username.github.io/repository/` and for a custom domain. The build also includes `docs/.nojekyll`.
+The Vite base path is relative (`./`), so generated assets work at the current project URL, **https://eric19960304.github.io/choco-gre/**, and on a custom domain. The build also includes `docs/.nojekyll`.
 
 In the GitHub repository:
 
@@ -199,7 +200,17 @@ In the GitHub repository:
 3. Under **Build and deployment**, select **Deploy from a branch**.
 4. Choose the `main` branch and `/docs` folder, then save.
 
-GitHub Pages will publish the contents of `docs/`. No server environment variables, database, or API routes are required. Vocabulary progress and question history remain stored in each visitor's browser.
+GitHub Pages will publish the contents of `docs/`. No custom server, database, or API routes are required. Firebase Authentication is initialized from its public web configuration; vocabulary progress and question history remain stored in each visitor's browser.
+
+### Firebase Google sign-in setup
+
+The Firebase web SDK and the `choco-gre` Firebase app configuration are bundled into the static build. Before Google sign-in works in production:
+
+1. Open **Firebase Console → Authentication → Sign-in method** and enable **Google**.
+2. Open **Authentication → Settings → Authorized domains** and add `eric19960304.github.io`.
+3. Keep `localhost` authorized if local sign-in testing is required.
+
+The header uses Firebase's popup flow, which avoids redirect-helper complications on GitHub Pages. The Firebase web configuration is public by design; never commit a Firebase service-account key or another private server credential.
 
 To preview the compiled site locally after building:
 

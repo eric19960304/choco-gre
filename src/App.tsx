@@ -2,6 +2,7 @@ import { lazy, Suspense, useMemo, useState } from 'react'
 import { AppHeader } from './components/AppHeader'
 import { Navigation, type AppPage } from './components/BottomNavigation'
 import { ToastProvider } from './components/Toast'
+import { AuthProvider } from './hooks/useAuth'
 import { useTheme } from './hooks/useTheme'
 import { VocabularyProvider, useVocabulary } from './hooks/useVocabulary'
 import { ProgressPage } from './pages/ProgressPage'
@@ -36,5 +37,5 @@ function AppContent() {
 }
 
 export default function App() {
-  return <VocabularyProvider><ToastProvider><AppContent /></ToastProvider></VocabularyProvider>
+  return <AuthProvider><VocabularyProvider><ToastProvider><AppContent /></ToastProvider></VocabularyProvider></AuthProvider>
 }
