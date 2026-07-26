@@ -33,6 +33,7 @@ import {
 } from '../utils/practice'
 
 const practiceBank = practiceBankJson as unknown as PracticeBank
+const totalQuestions = practiceBank.counts.total
 const typeFilters: { id: PracticeTypeFilter; label: string }[] = [
   { id: 'all', label: 'All types' },
   { id: 'reading-comprehension', label: 'Reading' },
@@ -213,7 +214,7 @@ export function PracticePage() {
           <p className="eyebrow practice-eyebrow"><Sparkles size={13} />Verbal reasoning questions</p>
           <h1 className="page-title">Practice the reasoning, not just the words.</h1>
           <p className="practice-intro mt-3 max-w-2xl text-muted dark:text-stone-400">
-            100 original GRE-style questions with immediate explanations and device-local attempt history.
+            {totalQuestions} original GRE-style questions with immediate explanations and device-local attempt history.
           </p>
         </div>
         <div className="inline-flex self-start rounded-2xl border border-ink/8 bg-white/70 p-1.5 dark:border-white/8 dark:bg-white/5">
@@ -240,7 +241,7 @@ export function PracticePage() {
           <div className="mb-6 grid grid-cols-3 gap-2 sm:gap-3" aria-label="Practice progress">
             <div className="surface-card p-4 sm:p-5">
               <p className="detail-label">Answered</p>
-              <strong className="mt-2 block font-display text-3xl font-black text-ink dark:text-white">{uniqueAnswered}<span className="text-base text-muted">/100</span></strong>
+              <strong className="mt-2 block font-display text-3xl font-black text-ink dark:text-white">{uniqueAnswered}<span className="text-base text-muted">/{totalQuestions}</span></strong>
             </div>
             <div className="surface-card p-4 sm:p-5">
               <p className="detail-label">Accuracy</p>
@@ -350,7 +351,7 @@ export function PracticePage() {
                   <QuestionTypeBadge question={currentQuestion} />
                   <span className="text-[10px] font-black uppercase tracking-wider text-muted">{currentQuestion.difficulty}</span>
                 </div>
-                <p className="text-xs font-bold text-muted">Question {currentQuestion.number} of 100</p>
+                <p className="text-xs font-bold text-muted">Question {currentQuestion.number} of {totalQuestions}</p>
               </div>
 
               <article className="surface-card overflow-hidden">

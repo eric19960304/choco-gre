@@ -1,6 +1,13 @@
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import {
+  additionalRcPassages,
+  additionalSentenceEquivalence,
+  additionalTcDouble,
+  additionalTcSingle,
+  additionalTcTriple,
+} from './verbal-practice-expansion.mjs'
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const choiceIds = ['A', 'B', 'C', 'D', 'E', 'F']
@@ -1345,11 +1352,145 @@ sentenceEquivalence.forEach((question, index) => {
   sequence += 1
 })
 
-const passages = rcPassages.map(({ id, title, text }) => ({ id, title, text }))
+let additionalRcIndex = rcPassages.reduce((total, passage) => total + passage.questions.length, 0)
+for (const passage of additionalRcPassages) {
+  passage.questions.forEach((question) => {
+    additionalRcIndex += 1
+    questions.push({
+      id: `rc-${String(additionalRcIndex).padStart(3, '0')}`,
+      number: sequence,
+      type: 'reading-comprehension',
+      difficulty: question.difficulty,
+      passageId: passage.id,
+      stem: question.stem,
+      directions: question.format === 'multiple'
+        ? 'Select all answer choices that apply. You must select every correct choice.'
+        : 'Select one answer choice.',
+      responseGroups: [{
+        id: 'main',
+        label: 'Answer choices',
+        selectionMode: question.format === 'multiple' ? 'multiple' : 'single',
+        requiredSelections: question.format === 'multiple' ? null : 1,
+        choices: makeChoices(question.choices),
+      }],
+      correctAnswer: { main: question.answer.map((index) => choiceIds[index]) },
+      explanation: question.explanation,
+      skills: question.skills,
+      source: 'Original GRE-style practice created for Choco GRE',
+    })
+    sequence += 1
+  })
+}
+
+let additionalTcIndex = tcSingle.length + tcDouble.length + tcTriple.length
+additionalTcSingle.forEach((question) => {
+  additionalTcIndex += 1
+  questions.push({
+    id: `tc-${String(additionalTcIndex).padStart(3, '0')}`,
+    number: sequence,
+    type: 'text-completion',
+    difficulty: question.difficulty,
+    text: question.text,
+    directions: 'Select one answer choice for the blank.',
+    responseGroups: [{
+      id: 'blank1',
+      label: 'Blank (i)',
+      selectionMode: 'single',
+      requiredSelections: 1,
+      choices: makeChoices(question.choices),
+    }],
+    correctAnswer: { blank1: [choiceIds[question.answer]] },
+    explanation: question.explanation,
+    skills: ['context clues', 'sentence logic'],
+    source: 'Original GRE-style practice created for Choco GRE',
+  })
+  sequence += 1
+})
+
+additionalTcDouble.forEach((question) => {
+  additionalTcIndex += 1
+  questions.push({
+    id: `tc-${String(additionalTcIndex).padStart(3, '0')}`,
+    number: sequence,
+    type: 'text-completion',
+    difficulty: question.difficulty,
+    text: question.text,
+    directions: 'Select one answer choice for each blank. There is no partial credit.',
+    responseGroups: question.blanks.map((blank, blankIndex) => ({
+      id: `blank${blankIndex + 1}`,
+      label: `Blank (${['i', 'ii'][blankIndex]})`,
+      selectionMode: 'single',
+      requiredSelections: 1,
+      choices: makeChoices(blank),
+    })),
+    correctAnswer: Object.fromEntries(question.answer.map((answer, blankIndex) => [
+      `blank${blankIndex + 1}`,
+      [choiceIds[answer]],
+    ])),
+    explanation: question.explanation,
+    skills: ['context clues', 'multi-blank coherence'],
+    source: 'Original GRE-style practice created for Choco GRE',
+  })
+  sequence += 1
+})
+
+additionalTcTriple.forEach((question) => {
+  additionalTcIndex += 1
+  questions.push({
+    id: `tc-${String(additionalTcIndex).padStart(3, '0')}`,
+    number: sequence,
+    type: 'text-completion',
+    difficulty: question.difficulty,
+    text: question.text,
+    directions: 'Select one answer choice for each blank. There is no partial credit.',
+    responseGroups: question.blanks.map((blank, blankIndex) => ({
+      id: `blank${blankIndex + 1}`,
+      label: `Blank (${['i', 'ii', 'iii'][blankIndex]})`,
+      selectionMode: 'single',
+      requiredSelections: 1,
+      choices: makeChoices(blank),
+    })),
+    correctAnswer: Object.fromEntries(question.answer.map((answer, blankIndex) => [
+      `blank${blankIndex + 1}`,
+      [choiceIds[answer]],
+    ])),
+    explanation: question.explanation,
+    skills: ['context clues', 'multi-blank coherence'],
+    source: 'Original GRE-style practice created for Choco GRE',
+  })
+  sequence += 1
+})
+
+let additionalSeIndex = sentenceEquivalence.length
+additionalSentenceEquivalence.forEach((question) => {
+  additionalSeIndex += 1
+  questions.push({
+    id: `se-${String(additionalSeIndex).padStart(3, '0')}`,
+    number: sequence,
+    type: 'sentence-equivalence',
+    difficulty: question.difficulty,
+    text: question.text,
+    directions: 'Select exactly two answer choices that complete the sentence and produce equivalent meanings.',
+    responseGroups: [{
+      id: 'main',
+      label: 'Select two',
+      selectionMode: 'multiple',
+      requiredSelections: 2,
+      choices: makeChoices(question.choices),
+    }],
+    correctAnswer: { main: question.answer.map((answer) => choiceIds[answer]) },
+    explanation: question.explanation,
+    skills: ['sentence logic', 'equivalent meaning'],
+    source: 'Original GRE-style practice created for Choco GRE',
+  })
+  sequence += 1
+})
+
+const passages = [...rcPassages, ...additionalRcPassages].map(({ id, title, text }) => ({ id, title, text }))
 const bank = {
-  version: 1,
+  version: 2,
   title: 'Choco GRE Verbal Reasoning Practice Bank',
-  disclosure: 'These 100 questions are original GRE-style practice created for Choco GRE. They are not official ETS questions or recalled live-test content.',
+  disclosure: 'These 300 questions are original GRE-style practice created for Choco GRE. They are not official ETS questions or recalled live-test content.',
   formatReference: 'https://www.ets.org/gre/test-takers/general-test/prepare/content/verbal-reasoning.html',
   counts: {
     total: questions.length,
@@ -1362,14 +1503,37 @@ const bank = {
 }
 
 const failures = []
-if (bank.counts.total !== 100) failures.push(`expected 100 questions, found ${bank.counts.total}`)
-if (bank.counts.readingComprehension !== 40) failures.push('expected 40 Reading Comprehension questions')
-if (bank.counts.textCompletion !== 30) failures.push('expected 30 Text Completion questions')
-if (bank.counts.sentenceEquivalence !== 30) failures.push('expected 30 Sentence Equivalence questions')
+if (bank.counts.total !== 300) failures.push(`expected 300 questions, found ${bank.counts.total}`)
+if (bank.counts.readingComprehension !== 100) failures.push('expected 100 Reading Comprehension questions')
+if (bank.counts.textCompletion !== 100) failures.push('expected 100 Text Completion questions')
+if (bank.counts.sentenceEquivalence !== 100) failures.push('expected 100 Sentence Equivalence questions')
 if (new Set(questions.map((question) => question.id)).size !== questions.length) failures.push('question IDs are not unique')
+if (questions.some((question, index) => question.number !== index + 1)) failures.push('question numbers are not continuous')
 
+const normalizedPrompts = new Set()
 for (const question of questions) {
+  const normalizedPrompt = [
+    question.type,
+    question.passageId ?? '',
+    question.stem ?? question.text ?? '',
+  ].join('|').toLocaleLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+  if (normalizedPrompts.has(normalizedPrompt)) failures.push(`${question.id} duplicates another prompt`)
+  normalizedPrompts.add(normalizedPrompt)
+
+  if (question.type === 'text-completion') {
+    const blankMarkers = question.text.match(/\{\{blank\d+\}\}/g) ?? []
+    if (blankMarkers.length !== question.responseGroups.length) {
+      failures.push(`${question.id} blank markers do not match its response groups`)
+    }
+  }
+
   for (const group of question.responseGroups) {
+    const normalizedChoices = group.choices.map((choice) => (
+      choice.text.toLocaleLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+    ))
+    if (new Set(normalizedChoices).size !== normalizedChoices.length) {
+      failures.push(`${question.id} has duplicate choices in ${group.id}`)
+    }
     const validIds = new Set(group.choices.map((choice) => choice.id))
     const answers = question.correctAnswer[group.id] ?? []
     if (!answers.length || answers.some((answer) => !validIds.has(answer))) {
@@ -1385,7 +1549,7 @@ if (failures.length) throw new Error(failures.join('\n'))
 
 const json = `${JSON.stringify(bank, null, 2)}\n`
 const outputs = [
-  resolve(projectRoot, 'gre_verbal_practice_100.json'),
+  resolve(projectRoot, 'gre_verbal_practice_300.json'),
   resolve(projectRoot, 'src/data/verbalPracticeQuestions.json'),
 ]
 for (const output of outputs) {

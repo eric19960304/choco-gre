@@ -22,7 +22,7 @@ describe('PracticePage', () => {
     expect(screen.getByText('Question type')).toBeInTheDocument()
     expect(screen.getByRole('option', { name: 'Unanswered' })).toBeInTheDocument()
     expect(screen.getByRole('combobox', { name: 'Answer status' })).toHaveValue('unanswered')
-    expect(screen.getByText('100 unanswered')).toBeInTheDocument()
+    expect(screen.getByText('300 unanswered')).toBeInTheDocument()
     const vocabularyLinks = screen.getAllByRole('link', { name: /pedestrian/i })
     expect(vocabularyLinks).toHaveLength(2)
     vocabularyLinks.forEach((link) => {
@@ -60,7 +60,7 @@ describe('PracticePage', () => {
 
     render(<PracticePage />)
 
-    expect(screen.getByText('Question 2 of 100')).toBeInTheDocument()
+    expect(screen.getByText('Question 2 of 300')).toBeInTheDocument()
   })
 
   it('returns to Unanswered after a page refresh', () => {
@@ -87,7 +87,7 @@ describe('PracticePage', () => {
     expect(screen.getByRole('button', { name: /Next question/ })).toBeEnabled()
     fireEvent.click(screen.getByRole('button', { name: /Try again/ }))
 
-    expect(screen.getByText('Question 1 of 100')).toBeInTheDocument()
+    expect(screen.getByText('Question 1 of 300')).toBeInTheDocument()
     expect(screen.queryByText('Correct.')).not.toBeInTheDocument()
     expect(screen.getByRole('radio', { name: /Tree-planting plans should account/ })).toHaveAttribute('aria-checked', 'false')
   })

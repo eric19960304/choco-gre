@@ -5,17 +5,17 @@ import type { PracticeBank } from '../types/practice'
 const bank = practiceBankJson as unknown as PracticeBank
 
 describe('GRE verbal practice bank', () => {
-  it('contains 100 unique, continuously numbered questions in the promised distribution', () => {
-    expect(bank.questions).toHaveLength(100)
-    expect(new Set(bank.questions.map((question) => question.id)).size).toBe(100)
+  it('contains 300 unique, continuously numbered questions in the promised distribution', () => {
+    expect(bank.questions).toHaveLength(300)
+    expect(new Set(bank.questions.map((question) => question.id)).size).toBe(300)
     expect(bank.questions.map((question) => question.number)).toEqual(
-      Array.from({ length: 100 }, (_, index) => index + 1),
+      Array.from({ length: 300 }, (_, index) => index + 1),
     )
     expect(bank.counts).toEqual({
-      total: 100,
-      readingComprehension: 40,
-      textCompletion: 30,
-      sentenceEquivalence: 30,
+      total: 300,
+      readingComprehension: 100,
+      textCompletion: 100,
+      sentenceEquivalence: 100,
     })
   })
 
@@ -62,6 +62,36 @@ describe('GRE verbal practice bank', () => {
         expect(question.correctAnswer.main).toHaveLength(2)
       }
     })
+  })
+
+  it('has distinct prompts and non-repeating choices within every response group', () => {
+    const normalizedPrompts = bank.questions.map((question) => (
+      [
+        question.type,
+        question.passageId ?? '',
+        question.stem ?? question.text ?? '',
+      ].join('|').toLocaleLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+    ))
+
+    expect(new Set(normalizedPrompts).size).toBe(bank.questions.length)
+    bank.questions.forEach((question) => {
+      question.responseGroups.forEach((group) => {
+        const normalizedChoices = group.choices.map((choice) => (
+          choice.text.toLocaleLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+        ))
+        expect(new Set(normalizedChoices).size).toBe(group.choices.length)
+      })
+    })
+  })
+
+  it('provides a balanced mix of one-, two-, and three-blank Text Completion questions', () => {
+    const textCompletionQuestions = bank.questions.filter(
+      (question) => question.type === 'text-completion',
+    )
+
+    expect(textCompletionQuestions.filter((question) => question.responseGroups.length === 1)).toHaveLength(34)
+    expect(textCompletionQuestions.filter((question) => question.responseGroups.length === 2)).toHaveLength(33)
+    expect(textCompletionQuestions.filter((question) => question.responseGroups.length === 3)).toHaveLength(33)
   })
 
   it('clearly discloses that the questions are original practice material', () => {

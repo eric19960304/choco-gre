@@ -1,6 +1,6 @@
 # Choco GRE — Vocabulary & Verbal Practice
 
-Choco GRE is a mobile-first, browser-based GRE preparation tool. It ships with a prepared list of 1,000 GRE words ranked by study priority and 100 original Verbal Reasoning practice questions. It schedules vocabulary reviews, records question attempts, and uses Firebase Authentication plus Cloud Firestore to synchronize vocabulary progress for signed-in users. Anonymous use still works without an account.
+Choco GRE is a mobile-first, browser-based GRE preparation tool. It ships with a prepared list of 1,000 GRE words ranked by study priority and 300 original Verbal Reasoning practice questions. It schedules vocabulary reviews, records question attempts, and uses Firebase Authentication plus Cloud Firestore to synchronize vocabulary progress for signed-in users. Anonymous use still works without an account.
 
 ## Run it locally
 
@@ -31,7 +31,7 @@ Then open **http://localhost:4173**.
 | Command | Purpose |
 | --- | --- |
 | `npm run dev` | Start the Vite development server (default port 5173) |
-| `npm run generate:practice` | Validate and regenerate both copies of the 100-question practice bank |
+| `npm run generate:practice` | Validate and regenerate both copies of the 300-question practice bank |
 | `npm run typecheck` | Run strict TypeScript checking without emitting files |
 | `npm test` | Run all Vitest tests once |
 | `npm run test:watch` | Run Vitest in watch mode |
@@ -118,19 +118,19 @@ Each source record has a `rank_signals` object showing its publisher-shortlist m
 
 ## GRE Verbal Reasoning practice bank
 
-`gre_verbal_practice_100.json` is the readable source artifact. The app bundles an identical copy at `src/data/verbalPracticeQuestions.json`. Running `npm run generate:practice` validates the answer keys and regenerates both files from `scripts/build-verbal-practice.mjs`.
+`gre_verbal_practice_300.json` is the readable source artifact. The app bundles an identical copy at `src/data/verbalPracticeQuestions.json`. Running `npm run generate:practice` validates the answer keys and regenerates both files from `scripts/build-verbal-practice.mjs` and `scripts/verbal-practice-expansion.mjs`.
 
 The bank contains:
 
 | Type | Questions | Supported interaction |
 | --- | ---: | --- |
-| Reading Comprehension | 40 | Five-choice single selection and three-choice “select all that apply” |
-| Text Completion | 30 | One to three independent blanks; one selection per blank |
-| Sentence Equivalence | 30 | Exactly two selections from six choices |
+| Reading Comprehension | 100 | Five-choice single selection and three-choice “select all that apply” |
+| Text Completion | 100 | One to three independent blanks; one selection per blank |
+| Sentence Equivalence | 100 | Exactly two selections from six choices |
 
-Every question contains a stable ID, sequence number, difficulty, directions, response groups, correct answer, explanation, skills, and source disclosure. Reading Comprehension questions reference one of 20 reusable passages. The generic `responseGroups` representation lets the scoring utility handle single answers, multiple answers, and independent blanks without type-specific answer hacks.
+Every question contains a stable ID, sequence number, difficulty, directions, response groups, correct answer, explanation, skills, and source disclosure. Reading Comprehension questions reference one of 50 reusable passages. The generic `responseGroups` representation lets the scoring utility handle single answers, multiple answers, and independent blanks without type-specific answer hacks.
 
-The format follows the structures described in the [official ETS Verbal Reasoning overview](https://www.ets.org/gre/test-takers/general-test/prepare/content/verbal-reasoning.html). All question wording, passages, distractors, answer keys, and explanations in this repository are original GRE-style practice created for Choco GRE. They are not official ETS questions, copied commercial questions, or recalled live-test content.
+The format follows the structures described in the [official ETS Verbal Reasoning overview](https://www.ets.org/gre/test-takers/general-test/prepare/content/verbal-reasoning.html). All question wording, passages, distractors, answer keys, and explanations in this repository are original GRE-style practice created for Choco GRE. They are not official ETS questions, copied commercial questions, or recalled live-test content; reproducing ETS test material requires the appropriate [ETS license or permission](https://www.ets.org/legal/permissions/licensing.html).
 
 On the Practice page, the user can:
 
