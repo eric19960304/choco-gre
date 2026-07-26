@@ -28,6 +28,9 @@ describe('Flashcard', () => {
     expect(screen.getByText('What each rating means')).toBeInTheDocument()
     expect(screen.getByText('You forgot it. Review in 10 minutes and move down one level.')).toBeInTheDocument()
     expect(screen.getByText('You know it well. Mark it as mastered and remove it from future reviews.')).toBeInTheDocument()
+    expect(screen.getByText('Good review intervals:').closest('p')).toHaveTextContent(
+      'Good review intervals: 1, 3, 7, 14, 30, 60, then 120 days. Each Good answer advances one step.',
+    )
   })
 
   it('keeps affix clues hidden before reveal', () => {

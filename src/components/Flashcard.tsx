@@ -64,6 +64,9 @@ export function Flashcard({ word, revealed, onReveal, onRate }: {
                 </div>
               ))}
             </dl>
+            <p className="mt-4 border-t border-ink/8 pt-3 text-xs leading-relaxed text-muted dark:border-white/8 dark:text-stone-300">
+              <span className="font-bold text-ink dark:text-stone-100">Good review intervals:</span> 1, 3, 7, 14, 30, 60, then 120 days. Each Good answer advances one step.
+            </p>
           </section>
         </div>
       )}
