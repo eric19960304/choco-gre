@@ -23,6 +23,13 @@ describe('PracticePage', () => {
     expect(screen.getByRole('option', { name: 'Unanswered' })).toBeInTheDocument()
     expect(screen.getByRole('combobox', { name: 'Answer status' })).toHaveValue('unanswered')
     expect(screen.getByText('100 unanswered')).toBeInTheDocument()
+    const vocabularyLinks = screen.getAllByRole('link', { name: /pedestrian/i })
+    expect(vocabularyLinks).toHaveLength(2)
+    vocabularyLinks.forEach((link) => {
+      expect(link).toHaveAttribute('target', '_blank')
+      expect(link).toHaveAttribute('rel', 'noopener noreferrer')
+      expect(link).toHaveAttribute('href', expect.stringContaining('word=pedestrian'))
+    })
 
     fireEvent.click(screen.getByRole('radio', { name: /Tree-planting plans should account/ }))
     fireEvent.click(screen.getByRole('button', { name: /Submit answer/ }))

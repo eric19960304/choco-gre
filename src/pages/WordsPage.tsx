@@ -1,5 +1,5 @@
 import { LibraryBig, Plus, Sparkles } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { ConfirmationDialog } from '../components/ConfirmationDialog'
 import { EmptyState } from '../components/EmptyState'
 import { FilterControls } from '../components/FilterControls'
@@ -21,11 +21,27 @@ export function WordsPage() {
   const [visibleCount, setVisibleCount] = useState(60)
   const [selectedId, setSelectedId] = useState<string | null>(null)
   const [mode, setMode] = useState<'add' | 'details' | 'edit' | 'delete' | null>(null)
+  const openedDeepLinkId = useRef<string | null>(null)
+  const requestedWord = useMemo(
+    () => new URLSearchParams(window.location.search).get('word')?.trim().toLocaleLowerCase('en-US'),
+    [],
+  )
 
   const tags = useMemo(() => [...new Set(words.flatMap((word) => word.tags))].sort(), [words])
   const filtered = useMemo(() => searchAndFilterWords(words, filters), [words, filters])
   const selectedWord = words.find((word) => word.id === selectedId)
   useEffect(() => setVisibleCount(60), [filters])
+  useEffect(() => {
+    if (!requestedWord) return
+    const linkedWord = words.find(
+      (word) => word.word.trim().toLocaleLowerCase('en-US') === requestedWord,
+    )
+    if (!linkedWord || openedDeepLinkId.current === linkedWord.id) return
+    openedDeepLinkId.current = linkedWord.id
+    markWordViewed(linkedWord.id)
+    setSelectedId(linkedWord.id)
+    setMode('details')
+  }, [markWordViewed, requestedWord, words])
 
   const openWord = (id: string) => { markWordViewed(id); setSelectedId(id); setMode('details') }
   const closeModal = () => { setMode(null); setSelectedId(null) }

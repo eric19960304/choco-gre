@@ -278,6 +278,32 @@ select:focus-visible {
   line-height: 1.75;
 }
 
+.practice-choice > button:focus-visible {
+  outline: 3px solid rgb(139 90 60 / 0.3);
+  outline-offset: 2px;
+}
+
+.practice-vocabulary-link {
+  pointer-events: auto;
+  position: relative;
+  z-index: 20;
+  border-radius: 0.2rem;
+  color: var(--color-accent-deep);
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.practice-vocabulary-link:hover {
+  background: rgb(139 90 60 / 0.1);
+}
+
+.dark .practice-vocabulary-link {
+  color: var(--color-accent-light);
+}
+
 @media (min-width: 640px) {
   .practice-passage {
     font-size: 1.24rem;

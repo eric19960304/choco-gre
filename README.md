@@ -140,6 +140,9 @@ On the Practice page, the user can:
 4. See the correct choices and explanation immediately.
 5. Retry a question or move between questions.
 6. Open History to review every saved attempt and its original response.
+7. Open any bundled high-frequency vocabulary word found in a passage, prompt, or answer choice in a new tab without losing the current question.
+
+Vocabulary links use a shareable `?word=...` URL. Opening one starts on the Words page, opens that word's detail sheet, and marks it as viewed so it joins the learner's review pool.
 
 Attempts are stored under `lexilo:practice:v1`. Each history record contains the question ID, selected response, correctness, and answer time. Practice-question history remains device-local; the current Firestore sync is intentionally limited to vocabulary progress and vocabulary review history.
 

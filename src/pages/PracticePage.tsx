@@ -13,7 +13,8 @@ import {
   Target,
   XCircle,
 } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
+import { Fragment, useEffect, useMemo, useState } from 'react'
+import { VocabularyText } from '../components/VocabularyText'
 import practiceBankJson from '../data/verbalPracticeQuestions.json'
 import { usePracticeHistory } from '../hooks/usePracticeHistory'
 import type {
@@ -53,7 +54,7 @@ function BlankText({ text }: { text: string }) {
     <>
       {text.split(/(\{\{blank\d+\}\})/g).map((part, index) => {
         const match = part.match(/^\{\{blank(\d+)\}\}$/)
-        if (!match) return <span key={`${part}-${index}`}>{part}</span>
+        if (!match) return <span key={`${part}-${index}`}><VocabularyText text={part} /></span>
         const blankIndex = Number(match[1]) - 1
         return (
           <span
@@ -359,13 +360,13 @@ export function PracticePage() {
                       <BookOpenText size={17} />
                       <p className="text-[10px] font-black uppercase tracking-[.18em]">{currentPassage.title}</p>
                     </div>
-                    <p className="practice-passage mt-4 text-ink dark:text-stone-100">{currentPassage.text}</p>
+                    <p className="practice-passage mt-4 text-ink dark:text-stone-100"><VocabularyText text={currentPassage.text} /></p>
                   </section>
                 )}
 
                 <div className="p-5 sm:p-7">
                   <p className="text-[10px] font-black uppercase tracking-[.15em] text-muted">{currentQuestion.directions}</p>
-                  {currentQuestion.stem && <h2 className="practice-question mt-4 text-ink dark:text-white">{currentQuestion.stem}</h2>}
+                  {currentQuestion.stem && <h2 className="practice-question mt-4 text-ink dark:text-white"><VocabularyText text={currentQuestion.stem} /></h2>}
                   {currentQuestion.text && <h2 className="practice-question mt-4 text-ink dark:text-white"><BlankText text={currentQuestion.text} /></h2>}
 
                   <div className="mt-7 space-y-6">
@@ -395,21 +396,26 @@ export function PracticePage() {
                                 : isSelected
                                   ? 'border-accent bg-accent/8 text-ink ring-1 ring-accent/20 dark:text-white'
                                   : 'border-ink/10 bg-white/60 text-ink hover:border-accent/40 hover:bg-accent/[.035] dark:border-white/10 dark:bg-white/[.035] dark:text-stone-100'
+                              const isDisabled = Boolean(submittedAttempt) || reachedLimit
                               return (
-                                <button
+                                <div
                                   key={choice.id}
-                                  type="button"
-                                  role={group.selectionMode === 'single' ? 'radio' : 'checkbox'}
-                                  aria-checked={isSelected}
-                                  disabled={Boolean(submittedAttempt) || reachedLimit}
-                                  onClick={() => selectChoice(group.id, choice.id)}
-                                  className={`practice-choice flex min-h-14 w-full items-center gap-3 rounded-2xl border p-3.5 text-left transition ${resultClass} ${reachedLimit ? 'cursor-not-allowed opacity-45' : ''}`}
+                                  className={`practice-choice relative flex min-h-14 w-full items-center gap-3 rounded-2xl border p-3.5 text-left transition ${resultClass} ${reachedLimit ? 'opacity-45' : ''}`}
                                 >
-                                  <span className={`grid size-7 shrink-0 place-items-center rounded-lg border text-[11px] font-black ${isSelected ? 'border-accent bg-accent text-white' : submittedAttempt && isCorrectChoice ? 'border-emerald-600 bg-emerald-600 text-white' : 'border-ink/12 bg-white/60 text-muted dark:border-white/15 dark:bg-white/5'}`}>{choice.id}</span>
-                                  <span className="min-w-0 flex-1">{choice.text}</span>
-                                  {submittedAttempt && isCorrectChoice && <CheckCircle2 className="shrink-0 text-emerald-600 dark:text-emerald-400" size={19} />}
-                                  {submittedAttempt && isSelected && !isCorrectChoice && <XCircle className="shrink-0 text-red-600 dark:text-red-400" size={19} />}
-                                </button>
+                                  <button
+                                    type="button"
+                                    role={group.selectionMode === 'single' ? 'radio' : 'checkbox'}
+                                    aria-label={choice.text}
+                                    aria-checked={isSelected}
+                                    disabled={isDisabled}
+                                    onClick={() => selectChoice(group.id, choice.id)}
+                                    className="absolute inset-0 z-0 rounded-2xl"
+                                  />
+                                  <span className={`pointer-events-none relative z-10 grid size-7 shrink-0 place-items-center rounded-lg border text-[11px] font-black ${isSelected ? 'border-accent bg-accent text-white' : submittedAttempt && isCorrectChoice ? 'border-emerald-600 bg-emerald-600 text-white' : 'border-ink/12 bg-white/60 text-muted dark:border-white/15 dark:bg-white/5'}`}>{choice.id}</span>
+                                  <span className="pointer-events-none relative z-10 min-w-0 flex-1"><VocabularyText text={choice.text} /></span>
+                                  {submittedAttempt && isCorrectChoice && <CheckCircle2 className="pointer-events-none relative z-10 shrink-0 text-emerald-600 dark:text-emerald-400" size={19} />}
+                                  {submittedAttempt && isSelected && !isCorrectChoice && <XCircle className="pointer-events-none relative z-10 shrink-0 text-red-600 dark:text-red-400" size={19} />}
+                                </div>
                               )
                             })}
                           </div>
@@ -430,7 +436,12 @@ export function PracticePage() {
                             {currentQuestion.responseGroups.map((group) => (
                               <p key={group.id} className="text-xs leading-relaxed text-ink dark:text-stone-200">
                                 <strong>{group.label}:</strong>{' '}
-                                {currentQuestion.correctAnswer[group.id].map((choiceId) => `${choiceId}. ${getChoiceText(currentQuestion, group.id, choiceId)}`).join(' / ')}
+                                {currentQuestion.correctAnswer[group.id].map((choiceId, index) => (
+                                  <Fragment key={choiceId}>
+                                    {index > 0 && ' / '}
+                                    {choiceId}. <VocabularyText text={getChoiceText(currentQuestion, group.id, choiceId)} />
+                                  </Fragment>
+                                ))}
                               </p>
                             ))}
                           </div>
