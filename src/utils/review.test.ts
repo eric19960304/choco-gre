@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { makeWord } from '../test/fixtures'
-import { calculateReviewUpdate, isWordDue, isWordReviewEligible } from './review'
+import { calculateReviewUpdate, getWordStatus, isWordDue, isWordReviewEligible } from './review'
 
 describe('review eligibility', () => {
   const now = new Date('2026-02-01T12:00:00.000Z')
@@ -23,6 +23,22 @@ describe('review eligibility', () => {
     const reviewed = makeWord({ viewedAt: undefined, lastReviewedAt: '2026-01-15T00:00:00.000Z' })
 
     expect(isWordReviewEligible(reviewed)).toBe(true)
+  })
+
+  it('treats only untouched words as new', () => {
+    const untouched = makeWord({
+      viewedAt: undefined,
+      createdAt: '2026-01-15T00:00:00.000Z',
+      updatedAt: '2026-01-15T00:00:00.000Z',
+    })
+    const viewed = makeWord({
+      viewedAt: '2026-01-15T00:00:00.000Z',
+      createdAt: '2026-01-15T00:00:00.000Z',
+      updatedAt: '2026-01-15T00:00:00.000Z',
+    })
+
+    expect(getWordStatus(untouched)).toBe('new')
+    expect(getWordStatus(viewed)).toBe('learning')
   })
 })
 

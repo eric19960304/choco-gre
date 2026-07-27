@@ -18,8 +18,8 @@ export function isWordDue(word: VocabularyWord, now = new Date()): boolean {
 
 export function getWordStatus(word: VocabularyWord, now = new Date()): Exclude<WordStatus, 'all' | 'due'> | 'due' {
   if (word.isMastered) return 'mastered'
+  if (!isWordReviewEligible(word)) return 'new'
   if (isWordDue(word, now) && word.correctCount + word.incorrectCount > 0) return 'due'
-  if (word.correctCount + word.incorrectCount === 0) return 'new'
   return 'learning'
 }
 

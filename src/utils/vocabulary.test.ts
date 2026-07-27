@@ -33,6 +33,31 @@ describe('searchAndFilterWords', () => {
     expect(result.map((item) => item.word)).toEqual(['aberrant'])
   })
 
+  it('shows only untouched words under the New filter', () => {
+    const newWords = [
+      makeWord({
+        id: 'untouched',
+        word: 'aberrant',
+        viewedAt: undefined,
+        createdAt: '2026-02-01T00:00:00.000Z',
+        updatedAt: '2026-02-01T00:00:00.000Z',
+      }),
+      makeWord({
+        id: 'viewed',
+        word: 'laconic',
+        viewedAt: '2026-02-01T01:00:00.000Z',
+      }),
+    ]
+
+    const result = searchAndFilterWords(
+      newWords,
+      { query: '', tag: '', status: 'new', sort: 'priority' },
+      now,
+    )
+
+    expect(result.map((item) => item.word)).toEqual(['aberrant'])
+  })
+
   it('sorts ranked seed words by study priority', () => {
     const rankedWords = [
       makeWord({ id: '1', word: 'laconic', priorityRank: 28 }),
