@@ -17,7 +17,7 @@ describe('isDuplicateWord', () => {
 describe('searchAndFilterWords', () => {
   const now = new Date('2026-02-01T12:00:00.000Z')
   const words = [
-    makeWord({ id: '1', word: 'aberrant', nextReviewAt: '2026-01-31T00:00:00.000Z', incorrectCount: 4 }),
+    makeWord({ id: '1', word: 'aberrant', nextReviewAt: '2026-01-31T00:00:00.000Z', lastReviewedAt: '2026-01-01T00:00:00.000Z', incorrectCount: 4 }),
     makeWord({ id: '2', word: 'laconic', definition: 'Using very few words.', chineseMeaning: '簡潔的', tags: ['adjective'], nextReviewAt: '2026-03-01T00:00:00.000Z' }),
     makeWord({ id: '3', word: 'mendacity', definition: 'Untruthfulness.', chineseMeaning: '虛假', tags: ['noun'], isMastered: true }),
   ]
@@ -56,6 +56,16 @@ describe('searchAndFilterWords', () => {
     )
 
     expect(result.map((item) => item.word)).toEqual(['aberrant'])
+  })
+
+  it('can filter viewed words that are not enrolled in review', () => {
+    const result = searchAndFilterWords(
+      words,
+      { query: '', tag: '', status: 'viewed', sort: 'alphabetical' },
+      now,
+    )
+
+    expect(result.map((item) => item.word)).toEqual(['laconic'])
   })
 
   it('sorts ranked seed words by study priority', () => {

@@ -10,7 +10,7 @@ type SessionStats = { correct: number; incorrect: number; hard: number; mastered
 
 export function ReviewPage({ onGoToWords }: { onGoToWords: () => void }) {
   const { words, reviewWord } = useVocabulary()
-  const viewedWords = useMemo(() => words.filter((word) => isWordReviewEligible(word)), [words])
+  const reviewWords = useMemo(() => words.filter((word) => isWordReviewEligible(word)), [words])
   const dueWords = useMemo(() => words.filter((word) => isWordDue(word)), [words])
   const [queue, setQueue] = useState<VocabularyWord[] | null>(null)
   const [index, setIndex] = useState(0)
@@ -68,7 +68,7 @@ export function ReviewPage({ onGoToWords }: { onGoToWords: () => void }) {
             <div className="flex items-start justify-between gap-5"><div><p className="text-xs font-black uppercase tracking-[.2em] text-accent-light">Ready when you are</p><p className="mt-4 font-display text-6xl font-black">{dueWords.length}</p><p className="mt-1 text-sm text-white/65 dark:text-ink/60">cards due for review</p></div><span className="grid size-14 place-items-center rounded-2xl bg-white/10 text-accent-light dark:bg-ink/8 dark:text-accent"><Layers3 size={26} /></span></div>
             <button type="button" onClick={startSession} className="mt-10 flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-accent px-5 font-black text-white transition hover:bg-accent-deep active:scale-[.99]">Start review session <ArrowRight size={19} /></button>
             <p className="mt-4 text-center text-xs text-white/45 dark:text-ink/45">Cards are shuffled at the start of each session.</p>
-          </section> : <EmptyState icon={CheckCircle2} title={viewedWords.length ? "You're all caught up" : 'No words selected for review'} description={viewedWords.length ? 'No viewed words are due right now. Return later for your next scheduled review.' : 'Open a word from the Words page to add it to your personal review queue.'} action={<button type="button" className="button-primary" onClick={onGoToWords}>{viewedWords.length ? 'Browse words' : 'Choose words'}</button>} />}
+          </section> : <EmptyState icon={CheckCircle2} title={reviewWords.length ? "You're all caught up" : 'No words selected for review'} description={reviewWords.length ? 'No enrolled words are due right now. Return later for your next scheduled review.' : 'Open a word on the Words page and select Send to Review when you are ready to learn it.'} action={<button type="button" className="button-primary" onClick={onGoToWords}>{reviewWords.length ? 'Browse words' : 'Choose words'}</button>} />}
         </div>
       </main>
     )

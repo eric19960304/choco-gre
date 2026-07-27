@@ -1,24 +1,26 @@
-import { CheckCircle2, Clock3, Edit3, RotateCcw, Trash2 } from 'lucide-react'
+import { CheckCircle2, Clock3, ListPlus, RotateCcw, Trash2 } from 'lucide-react'
 import type { VocabularyWord } from '../types/vocabulary'
 import { formatReviewDate } from '../utils/date'
+import { isWordReviewEligible } from '../utils/review'
 import { CommonAffixes } from './CommonAffixes'
 import { Modal } from './Modal'
 import { PronunciationButton } from './PronunciationButton'
 
-export function WordDetails({ word, onClose, onEdit, onDelete, onToggleMastered }: {
+export function WordDetails({ word, onClose, onSendToReview, onDelete, onToggleMastered }: {
   word: VocabularyWord
   onClose: () => void
-  onEdit: () => void
+  onSendToReview: () => void
   onDelete: () => void
   onToggleMastered: () => void
 }) {
   const attempts = word.correctCount + word.incorrectCount
   const accuracy = attempts ? Math.round((word.correctCount / attempts) * 100) : 0
+  const isInReview = isWordReviewEligible(word)
   return (
     <Modal
       title={word.word}
       titleAction={<PronunciationButton text={word.word} label={`the word ${word.word}`} rate={0.78} />}
-      description={`${word.priorityRank ? `Study priority #${word.priorityRank} · ` : ''}${word.isMastered ? 'Mastered word' : `Review level ${word.reviewLevel} of 7`}`}
+      description={`${word.priorityRank ? `Study priority #${word.priorityRank} · ` : ''}${word.isMastered ? 'Mastered word' : isInReview ? `Review level ${word.reviewLevel} of 7` : 'Not in spaced repetition'}`}
       onClose={onClose}
     >
       <div className="space-y-6 p-5 md:p-7">
@@ -33,11 +35,26 @@ export function WordDetails({ word, onClose, onEdit, onDelete, onToggleMastered 
           <div className="border-x border-ink/8 dark:border-white/10"><p className="text-xl font-black text-ink dark:text-white">{accuracy}%</p><p className="text-[10px] font-bold uppercase tracking-wider text-muted">Accuracy</p></div>
           <div><p className="text-xl font-black text-ink dark:text-white">{word.incorrectCount}</p><p className="text-[10px] font-bold uppercase tracking-wider text-muted">Missed</p></div>
         </section>
-        <p className="flex items-center gap-2 text-xs font-semibold text-muted"><Clock3 size={15} />{word.isMastered ? 'Review completed' : `Next review: ${formatReviewDate(word.nextReviewAt)}`}</p>
-        <div className="grid grid-cols-2 gap-3 border-t border-ink/8 pt-5 dark:border-white/10">
-          <button type="button" className="button-secondary gap-2" onClick={onEdit}><Edit3 size={17} />Edit</button>
-          <button type="button" className="button-secondary gap-2" onClick={onToggleMastered}>{word.isMastered ? <RotateCcw size={17} /> : <CheckCircle2 size={17} />}{word.isMastered ? 'Unmaster' : 'Master'}</button>
-          <button type="button" className="button-ghost col-span-2 gap-2 text-red-700 hover:bg-red-50 dark:text-red-300 dark:hover:bg-red-950/30" onClick={onDelete}><Trash2 size={17} />Delete word</button>
+        {isInReview && <p className="flex items-center gap-2 text-xs font-semibold text-muted"><Clock3 size={15} />{word.isMastered ? 'Review completed' : `Next review: ${formatReviewDate(word.nextReviewAt)}`}</p>}
+        <div className="border-t border-ink/8 pt-5 dark:border-white/10">
+          <button
+            type="button"
+            className={`w-full gap-2 ${isInReview ? 'button-secondary cursor-default opacity-70' : 'button-primary'}`}
+            onClick={onSendToReview}
+            disabled={isInReview}
+          >
+            {isInReview ? <CheckCircle2 size={17} /> : <ListPlus size={17} />}
+            {isInReview ? 'In Review' : 'Send to Review'}
+          </button>
+          <p className="mt-2 text-xs leading-relaxed text-muted dark:text-stone-400">
+            {isInReview
+              ? 'This word is in your spaced-repetition queue. Again returns it in 10 minutes, Hard in 1 day, Good advances through 1, 3, 7, 14, 30, 60, and 120-day intervals, and Master removes it from future reviews.'
+              : 'Send this word to your spaced-repetition queue when you are ready to learn it. It becomes due immediately; then Again returns it in 10 minutes, Hard in 1 day, Good advances through 1, 3, 7, 14, 30, 60, and 120-day intervals, and Master removes it from future reviews.'}
+          </p>
+          <div className="mt-4 grid grid-cols-2 gap-3">
+            <button type="button" className="button-secondary gap-2" onClick={onToggleMastered}>{word.isMastered ? <RotateCcw size={17} /> : <CheckCircle2 size={17} />}{word.isMastered ? 'Unmaster' : 'Master'}</button>
+            <button type="button" className="button-ghost gap-2 text-red-700 hover:bg-red-50 dark:text-red-300 dark:hover:bg-red-950/30" onClick={onDelete}><Trash2 size={17} />Delete word</button>
+          </div>
         </div>
       </div>
     </Modal>

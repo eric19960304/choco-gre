@@ -142,13 +142,13 @@ On the Practice page, the user can:
 6. Open History to review every saved attempt and its original response.
 7. Open any bundled high-frequency vocabulary word found in a passage, prompt, or answer choice in a new tab without losing the current question.
 
-Vocabulary links use a shareable `?word=...` URL. Opening one starts on the Words page, opens that word's detail sheet, and marks it as viewed so it joins the learner's review pool.
+Vocabulary links use a shareable `?word=...` URL. Opening one starts on the Words page, opens that word's detail sheet, and marks it as viewed without adding it to spaced repetition.
 
 Attempts are stored under `lexilo:practice:v1`. Each history record contains the question ID, selected response, correctness, and answer time. Practice-question history remains device-local; the current Firestore sync is intentionally limited to vocabulary progress and vocabulary review history.
 
 ## Spaced-repetition behavior
 
-Opening a word from the Words page marks it as viewed and adds it to the learner's personal review pool. Untouched words in the bundled 1,000-word library are excluded. Review sessions include only viewed, unmastered words whose `nextReviewAt` is now or earlier, and shuffle that queue once when the session starts. Previously reviewed words from an older saved dataset remain eligible so existing progress is preserved.
+Opening a word marks it as Viewed but does not add it to the learner's review pool. The learner explicitly selects **Send to Review** in the word detail sheet to enroll it; enrollment makes the word due immediately and synchronizes through the existing vocabulary-progress record. Review sessions include only enrolled, unmastered words whose `nextReviewAt` is now or earlier, and shuffle that queue once when the session starts. Previously reviewed words from an older saved dataset remain eligible so existing progress is preserved.
 
 | Rating | Level change | Next review | Counter |
 | --- | --- | --- | --- |

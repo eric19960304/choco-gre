@@ -3,10 +3,10 @@ import type { ReviewRating, VocabularyWord, WordStatus } from '../types/vocabula
 
 export function isWordReviewEligible(word: VocabularyWord): boolean {
   return Boolean(
-    word.viewedAt
-    || word.lastReviewedAt
+    word.lastReviewedAt
+    || word.reviewLevel > 0
     || word.correctCount + word.incorrectCount > 0
-    || word.updatedAt !== word.createdAt,
+    || word.isMastered,
   )
 }
 
@@ -18,9 +18,22 @@ export function isWordDue(word: VocabularyWord, now = new Date()): boolean {
 
 export function getWordStatus(word: VocabularyWord, now = new Date()): Exclude<WordStatus, 'all' | 'due'> | 'due' {
   if (word.isMastered) return 'mastered'
-  if (!isWordReviewEligible(word)) return 'new'
-  if (isWordDue(word, now) && word.correctCount + word.incorrectCount > 0) return 'due'
-  return 'learning'
+  if (isWordReviewEligible(word)) {
+    if (isWordDue(word, now) && word.correctCount + word.incorrectCount > 0) return 'due'
+    return 'learning'
+  }
+  return word.viewedAt ? 'viewed' : 'new'
+}
+
+export function enrollWordForReview(word: VocabularyWord, now = new Date()): VocabularyWord {
+  if (isWordReviewEligible(word)) return word
+  const timestamp = now.toISOString()
+  return {
+    ...word,
+    nextReviewAt: timestamp,
+    lastReviewedAt: timestamp,
+    updatedAt: timestamp,
+  }
 }
 
 export function calculateReviewUpdate(

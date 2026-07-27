@@ -5,6 +5,7 @@ import { WordsPage } from './WordsPage'
 
 const mocks = vi.hoisted(() => ({
   markWordViewed: vi.fn(),
+  sendWordToReview: vi.fn(),
   words: [] as ReturnType<typeof makeWord>[],
 }))
 
@@ -19,6 +20,18 @@ vi.mock('../hooks/useVocabulary', async () => {
           word.id === id ? { ...word, viewedAt: '2026-07-27T00:00:00.000Z' } : word
         )))
       }, [])
+      const sendWordToReview = useCallback((id: string) => {
+        mocks.sendWordToReview(id)
+        setWords((current) => current.map((word) => (
+          word.id === id
+            ? {
+                ...word,
+                lastReviewedAt: '2026-07-27T00:01:00.000Z',
+                nextReviewAt: '2026-07-27T00:01:00.000Z',
+              }
+            : word
+        )))
+      }, [])
       return {
         words,
         addWord: vi.fn(),
@@ -26,6 +39,7 @@ vi.mock('../hooks/useVocabulary', async () => {
         deleteWord: vi.fn(),
         toggleMastered: vi.fn(),
         markWordViewed,
+        sendWordToReview,
       }
     },
   }
@@ -38,6 +52,7 @@ vi.mock('../components/Toast', () => ({
 describe('WordsPage vocabulary deep links', () => {
   beforeEach(() => {
     mocks.markWordViewed.mockReset()
+    mocks.sendWordToReview.mockReset()
     mocks.words = [makeWord({
       id: 'pedestrian-word',
       word: 'pedestrian',
@@ -71,5 +86,19 @@ describe('WordsPage vocabulary deep links', () => {
     expect(await screen.findByRole('dialog')).toBeInTheDocument()
     await waitFor(() => expect(screen.getByText('0 results')).toBeInTheDocument())
     expect(mocks.markWordViewed).toHaveBeenCalledWith('pedestrian-word')
+  })
+
+  it('enrolls a word only after Send to Review is selected', async () => {
+    window.history.replaceState({}, '', '/choco-gre/')
+    render(<WordsPage />)
+
+    fireEvent.click(screen.getByRole('button', { name: /pedestrian/i }))
+    expect(await screen.findByRole('button', { name: 'Send to Review' })).toBeEnabled()
+    expect(mocks.sendWordToReview).not.toHaveBeenCalled()
+
+    fireEvent.click(screen.getByRole('button', { name: 'Send to Review' }))
+
+    await waitFor(() => expect(screen.getByRole('button', { name: 'In Review' })).toBeDisabled())
+    expect(mocks.sendWordToReview).toHaveBeenCalledWith('pedestrian-word')
   })
 })

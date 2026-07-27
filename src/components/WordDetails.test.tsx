@@ -1,11 +1,11 @@
-import { cleanup, render, screen } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { makeWord } from '../test/fixtures'
 import { WordDetails } from './WordDetails'
 
 const callbacks = {
   onClose: vi.fn(),
-  onEdit: vi.fn(),
+  onSendToReview: vi.fn(),
   onDelete: vi.fn(),
   onToggleMastered: vi.fn(),
 }
@@ -50,5 +50,15 @@ describe('WordDetails', () => {
     render(<WordDetails word={makeWord({ commonAffixes: [] })} {...callbacks} />)
 
     expect(screen.queryByText('Meaningful word parts')).not.toBeInTheDocument()
+  })
+
+  it('explains and exposes explicit spaced-repetition enrollment', () => {
+    render(<WordDetails word={makeWord()} {...callbacks} />)
+
+    expect(screen.getByText('Not in spaced repetition')).toBeInTheDocument()
+    expect(screen.getByText(/Send this word to your spaced-repetition queue/)).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: 'Send to Review' }))
+    expect(callbacks.onSendToReview).toHaveBeenCalledOnce()
+    expect(screen.queryByRole('button', { name: 'Edit' })).not.toBeInTheDocument()
   })
 })

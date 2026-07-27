@@ -1,9 +1,9 @@
-import { BookOpen, Check, ChevronRight, Clock3 } from 'lucide-react'
+import { BookOpen, Check, ChevronRight, Clock3, Eye } from 'lucide-react'
 import type { VocabularyWord } from '../types/vocabulary'
 import { formatReviewDate } from '../utils/date'
 import { getWordStatus, isWordReviewEligible } from '../utils/review'
 
-const statusLabels = { due: 'Due', new: 'New', learning: 'Learning', mastered: 'Mastered' }
+const statusLabels = { due: 'Due', new: 'New', viewed: 'Viewed', learning: 'Learning', mastered: 'Mastered' }
 
 export function WordCard({ word, onOpen }: { word: VocabularyWord; onOpen: () => void }) {
   const status = getWordStatus(word)
@@ -19,7 +19,10 @@ export function WordCard({ word, onOpen }: { word: VocabularyWord; onOpen: () =>
           </div>
           <p lang={word.chineseMeaning ? 'zh-Hant' : 'en'} className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted dark:text-stone-300">{word.chineseMeaning || word.definition}</p>
           <div className="mt-3 flex items-center gap-2 overflow-hidden">
-            <span className="flex shrink-0 items-center gap-1.5 text-[11px] font-semibold text-muted dark:text-stone-400">{isReviewEligible ? <Clock3 size={13} /> : <BookOpen size={13} />}{!isReviewEligible ? 'Open to add to reviews' : word.isMastered ? 'Completed' : formatReviewDate(word.nextReviewAt)}</span>
+            <span className="flex shrink-0 items-center gap-1.5 text-[11px] font-semibold text-muted dark:text-stone-400">
+              {isReviewEligible ? <Clock3 size={13} /> : word.viewedAt ? <Eye size={13} /> : <BookOpen size={13} />}
+              {isReviewEligible ? (word.isMastered ? 'Completed' : formatReviewDate(word.nextReviewAt)) : word.viewedAt ? 'Not in review' : 'Open to view'}
+            </span>
             {word.tags.slice(0, 2).map((tag) => <span key={tag} className="truncate rounded-md bg-ink/[.045] px-2 py-1 text-[10px] font-bold text-muted dark:bg-white/[.07] dark:text-stone-300">{tag}</span>)}
           </div>
         </div>

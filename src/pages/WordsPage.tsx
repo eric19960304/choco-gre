@@ -15,12 +15,12 @@ import { searchAndFilterWords } from '../utils/vocabulary'
 const initialFilters: WordFilters = { query: '', tag: '', status: 'new', sort: 'priority' }
 
 export function WordsPage() {
-  const { words, addWord, updateWord, deleteWord, toggleMastered, markWordViewed } = useVocabulary()
+  const { words, addWord, deleteWord, toggleMastered, markWordViewed, sendWordToReview } = useVocabulary()
   const { showToast } = useToast()
   const [filters, setFilters] = useState(initialFilters)
   const [visibleCount, setVisibleCount] = useState(60)
   const [selectedId, setSelectedId] = useState<string | null>(null)
-  const [mode, setMode] = useState<'add' | 'details' | 'edit' | 'delete' | null>(null)
+  const [mode, setMode] = useState<'add' | 'details' | 'delete' | null>(null)
   const openedDeepLinkId = useRef<string | null>(null)
   const requestedWord = useMemo(
     () => new URLSearchParams(window.location.search).get('word')?.trim().toLocaleLowerCase('en-US'),
@@ -49,12 +49,6 @@ export function WordsPage() {
     addWord(draft)
     closeModal()
     showToast(`“${draft.word.trim()}” added to your lexicon.`)
-  }
-  const saveEdit = (draft: VocabularyDraft) => {
-    if (!selectedWord) return
-    updateWord(selectedWord.id, draft)
-    setMode('details')
-    showToast('Word updated.')
   }
   const confirmDelete = () => {
     if (!selectedWord) return
@@ -93,8 +87,7 @@ export function WordsPage() {
       <button type="button" onClick={() => setMode('add')} className="fixed bottom-24 right-4 z-30 grid size-14 place-items-center rounded-2xl bg-accent text-white shadow-xl shadow-accent/25 transition active:scale-95 sm:hidden" aria-label="Add word"><Plus size={25} /></button>
 
       {mode === 'add' && <Modal title="Add a new word" description="Make it memorable with context and a personal note." onClose={closeModal}><WordForm onSubmit={saveNew} onCancel={closeModal} /></Modal>}
-      {selectedWord && mode === 'details' && <WordDetails word={selectedWord} onClose={closeModal} onEdit={() => setMode('edit')} onDelete={() => setMode('delete')} onToggleMastered={() => { toggleMastered(selectedWord.id); showToast(selectedWord.isMastered ? 'Moved back to learning.' : 'Marked as mastered.'); setMode('details') }} />}
-      {selectedWord && mode === 'edit' && <Modal title={`Edit ${selectedWord.word}`} description="Update the card without losing review progress." onClose={() => setMode('details')}><WordForm initialWord={selectedWord} onSubmit={saveEdit} onCancel={() => setMode('details')} /></Modal>}
+      {selectedWord && mode === 'details' && <WordDetails word={selectedWord} onClose={closeModal} onSendToReview={() => { sendWordToReview(selectedWord.id); showToast('Sent to review. It is due now.'); setMode('details') }} onDelete={() => setMode('delete')} onToggleMastered={() => { toggleMastered(selectedWord.id); showToast(selectedWord.isMastered ? 'Moved back to learning.' : 'Marked as mastered.'); setMode('details') }} />}
       {selectedWord && mode === 'delete' && <ConfirmationDialog word={selectedWord.word} onCancel={() => setMode('details')} onConfirm={confirmDelete} />}
     </main>
   )

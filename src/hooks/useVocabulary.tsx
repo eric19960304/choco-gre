@@ -9,7 +9,7 @@ import type {
 } from '../types/vocabulary'
 import { createId } from '../utils/id'
 import { getWordSyncKey } from '../utils/progressSync'
-import { calculateReviewUpdate } from '../utils/review'
+import { calculateReviewUpdate, enrollWordForReview } from '../utils/review'
 import { isDuplicateWord } from '../utils/vocabulary'
 import { useAuth } from './useAuth'
 import { useCloudVocabularySync } from './useCloudVocabularySync'
@@ -25,6 +25,7 @@ type VocabularyContextValue = {
   deleteWord: (id: string) => void
   toggleMastered: (id: string) => void
   markWordViewed: (id: string) => void
+  sendWordToReview: (id: string) => void
   reviewWord: (id: string, rating: ReviewRating, now?: Date) => void
   importWords: (text: string) => ImportSummary
   exportWords: () => void
@@ -135,6 +136,14 @@ export function VocabularyProvider({ children }: { children: ReactNode }) {
         })
         return changed ? { ...current, words } : current
       })
+    },
+    sendWordToReview(id) {
+      setData((current) => ({
+        ...current,
+        words: current.words.map((word) => (
+          word.id === id ? enrollWordForReview(word) : word
+        )),
+      }))
     },
     reviewWord(id, rating, now = new Date()) {
       setData((current) => {

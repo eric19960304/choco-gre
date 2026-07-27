@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest'
 import { makeWord } from '../test/fixtures'
-import { calculateReviewUpdate, getWordStatus, isWordDue, isWordReviewEligible } from './review'
+import {
+  calculateReviewUpdate,
+  enrollWordForReview,
+  getWordStatus,
+  isWordDue,
+  isWordReviewEligible,
+} from './review'
 
 describe('review eligibility', () => {
   const now = new Date('2026-02-01T12:00:00.000Z')
@@ -12,11 +18,11 @@ describe('review eligibility', () => {
     expect(isWordDue(untouched, now)).toBe(false)
   })
 
-  it('includes a word after it has been opened', () => {
+  it('does not enroll a word merely because it has been opened', () => {
     const viewed = makeWord({ viewedAt: '2026-01-15T00:00:00.000Z', nextReviewAt: '2026-01-20T00:00:00.000Z' })
 
-    expect(isWordReviewEligible(viewed)).toBe(true)
-    expect(isWordDue(viewed, now)).toBe(true)
+    expect(isWordReviewEligible(viewed)).toBe(false)
+    expect(isWordDue(viewed, now)).toBe(false)
   })
 
   it('keeps previously reviewed legacy words eligible', () => {
@@ -38,7 +44,21 @@ describe('review eligibility', () => {
     })
 
     expect(getWordStatus(untouched)).toBe('new')
-    expect(getWordStatus(viewed)).toBe('learning')
+    expect(getWordStatus(viewed)).toBe('viewed')
+  })
+
+  it('enrolls a word explicitly and makes it due immediately', () => {
+    const viewed = makeWord({
+      viewedAt: '2026-01-15T00:00:00.000Z',
+      nextReviewAt: '2026-03-01T00:00:00.000Z',
+    })
+
+    const enrolled = enrollWordForReview(viewed, now)
+
+    expect(enrolled.lastReviewedAt).toBe('2026-02-01T12:00:00.000Z')
+    expect(enrolled.nextReviewAt).toBe('2026-02-01T12:00:00.000Z')
+    expect(isWordReviewEligible(enrolled)).toBe(true)
+    expect(isWordDue(enrolled, now)).toBe(true)
   })
 })
 
