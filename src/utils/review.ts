@@ -22,7 +22,7 @@ export function getWordStatus(word: VocabularyWord, now = new Date()): Exclude<W
     if (isWordDue(word, now) && word.correctCount + word.incorrectCount > 0) return 'due'
     return 'learning'
   }
-  return word.viewedAt ? 'viewed' : 'new'
+  return 'new'
 }
 
 export function enrollWordForReview(word: VocabularyWord, now = new Date()): VocabularyWord {

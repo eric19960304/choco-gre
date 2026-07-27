@@ -1,4 +1,4 @@
-import { Activity, BarChart3, BookOpen, Brain, CalendarPlus, CheckCircle2, Clock3, Eye, Sparkles, Target, XCircle } from 'lucide-react'
+import { Activity, BarChart3, BookOpen, Brain, CalendarPlus, CheckCircle2, Clock3, Sparkles, Target, XCircle } from 'lucide-react'
 import { ProgressCard } from '../components/ProgressCard'
 import { useVocabulary } from '../hooks/useVocabulary'
 import { daysAgo, endOfDay, isSameDay } from '../utils/date'
@@ -10,11 +10,10 @@ export function ProgressPage() {
   const counts = words.reduce((result, word) => {
     const status = getWordStatus(word, now)
     if (status === 'new') result.new += 1
-    if (status === 'viewed') result.viewed += 1
     if (status === 'learning' || status === 'due') result.learning += 1
     if (status === 'mastered') result.mastered += 1
     return result
-  }, { new: 0, viewed: 0, learning: 0, mastered: 0 })
+  }, { new: 0, learning: 0, mastered: 0 })
   const correct = words.reduce((sum, word) => sum + word.correctCount, 0)
   const incorrect = words.reduce((sum, word) => sum + word.incorrectCount, 0)
   const attempts = correct + incorrect
@@ -30,10 +29,9 @@ export function ProgressPage() {
       <h1 className="page-title">Your progress, in focus.</h1>
       <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted dark:text-stone-400">Consistency compounds. Here’s how your vocabulary practice is taking shape.</p>
 
-      <section className="mt-7 grid grid-cols-2 gap-3 lg:grid-cols-5" aria-label="Vocabulary overview">
+      <section className="mt-7 grid grid-cols-2 gap-3 lg:grid-cols-4" aria-label="Vocabulary overview">
         <ProgressCard label="Total words" value={words.length.toLocaleString()} detail="In your lexicon" icon={BookOpen} />
-        <ProgressCard label="New" value={counts.new.toLocaleString()} detail="Ready to view" icon={Sparkles} tone="blue" />
-        <ProgressCard label="Viewed" value={counts.viewed.toLocaleString()} detail="Not yet in review" icon={Eye} />
+        <ProgressCard label="New" value={counts.new.toLocaleString()} detail="Not yet in review" icon={Sparkles} tone="blue" />
         <ProgressCard label="Learning" value={counts.learning.toLocaleString()} detail="In active rotation" icon={Brain} tone="brown" />
         <ProgressCard label="Mastered" value={counts.mastered.toLocaleString()} detail={`${mastery}% of collection`} icon={CheckCircle2} tone="green" progress={mastery} />
       </section>

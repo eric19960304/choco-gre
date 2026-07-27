@@ -136,10 +136,6 @@ select:focus-visible {
     @apply bg-blue-50 text-blue-700 dark:bg-blue-950/45 dark:text-blue-300;
   }
 
-  .status-viewed {
-    @apply bg-stone-100 text-stone-700 dark:bg-stone-800/70 dark:text-stone-300;
-  }
-
   .status-learning {
     @apply bg-amber-50 text-amber-700 dark:bg-amber-950/45 dark:text-amber-300;
   }

@@ -33,7 +33,7 @@ describe('searchAndFilterWords', () => {
     expect(result.map((item) => item.word)).toEqual(['aberrant'])
   })
 
-  it('shows only untouched words under the New filter', () => {
+  it('keeps viewed but unenrolled words under the New filter', () => {
     const newWords = [
       makeWord({
         id: 'untouched',
@@ -55,17 +55,7 @@ describe('searchAndFilterWords', () => {
       now,
     )
 
-    expect(result.map((item) => item.word)).toEqual(['aberrant'])
-  })
-
-  it('can filter viewed words that are not enrolled in review', () => {
-    const result = searchAndFilterWords(
-      words,
-      { query: '', tag: '', status: 'viewed', sort: 'alphabetical' },
-      now,
-    )
-
-    expect(result.map((item) => item.word)).toEqual(['laconic'])
+    expect(result.map((item) => item.word)).toEqual(['aberrant', 'laconic'])
   })
 
   it('sorts ranked seed words by study priority', () => {

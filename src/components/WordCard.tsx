@@ -3,7 +3,7 @@ import type { VocabularyWord } from '../types/vocabulary'
 import { formatReviewDate } from '../utils/date'
 import { getWordStatus, isWordReviewEligible } from '../utils/review'
 
-const statusLabels = { due: 'Due', new: 'New', viewed: 'Viewed', learning: 'Learning', mastered: 'Mastered' }
+const statusLabels = { due: 'Due', new: 'New', learning: 'Learning', mastered: 'Mastered' }
 
 export function WordCard({ word, onOpen }: { word: VocabularyWord; onOpen: () => void }) {
   const status = getWordStatus(word)

@@ -148,7 +148,7 @@ Attempts are stored under `lexilo:practice:v1`. Each history record contains the
 
 ## Spaced-repetition behavior
 
-Opening a word marks it as Viewed but does not add it to the learner's review pool. The learner explicitly selects **Send to Review** in the word detail sheet to enroll it; enrollment makes the word due immediately and synchronizes through the existing vocabulary-progress record. Review sessions include only enrolled, unmastered words whose `nextReviewAt` is now or earlier, and shuffle that queue once when the session starts. Previously reviewed words from an older saved dataset remain eligible so existing progress is preserved.
+Opening a word records that it was seen but leaves it in the New status and does not add it to the learner's review pool. The learner explicitly selects **Send to Review** in the word detail sheet to enroll it; enrollment makes the word due immediately and synchronizes through the existing vocabulary-progress record. Review sessions include only enrolled, unmastered words whose `nextReviewAt` is now or earlier, and shuffle that queue once when the session starts. Previously reviewed words from an older saved dataset remain eligible so existing progress is preserved.
 
 | Rating | Level change | Next review | Counter |
 | --- | --- | --- | --- |

@@ -3,8 +3,7 @@ import type { SortOption, WordFilters, WordStatus } from '../types/vocabulary'
 
 const statuses: { value: WordStatus; label: string }[] = [
   { value: 'all', label: 'All' }, { value: 'due', label: 'Due' }, { value: 'new', label: 'New' },
-  { value: 'viewed', label: 'Viewed' }, { value: 'learning', label: 'Learning' },
-  { value: 'mastered', label: 'Mastered' },
+  { value: 'learning', label: 'Learning' }, { value: 'mastered', label: 'Mastered' },
 ]
 
 export function FilterControls({ filters, tags, onChange }: { filters: WordFilters; tags: string[]; onChange: (filters: WordFilters) => void }) {

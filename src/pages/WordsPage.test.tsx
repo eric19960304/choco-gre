@@ -74,7 +74,7 @@ describe('WordsPage vocabulary deep links', () => {
     await waitFor(() => expect(mocks.markWordViewed).toHaveBeenCalledWith('pedestrian-word'))
   })
 
-  it('removes a viewed word from the New-filtered list', async () => {
+  it('keeps a viewed word in the New-filtered list', async () => {
     window.history.replaceState({}, '', '/choco-gre/')
     render(<WordsPage />)
 
@@ -84,7 +84,7 @@ describe('WordsPage vocabulary deep links', () => {
     fireEvent.click(screen.getByRole('button', { name: /pedestrian/i }))
 
     expect(await screen.findByRole('dialog')).toBeInTheDocument()
-    await waitFor(() => expect(screen.getByText('0 results')).toBeInTheDocument())
+    await waitFor(() => expect(screen.getByText('1 result')).toBeInTheDocument())
     expect(mocks.markWordViewed).toHaveBeenCalledWith('pedestrian-word')
   })
 

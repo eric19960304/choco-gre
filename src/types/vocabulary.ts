@@ -43,7 +43,7 @@ export type SeedVocabularyWord = {
 }
 
 export type ReviewRating = 'again' | 'hard' | 'good' | 'master'
-export type WordStatus = 'all' | 'due' | 'new' | 'viewed' | 'learning' | 'mastered'
+export type WordStatus = 'all' | 'due' | 'new' | 'learning' | 'mastered'
 export type SortOption = 'priority' | 'alphabetical' | 'recent' | 'nextReview' | 'incorrect'
 
 export type ReviewEvent = {

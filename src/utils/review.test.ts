@@ -31,7 +31,7 @@ describe('review eligibility', () => {
     expect(isWordReviewEligible(reviewed)).toBe(true)
   })
 
-  it('treats only untouched words as new', () => {
+  it('keeps both untouched and viewed unenrolled words new', () => {
     const untouched = makeWord({
       viewedAt: undefined,
       createdAt: '2026-01-15T00:00:00.000Z',
@@ -44,7 +44,7 @@ describe('review eligibility', () => {
     })
 
     expect(getWordStatus(untouched)).toBe('new')
-    expect(getWordStatus(viewed)).toBe('viewed')
+    expect(getWordStatus(viewed)).toBe('new')
   })
 
   it('enrolls a word explicitly and makes it due immediately', () => {
