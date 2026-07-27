@@ -19,11 +19,11 @@ export function ReviewPage({ onGoToWords }: { onGoToWords: () => void }) {
   const [completed, setCompleted] = useState(false)
 
   const startSession = () => {
-    setQueue(shuffleWords(dueWords))
     setIndex(0)
     setRevealed(false)
     setStats({ correct: 0, incorrect: 0, hard: 0, mastered: 0 })
     setCompleted(false)
+    setQueue(dueWords.length ? shuffleWords(dueWords) : null)
   }
 
   const rate = (rating: ReviewRating) => {
@@ -89,7 +89,7 @@ export function ReviewPage({ onGoToWords }: { onGoToWords: () => void }) {
             <div className="summary-stat"><strong className="text-red-600 dark:text-red-400">{stats.incorrect}</strong><span>Again</span></div>
             <div className="summary-stat"><strong className="text-accent-deep dark:text-accent-light">{stats.mastered}</strong><span>Mastered</span></div>
           </div>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2"><button type="button" className="button-secondary gap-2" onClick={() => setQueue(null)}><Trophy size={17} />Finish</button><button type="button" className="button-primary gap-2" onClick={startSession}><RotateCcw size={17} />Review due cards</button></div>
+          <div className="mt-8 grid gap-3 sm:grid-cols-2"><button type="button" className="button-secondary gap-2" onClick={() => setQueue(null)}><Trophy size={17} />Finish</button><button type="button" className="button-primary gap-2" onClick={startSession}><RotateCcw size={17} />{dueWords.length ? 'Review due cards' : 'Review overview'}</button></div>
         </section>
       </main>
     )
