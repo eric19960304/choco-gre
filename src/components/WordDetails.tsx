@@ -48,8 +48,8 @@ export function WordDetails({ word, onClose, onSendToReview, onDelete, onToggleM
           </button>
           <p className="mt-2 text-xs leading-relaxed text-muted dark:text-stone-400">
             {isInReview
-              ? 'This word is in your spaced-repetition queue. Again returns it in 10 minutes, Hard in 1 day, Good advances through 1, 3, 7, 14, 30, 60, and 120-day intervals, and Master removes it from future reviews.'
-              : 'Send this word to your spaced-repetition queue when you are ready to learn it. It becomes due immediately; then Again returns it in 10 minutes, Hard in 1 day, Good advances through 1, 3, 7, 14, 30, 60, and 120-day intervals, and Master removes it from future reviews.'}
+              ? 'This word is in your spaced-repetition queue. The Master button removes it from future reviews.'
+              : 'Send this word to your spaced-repetition queue when you are ready to learn it. The Master button removes it from future reviews.'}
           </p>
           <div className="mt-4 grid grid-cols-2 gap-3">
             <button type="button" className="button-secondary gap-2" onClick={onToggleMastered}>{word.isMastered ? <RotateCcw size={17} /> : <CheckCircle2 size={17} />}{word.isMastered ? 'Unmaster' : 'Master'}</button>
