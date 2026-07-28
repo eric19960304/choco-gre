@@ -30,6 +30,35 @@ describe('ranked seed vocabulary', () => {
     expect(firstTwentyInitials.size).toBeGreaterThan(5)
   })
 
+  it('keeps definitions separate from example sentences', () => {
+    const capricious = seedVocabulary.find((item) => item.word === 'capricious')
+
+    expect(capricious?.definition).toBe(
+      'determined by chance or impulse or whim rather than by necessity or reason.',
+    )
+    expect(capricious?.exampleSentence).toBe(
+      'Nearly every month our capricious CEO had a new plan to turn the company around, and none of them worked because we never gave them the time they needed to succeed.',
+    )
+
+    const publisherBoilerplate =
+      /This word has other definitions but this is the most important one for the GRE/i
+    const malformedExampleStart = /^(?:[a-z]|;)/
+    const corruptedText = /(?:Ã|Â|â€)/
+
+    for (const item of seedVocabulary) {
+      expect(item.definition).not.toMatch(publisherBoilerplate)
+      expect(item.exampleSentence).not.toMatch(publisherBoilerplate)
+      expect(item.definition).not.toMatch(corruptedText)
+      expect(item.exampleSentence).not.toMatch(corruptedText)
+      expect(item.exampleSentence).not.toMatch(malformedExampleStart)
+      if (item.exampleSentence) {
+        expect(item.definition.toLocaleLowerCase()).not.toContain(
+          item.exampleSentence.toLocaleLowerCase(),
+        )
+      }
+    }
+  })
+
   it('audits every word and stores only meaning-linked parts with memory hints', () => {
     expect(seedVocabulary.every((item) => Array.isArray(item.commonAffixes))).toBe(true)
     expect(seedVocabulary.filter((item) => item.commonAffixes.length)).toHaveLength(216)

@@ -9,6 +9,7 @@
     "build": "tsc -b && vite build",
     "annotate:affixes": "node scripts/annotate-vocabulary-affixes.mjs",
     "generate:practice": "node scripts/build-verbal-practice.mjs",
+    "audit:vocabulary": "node scripts/audit-vocabulary-data.mjs",
     "typecheck": "tsc -b --pretty false",
     "test": "vitest run",
     "test:watch": "vitest"

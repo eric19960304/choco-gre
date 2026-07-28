@@ -32,6 +32,7 @@ Then open **http://localhost:4173**.
 | --- | --- |
 | `npm run dev` | Start the Vite development server (default port 5173) |
 | `npm run generate:practice` | Validate and regenerate both copies of the 300-question practice bank |
+| `npm run audit:vocabulary` | Validate all 1,000 vocabulary records and check definition/example boundaries |
 | `npm run typecheck` | Run strict TypeScript checking without emitting files |
 | `npm test` | Run all Vitest tests once |
 | `npm run test:watch` | Run Vitest in watch mode |
@@ -79,6 +80,8 @@ The static GitHub Pages app cannot run a server-side SQLite database. localStora
 ## First-run data and persistence
 
 `src/data/seedVocabulary.json` contains the app-ready 1,000-word list with rank, part of speech, English definition, Traditional Chinese meaning, available example sentence, a `commonAffixes` array, and an optional `affixMemoryHint`. Despite the legacy field name, each retained item may be a meaning-bearing prefix, root, or suffix. The memory hint connects those parts to that specific word's definition. Words without an honest, learner-useful breakdown have an empty array and no hint. The source dataset, including evidence signals used during ranking and equivalent `common_affixes` and `affix_memory_hint` fields, is `gre_vocabulary_1000_zh_TW.json` in the project root.
+
+Run `npm run audit:vocabulary` to check every app-ready vocabulary record for missing required fields, duplicate words, discontinuous ranks, publisher boilerplate, corrupted text, and definitions accidentally joined to example sentences.
 
 Run `npm run annotate:affixes` to validate both 1,000-word files and regenerate their word-part annotations from the curated, offline rules in `scripts/annotate-vocabulary-affixes.mjs`. The current audit examines all 1,000 entries and retains 305 meaning-linked parts for 216 words. Broad grammar-only endings such as `-ous`, `-al`, `-ive`, and `-tion` are deliberately excluded. Alternative senses use semicolons for quick scanning. The generator rejects duplicate clues, malformed notation, overly long explanations, and “or” separators, and it requires a word-specific memory link for every annotated word. The annotation process does not call an external dictionary or web service.
 
