@@ -87,7 +87,7 @@ export function WordsPage() {
       <button type="button" onClick={() => setMode('add')} className="fixed bottom-24 right-4 z-30 grid size-14 place-items-center rounded-2xl bg-accent text-white shadow-xl shadow-accent/25 transition active:scale-95 sm:hidden" aria-label="Add word"><Plus size={25} /></button>
 
       {mode === 'add' && <Modal title="Add a new word" description="Make it memorable with context and a personal note." onClose={closeModal}><WordForm onSubmit={saveNew} onCancel={closeModal} /></Modal>}
-      {selectedWord && mode === 'details' && <WordDetails word={selectedWord} onClose={closeModal} onSendToReview={() => { sendWordToReview(selectedWord.id); showToast('Sent to review. It is due now.'); setMode('details') }} onDelete={() => setMode('delete')} onToggleMastered={() => { toggleMastered(selectedWord.id); showToast(selectedWord.isMastered ? 'Moved back to learning.' : 'Marked as mastered.'); setMode('details') }} />}
+      {selectedWord && mode === 'details' && <WordDetails word={selectedWord} onClose={closeModal} onSendToReview={() => { sendWordToReview(selectedWord.id); closeModal(); showToast('Sent to review. It is due now.') }} onDelete={() => setMode('delete')} onToggleMastered={() => { toggleMastered(selectedWord.id); showToast(selectedWord.isMastered ? 'Moved back to learning.' : 'Marked as mastered.'); setMode('details') }} />}
       {selectedWord && mode === 'delete' && <ConfirmationDialog word={selectedWord.word} onCancel={() => setMode('details')} onConfirm={confirmDelete} />}
     </main>
   )

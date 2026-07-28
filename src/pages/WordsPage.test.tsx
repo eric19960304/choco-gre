@@ -99,7 +99,7 @@ describe('WordsPage vocabulary deep links', () => {
 
     fireEvent.click(screen.getByRole('button', { name: 'Send to Review' }))
 
-    await waitFor(() => expect(screen.getByRole('button', { name: 'In Review' })).toBeDisabled())
+    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
     expect(mocks.sendWordToReview).toHaveBeenCalledWith('pedestrian-word')
   })
 })
