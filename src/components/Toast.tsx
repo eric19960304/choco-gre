@@ -42,3 +42,7 @@ export function useToast() {
   if (!value) throw new Error('useToast must be used inside ToastProvider')
   return value
 }
+
+export function useOptionalToast() {
+  return useContext(ToastContext)
+}

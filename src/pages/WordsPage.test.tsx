@@ -47,6 +47,7 @@ vi.mock('../hooks/useVocabulary', async () => {
 
 vi.mock('../components/Toast', () => ({
   useToast: () => ({ showToast: vi.fn() }),
+  useOptionalToast: () => ({ showToast: vi.fn() }),
 }))
 
 describe('WordsPage vocabulary deep links', () => {

@@ -55,7 +55,7 @@ Vite preview uses **http://localhost:4173** by default.
 - **React Context + custom hooks:** a vocabulary context owns learning state, while a focused practice-history hook records Verbal Reasoning attempts. No external state-management library is needed for this dataset size.
 - **localStorage:** keeps an immediate offline cache and anonymous progress. Each Firebase user gets a separate local cache so accounts cannot accidentally inherit another account's state on a shared browser.
 - **Firebase Authentication + Cloud Firestore:** Google sign-in identifies the learner. Firestore stores only per-word learning fields and review events under that user's UID; the bundled definitions and sentences are not uploaded.
-- **Web Speech API:** word and example-sentence pronunciation uses Chrome's built-in `speechSynthesis` engine. The app prefers a Google US English voice when Chrome exposes one, falls back to another English voice, and does not download or store audio files.
+- **Web Speech API:** word and example-sentence pronunciation uses the browser's built-in `speechSynthesis` engine. The app prefers a Google US English voice when Chrome exposes one, falls back to another English voice, and does not download or store audio files. Some embedded in-app browsers do not provide a working speech engine; the button detects a missing or silent engine and directs the learner to open the page in Safari or Chrome.
 - **Vitest:** tests vocabulary scheduling and validation as well as all question-bank structures, GRE answer rules, history persistence, and the end-to-end submit/reveal flow.
 
 The main source layout is:
