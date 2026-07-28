@@ -1,4 +1,4 @@
-import { Eye, RotateCcw, Tags } from 'lucide-react'
+import { Eye, Tags } from 'lucide-react'
 import type { ReviewRating, VocabularyWord } from '../types/vocabulary'
 import { CommonAffixes } from './CommonAffixes'
 import { PronunciationButton } from './PronunciationButton'
@@ -35,7 +35,6 @@ export function Flashcard({ word, revealed, onReveal, onRate }: {
               <h2 className="break-words font-display text-3xl font-black text-ink dark:text-white sm:text-4xl">{word.word}</h2>
               <div className="flex items-center gap-2">
                 <PronunciationButton text={word.word} label={`the word ${word.word}`} rate={0.78} />
-                <RotateCcw size={18} className="text-muted" />
               </div>
             </div>
             <div className="flex-1 space-y-5 pt-5">
