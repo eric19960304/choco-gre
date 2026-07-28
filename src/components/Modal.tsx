@@ -15,9 +15,22 @@ export function Modal({ title, titleAction, description, onClose, children, size
     return () => window.removeEventListener('keydown', listener)
   }, [onClose])
 
+  useEffect(() => {
+    const previousBodyOverflow = document.body.style.overflow
+    const previousHtmlOverflow = document.documentElement.style.overflow
+
+    document.body.style.overflow = 'hidden'
+    document.documentElement.style.overflow = 'hidden'
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow
+      document.documentElement.style.overflow = previousHtmlOverflow
+    }
+  }, [])
+
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-ink/45 p-0 backdrop-blur-sm md:items-center md:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-title" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
-      <section className={`max-h-[92dvh] w-full overflow-y-auto rounded-t-[2rem] border border-white/40 bg-paper shadow-2xl dark:border-white/10 dark:bg-charcoal md:rounded-[2rem] ${size === 'sm' ? 'md:max-w-md' : size === 'lg' ? 'md:max-w-2xl' : 'md:max-w-xl'}`}>
+      <section className={`max-h-[92dvh] w-full overflow-y-auto overscroll-contain rounded-t-[2rem] border border-white/40 bg-paper shadow-2xl dark:border-white/10 dark:bg-charcoal md:rounded-[2rem] ${size === 'sm' ? 'md:max-w-md' : size === 'lg' ? 'md:max-w-2xl' : 'md:max-w-xl'}`}>
         <header className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-ink/8 bg-paper/95 px-5 py-5 backdrop-blur dark:border-white/10 dark:bg-charcoal/95 md:px-7">
           <div className="flex min-w-0 flex-wrap items-start gap-x-3 gap-y-2">
             <div className="min-w-0">
