@@ -19,12 +19,16 @@ describe('vocabularyStorage seed ranking', () => {
     })
   })
 
-  it('migrates an existing seed word to the audited rank without losing progress', () => {
+  it('migrates bundled content and rank without losing progress', () => {
     const oldData: StoredVocabularyData = {
       version: 1,
-      seedRevision: 5,
+      seedRevision: 6,
       words: [makeWord({
-        word: 'loquacious',
+        word: 'capricious',
+        definition:
+          'determined by chance or impulse or whim rather than by necessity or reason Nearly every month our capricious CEO had a new plan to turn the company around, and none of them worked because we never gave them the time they needed to succeed.',
+        exampleSentence: undefined,
+        notes: 'Remember: unpredictable.',
         tags: ['GRE 1000', 'Top 300', 'adjective'],
         correctCount: 7,
         reviewLevel: 4,
@@ -38,17 +42,16 @@ describe('vocabularyStorage seed ranking', () => {
     const migrated = vocabularyStorage.load()
 
     expect(migrated.words[0]).toMatchObject({
-      word: 'loquacious',
-      priorityRank: 6,
+      word: 'capricious',
+      definition: 'determined by chance or impulse or whim rather than by necessity or reason.',
+      exampleSentence:
+        'Nearly every month our capricious CEO had a new plan to turn the company around, and none of them worked because we never gave them the time they needed to succeed.',
+      notes: 'Remember: unpredictable.',
+      priorityRank: 1,
       correctCount: 7,
       reviewLevel: 4,
     })
-    expect(migrated.words[0].commonAffixes).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({ type: 'root', form: 'loqu' }),
-      ]),
-    )
-    expect(migrated.words[0].affixMemoryHint).toContain('loquacious means')
+    expect(migrated.words[0].commonAffixes).toEqual([])
     expect(migrated.words[0].tags).toContain('Top 100')
     expect(migrated.words[0].tags).not.toContain('Top 300')
   })

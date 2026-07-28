@@ -4,7 +4,7 @@ import { createId } from '../utils/id'
 import { validateVocabularyImport } from '../utils/importValidation'
 
 const STORAGE_KEY = 'lexilo:vocabulary:v1'
-const SEED_REVISION = 6
+const SEED_REVISION = 7
 
 function storageKey(userId?: string | null): string {
   return userId ? `${STORAGE_KEY}:user:${userId}` : STORAGE_KEY
@@ -62,6 +62,8 @@ export const vocabularyStorage = {
                 if (!seed || !word.tags.includes('GRE 1000')) return word
                 return {
                   ...word,
+                  definition: seed.definition,
+                  exampleSentence: seed.exampleSentence || undefined,
                   priorityRank: seed.rank,
                   commonAffixes: seed.commonAffixes,
                   affixMemoryHint: seed.affixMemoryHint,

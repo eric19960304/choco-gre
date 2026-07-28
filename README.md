@@ -91,7 +91,7 @@ On the first visit, the storage service:
 2. Adds IDs, timestamps, review counters, and useful starter tags.
 3. Saves the result under the versioned `lexilo:vocabulary:v1` localStorage key.
 
-Every later visit loads that saved snapshot instead of rebuilding the seed. Edits, review results, mastery state, imports, and deletions persist across refreshes. When a Google user signs in, viewed state, review scheduling, mastery, correct/incorrect counters, and review history synchronize through Firestore. Each device retains a user-scoped local cache for fast startup and offline fallback. When bundled seed metadata is revised, the storage migration updates seed-word priority ranks, meaning-linked word parts, memory hints, and `Top 100`/`Top 300` tags while preserving the learner's review history and edits.
+Every later visit loads that saved snapshot instead of rebuilding the seed. Edits, review results, mastery state, imports, and deletions persist across refreshes. When a Google user signs in, viewed state, review scheduling, mastery, correct/incorrect counters, and review history synchronize through Firestore. Each device retains a user-scoped local cache for fast startup and offline fallback. When bundled seed metadata is revised, the storage migration updates seed-word definitions, example sentences, priority ranks, meaning-linked word parts, memory hints, and `Top 100`/`Top 300` tags while preserving the learner's notes, review history, and progress.
 
 The light/dark preference is stored separately under `lexilo:theme`.
 
