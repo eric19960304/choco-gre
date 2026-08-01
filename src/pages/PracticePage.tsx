@@ -211,8 +211,8 @@ export function PracticePage() {
     <main className="practice-page page-container pb-28 md:pb-12">
       <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
         <div>
-          <p className="eyebrow practice-eyebrow"><Sparkles size={13} />Verbal reasoning questions</p>
-          <h1 className="page-title">Practice the reasoning, not just the words.</h1>
+          <p className="eyebrow practice-eyebrow"><Sparkles size={13} />Practice the reasoning, not just the words</p>
+          <h1 className="page-title">Verbal reasoning questions</h1>
           <p className="practice-intro mt-3 max-w-2xl text-muted dark:text-stone-400">
             {totalQuestions} original GRE-style questions with immediate explanations and device-local attempt history.
           </p>

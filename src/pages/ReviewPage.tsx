@@ -60,8 +60,8 @@ export function ReviewPage({ onGoToWords }: { onGoToWords: () => void }) {
   if (!queue) {
     return (
       <main className="page-container pb-28 md:pb-12">
-        <p className="eyebrow"><Layers3 size={13} />Spaced repetition</p>
-        <h1 className="page-title">Review with intention.</h1>
+        <p className="eyebrow"><Layers3 size={13} />Review with intention</p>
+        <h1 className="page-title">Spaced repetition</h1>
         <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted dark:text-stone-400">Small, well-timed reviews turn unfamiliar words into lasting knowledge.</p>
         <div className="mx-auto mt-10 max-w-xl">
           {dueWords.length ? <section className="overflow-hidden rounded-[2rem] bg-ink p-7 text-white shadow-2xl shadow-ink/15 dark:bg-white dark:text-ink sm:p-10">

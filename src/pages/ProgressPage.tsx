@@ -25,8 +25,8 @@ export function ProgressPage() {
 
   return (
     <main className="page-container pb-28 md:pb-12">
-      <p className="eyebrow"><BarChart3 size={13} />Learning pulse</p>
-      <h1 className="page-title">Your progress, in focus.</h1>
+      <p className="eyebrow"><BarChart3 size={13} />Your progress, in focus</p>
+      <h1 className="page-title">Learning pulse</h1>
       <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted dark:text-stone-400">Consistency compounds. Here’s how your vocabulary practice is taking shape.</p>
 
       <section className="mt-7 grid grid-cols-2 gap-3 lg:grid-cols-4" aria-label="Vocabulary overview">
