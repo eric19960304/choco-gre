@@ -4,7 +4,7 @@ import { createId } from '../utils/id'
 import { validateVocabularyImport } from '../utils/importValidation'
 
 const STORAGE_KEY = 'lexilo:vocabulary:v1'
-const SEED_REVISION = 8
+const SEED_REVISION = 9
 
 function storageKey(userId?: string | null): string {
   return userId ? `${STORAGE_KEY}:user:${userId}` : STORAGE_KEY

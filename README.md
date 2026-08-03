@@ -83,6 +83,8 @@ The static GitHub Pages app cannot run a server-side SQLite database. localStora
 
 Run `npm run audit:vocabulary` to check every app-ready vocabulary record for missing or duplicate synonyms, self-referential synonyms, missing required fields, duplicate words, discontinuous ranks, publisher boilerplate, corrupted text, and definitions accidentally joined to example sentences.
 
+English definitions follow one consistent dictionary style. They contain no part-of-speech label because `partsOfSpeech` stores that separately; they begin in lowercase, end with one period, use `to …` for verb-only entries, and separate distinct senses with semicolons. Definitions stay concise and do not contain example sentences.
+
 Run `npm run annotate:affixes` to validate both 1,000-word files and regenerate their word-part annotations from the curated, offline rules in `scripts/annotate-vocabulary-affixes.mjs`. The current audit examines all 1,000 entries and retains 305 meaning-linked parts for 216 words. Broad grammar-only endings such as `-ous`, `-al`, `-ive`, and `-tion` are deliberately excluded. Alternative senses use semicolons for quick scanning. The generator rejects duplicate clues, malformed notation, overly long explanations, and “or” separators, and it requires a word-specific memory link for every annotated word. The annotation process does not call an external dictionary or web service.
 
 On the first visit, the storage service:

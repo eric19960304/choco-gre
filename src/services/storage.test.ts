@@ -23,7 +23,7 @@ describe('vocabularyStorage seed ranking', () => {
   it('migrates bundled content and rank without losing progress', () => {
     const oldData: StoredVocabularyData = {
       version: 1,
-      seedRevision: 7,
+      seedRevision: 8,
       words: [makeWord({
         word: 'capricious',
         definition:
