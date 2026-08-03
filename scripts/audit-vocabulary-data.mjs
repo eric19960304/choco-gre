@@ -24,6 +24,14 @@ for (const item of words) {
   if (!item.word?.trim()) failures.push(`rank ${item.rank} has no word`)
   if (!item.definition?.trim()) failures.push(`${item.word} has no definition`)
   if (!item.chineseMeaning?.trim()) failures.push(`${item.word} has no Traditional Chinese meaning`)
+  if (!Array.isArray(item.synonyms) || item.synonyms.length < 3) {
+    failures.push(`${item.word} needs at least three synonyms`)
+  } else {
+    const normalizedSynonyms = item.synonyms.map((synonym) => synonym.trim().toLocaleLowerCase())
+    if (normalizedSynonyms.some((synonym) => !synonym)) failures.push(`${item.word} has a blank synonym`)
+    if (new Set(normalizedSynonyms).size !== normalizedSynonyms.length) failures.push(`${item.word} has duplicate synonyms`)
+    if (normalizedSynonyms.includes(item.word.trim().toLocaleLowerCase())) failures.push(`${item.word} lists itself as a synonym`)
+  }
   if (!Array.isArray(item.partsOfSpeech) || !item.partsOfSpeech.length) {
     failures.push(`${item.word} has no part of speech`)
   }
@@ -53,4 +61,4 @@ if (capricious?.exampleSentence !== 'Nearly every month our capricious CEO had a
 }
 
 if (failures.length) throw new Error(failures.join('\n'))
-console.log(`Audited ${words.length} vocabulary records: definitions and examples are structurally separated.`)
+console.log(`Audited ${words.length} vocabulary records: synonyms are complete and definitions and examples are structurally separated.`)

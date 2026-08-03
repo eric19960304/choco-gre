@@ -8,6 +8,7 @@ export type VocabularyWord = {
   id: string
   word: string
   definition: string
+  synonyms?: string[]
   chineseMeaning?: string
   exampleSentence?: string
   notes?: string
@@ -28,7 +29,7 @@ export type VocabularyWord = {
 
 export type VocabularyDraft = Pick<
   VocabularyWord,
-  'word' | 'definition' | 'chineseMeaning' | 'exampleSentence' | 'notes' | 'tags'
+  'word' | 'definition' | 'synonyms' | 'exampleSentence' | 'notes' | 'tags'
 >
 
 export type SeedVocabularyWord = {
@@ -37,6 +38,7 @@ export type SeedVocabularyWord = {
   partsOfSpeech: string[]
   definition: string
   chineseMeaning: string
+  synonyms: string[]
   exampleSentence: string
   commonAffixes: CommonAffix[]
   affixMemoryHint?: string

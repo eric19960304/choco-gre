@@ -79,9 +79,9 @@ The static GitHub Pages app cannot run a server-side SQLite database. localStora
 
 ## First-run data and persistence
 
-`src/data/seedVocabulary.json` contains the app-ready 1,000-word list with rank, part of speech, English definition, Traditional Chinese meaning, available example sentence, a `commonAffixes` array, and an optional `affixMemoryHint`. Despite the legacy field name, each retained item may be a meaning-bearing prefix, root, or suffix. The memory hint connects those parts to that specific word's definition. Words without an honest, learner-useful breakdown have an empty array and no hint. The source dataset, including evidence signals used during ranking and equivalent `common_affixes` and `affix_memory_hint` fields, is `gre_vocabulary_1000_zh_TW.json` in the project root.
+`src/data/seedVocabulary.json` contains the app-ready 1,000-word list with rank, part of speech, English definition, four reviewed common-English synonyms, available example sentence, a `commonAffixes` array, and an optional `affixMemoryHint`. The legacy `chineseMeaning` field remains in the data for backward compatibility, but the word-details and review interfaces use `synonyms`. Each retained word part may be a meaning-bearing prefix, root, or suffix. The memory hint connects those parts to that specific word's definition. Words without an honest, learner-useful breakdown have an empty array and no hint. The source dataset, including evidence signals used during ranking and equivalent `common_affixes`, `affix_memory_hint`, and `synonyms` fields, is `gre_vocabulary_1000_zh_TW.json` in the project root.
 
-Run `npm run audit:vocabulary` to check every app-ready vocabulary record for missing required fields, duplicate words, discontinuous ranks, publisher boilerplate, corrupted text, and definitions accidentally joined to example sentences.
+Run `npm run audit:vocabulary` to check every app-ready vocabulary record for missing or duplicate synonyms, self-referential synonyms, missing required fields, duplicate words, discontinuous ranks, publisher boilerplate, corrupted text, and definitions accidentally joined to example sentences.
 
 Run `npm run annotate:affixes` to validate both 1,000-word files and regenerate their word-part annotations from the curated, offline rules in `scripts/annotate-vocabulary-affixes.mjs`. The current audit examines all 1,000 entries and retains 305 meaning-linked parts for 216 words. Broad grammar-only endings such as `-ous`, `-al`, `-ive`, and `-tion` are deliberately excluded. Alternative senses use semicolons for quick scanning. The generator rejects duplicate clues, malformed notation, overly long explanations, and “or” separators, and it requires a word-specific memory link for every annotated word. The annotation process does not call an external dictionary or web service.
 
@@ -91,7 +91,7 @@ On the first visit, the storage service:
 2. Adds IDs, timestamps, review counters, and useful starter tags.
 3. Saves the result under the versioned `lexilo:vocabulary:v1` localStorage key.
 
-Every later visit loads that saved snapshot instead of rebuilding the seed. Edits, review results, mastery state, imports, and deletions persist across refreshes. When a Google user signs in, viewed state, review scheduling, mastery, correct/incorrect counters, and review history synchronize through Firestore. Each device retains a user-scoped local cache for fast startup and offline fallback. When bundled seed metadata is revised, the storage migration updates seed-word definitions, example sentences, priority ranks, meaning-linked word parts, memory hints, and `Top 100`/`Top 300` tags while preserving the learner's notes, review history, and progress.
+Every later visit loads that saved snapshot instead of rebuilding the seed. Edits, review results, mastery state, imports, and deletions persist across refreshes. When a Google user signs in, viewed state, review scheduling, mastery, correct/incorrect counters, and review history synchronize through Firestore. Each device retains a user-scoped local cache for fast startup and offline fallback. When bundled seed metadata is revised, the storage migration updates seed-word definitions, synonyms, example sentences, priority ranks, meaning-linked word parts, memory hints, and `Top 100`/`Top 300` tags while preserving the learner's notes, review history, and progress.
 
 The light/dark preference is stored separately under `lexilo:theme`.
 
@@ -177,7 +177,7 @@ The storage service can validate a UTF-8 `.json` file containing an array. A min
   {
     "word": "laconic",
     "definition": "Using very few words.",
-    "chineseMeaning": "簡潔的；寡言的",
+    "synonyms": ["brief", "concise", "terse"],
     "exampleSentence": "Her laconic reply ended the conversation.",
     "notes": "Think: concise",
     "tags": ["adjective", "difficult"]

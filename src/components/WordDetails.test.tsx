@@ -46,6 +46,16 @@ describe('WordDetails', () => {
     expect(screen.getByRole('button', { name: 'Play pronunciation for the example sentence' })).toBeInTheDocument()
   })
 
+  it('shows common English synonyms instead of the Chinese meaning', () => {
+    render(<WordDetails word={makeWord()} {...callbacks} />)
+
+    const synonyms = screen.getByRole('list', { name: 'Synonyms' })
+    expect(synonyms).toHaveTextContent('unusual')
+    expect(synonyms).toHaveTextContent('abnormal')
+    expect(screen.queryByText('Chinese meaning')).not.toBeInTheDocument()
+    expect(screen.queryByText('偏離常軌的')).not.toBeInTheDocument()
+  })
+
   it('hides the section when a word has no reliable affix clue', () => {
     render(<WordDetails word={makeWord({ commonAffixes: [] })} {...callbacks} />)
 

@@ -5,6 +5,7 @@ import { isWordReviewEligible } from '../utils/review'
 import { CommonAffixes } from './CommonAffixes'
 import { Modal } from './Modal'
 import { PronunciationButton } from './PronunciationButton'
+import { SynonymList } from './SynonymList'
 
 export function WordDetails({ word, onClose, onSendToReview, onDelete, onToggleMastered }: {
   word: VocabularyWord
@@ -24,7 +25,7 @@ export function WordDetails({ word, onClose, onSendToReview, onDelete, onToggleM
       onClose={onClose}
     >
       <div className="space-y-6 p-5 md:p-7">
-        {word.chineseMeaning && <section><p className="detail-label">Chinese meaning</p><p lang="zh-Hant" className="mt-1 text-lg leading-relaxed text-ink dark:text-white">{word.chineseMeaning}</p></section>}
+        <SynonymList synonyms={word.synonyms} />
         <section><p className="detail-label">Definition</p><p className="mt-1 leading-relaxed text-ink dark:text-stone-100">{word.definition}</p></section>
         <CommonAffixes affixes={word.commonAffixes} memoryHint={word.affixMemoryHint} />
         {word.exampleSentence && <section className="rounded-2xl border-l-4 border-accent bg-accent/7 p-4"><div className="flex items-center justify-between gap-3"><p className="detail-label">In context</p><PronunciationButton text={word.exampleSentence} label="the example sentence" rate={0.9} /></div><p className="mt-2 font-display text-lg italic leading-relaxed text-ink dark:text-stone-100">“{word.exampleSentence}”</p></section>}

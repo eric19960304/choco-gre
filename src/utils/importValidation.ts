@@ -14,6 +14,16 @@ function optionalString(value: unknown): string | undefined {
   return typeof value === 'string' && value.trim() ? value.trim() : undefined
 }
 
+function optionalStringArray(value: unknown): string[] | undefined {
+  if (!Array.isArray(value)) return undefined
+  const values = value
+    .filter((item): item is string => typeof item === 'string')
+    .map((item) => item.trim())
+    .filter(Boolean)
+  const unique = [...new Map(values.map((item) => [item.toLocaleLowerCase(), item])).values()]
+  return unique.length ? unique : undefined
+}
+
 function optionalCommonAffixes(value: unknown): CommonAffix[] | undefined {
   if (!Array.isArray(value)) return undefined
   return value.flatMap((affix) => {
@@ -54,6 +64,7 @@ export function validateVocabularyImport(input: unknown, now = new Date()): Impo
       id: typeof raw.id === 'string' && raw.id ? raw.id : createId(),
       word,
       definition,
+      synonyms: optionalStringArray(raw.synonyms),
       chineseMeaning: optionalString(raw.chineseMeaning),
       exampleSentence: optionalString(raw.exampleSentence),
       notes: optionalString(raw.notes),

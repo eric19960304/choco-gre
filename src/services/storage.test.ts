@@ -14,6 +14,7 @@ describe('vocabularyStorage seed ranking', () => {
       Array.from({ length: 1_000 }, (_, index) => index + 1),
     )
     expect(data.words.find((word) => word.word === 'antipathy')).toMatchObject({
+      synonyms: expect.arrayContaining(['dislike', 'hostility']),
       commonAffixes: expect.any(Array),
       affixMemoryHint: expect.stringContaining('antipathy means'),
     })
@@ -22,12 +23,13 @@ describe('vocabularyStorage seed ranking', () => {
   it('migrates bundled content and rank without losing progress', () => {
     const oldData: StoredVocabularyData = {
       version: 1,
-      seedRevision: 6,
+      seedRevision: 7,
       words: [makeWord({
         word: 'capricious',
         definition:
           'determined by chance or impulse or whim rather than by necessity or reason Nearly every month our capricious CEO had a new plan to turn the company around, and none of them worked because we never gave them the time they needed to succeed.',
         exampleSentence: undefined,
+        synonyms: undefined,
         notes: 'Remember: unpredictable.',
         tags: ['GRE 1000', 'Top 300', 'adjective'],
         correctCount: 7,
@@ -44,6 +46,7 @@ describe('vocabularyStorage seed ranking', () => {
     expect(migrated.words[0]).toMatchObject({
       word: 'capricious',
       definition: 'determined by chance or impulse or whim rather than by necessity or reason.',
+      synonyms: ['unpredictable', 'changeable', 'impulsive', 'whimsical'],
       exampleSentence:
         'Nearly every month our capricious CEO had a new plan to turn the company around, and none of them worked because we never gave them the time they needed to succeed.',
       notes: 'Remember: unpredictable.',

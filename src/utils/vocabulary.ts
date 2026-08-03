@@ -24,6 +24,7 @@ export function searchAndFilterWords(
     const searchable = [
       word.word,
       word.definition,
+      ...(word.synonyms ?? []),
       word.chineseMeaning,
       word.exampleSentence,
       word.notes,

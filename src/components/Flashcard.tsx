@@ -2,6 +2,7 @@ import { Eye, Tags } from 'lucide-react'
 import type { ReviewRating, VocabularyWord } from '../types/vocabulary'
 import { CommonAffixes } from './CommonAffixes'
 import { PronunciationButton } from './PronunciationButton'
+import { SynonymList } from './SynonymList'
 
 const ratings: { id: ReviewRating; label: string; hint: string; description: string; style: string }[] = [
   { id: 'again', label: 'Again', hint: '10 min', description: 'You forgot it. Review in 10 minutes and move down one level.', style: 'border-red-200 bg-red-50 text-red-800 hover:bg-red-100 dark:border-red-900 dark:bg-red-950/35 dark:text-red-200' },
@@ -39,7 +40,7 @@ export function Flashcard({ word, revealed, onReveal, onRate }: {
             </div>
             <div className="flex-1 space-y-5 pt-5">
               <section><p className="detail-label">Definition</p><p className="mt-1 text-base leading-relaxed text-ink dark:text-stone-100 sm:text-lg">{word.definition}</p></section>
-              {word.chineseMeaning && <section><p className="detail-label">Traditional Chinese</p><p lang="zh-Hant" className="mt-1 text-base leading-relaxed text-ink dark:text-stone-100">{word.chineseMeaning}</p></section>}
+              <SynonymList synonyms={word.synonyms} compact />
               <CommonAffixes affixes={word.commonAffixes} memoryHint={word.affixMemoryHint} compact />
               {word.exampleSentence && <section className="border-l-3 border-accent pl-4"><div className="mb-2 flex items-center justify-between gap-3"><p className="detail-label">In context</p><PronunciationButton text={word.exampleSentence} label="the example sentence" rate={0.9} /></div><p className="font-display italic leading-relaxed text-muted dark:text-stone-300">“{word.exampleSentence}”</p></section>}
               {word.notes && <p className="rounded-xl bg-amber-50 p-3 text-sm text-amber-900 dark:bg-amber-950/30 dark:text-amber-100">{word.notes}</p>}

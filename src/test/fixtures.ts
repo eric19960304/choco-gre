@@ -5,6 +5,7 @@ export function makeWord(overrides: Partial<VocabularyWord> = {}): VocabularyWor
     id: 'word-1',
     word: 'aberrant',
     definition: 'Departing from an accepted standard.',
+    synonyms: ['unusual', 'abnormal', 'irregular', 'atypical'],
     chineseMeaning: '偏離常軌的',
     exampleSentence: 'The result was aberrant.',
     notes: 'Think: abnormal.',

@@ -18,12 +18,13 @@ describe('searchAndFilterWords', () => {
   const now = new Date('2026-02-01T12:00:00.000Z')
   const words = [
     makeWord({ id: '1', word: 'aberrant', nextReviewAt: '2026-01-31T00:00:00.000Z', lastReviewedAt: '2026-01-01T00:00:00.000Z', incorrectCount: 4 }),
-    makeWord({ id: '2', word: 'laconic', definition: 'Using very few words.', chineseMeaning: '簡潔的', tags: ['adjective'], nextReviewAt: '2026-03-01T00:00:00.000Z' }),
+    makeWord({ id: '2', word: 'laconic', definition: 'Using very few words.', synonyms: ['brief', 'concise', 'terse'], chineseMeaning: '簡潔的', tags: ['adjective'], nextReviewAt: '2026-03-01T00:00:00.000Z' }),
     makeWord({ id: '3', word: 'mendacity', definition: 'Untruthfulness.', chineseMeaning: '虛假', tags: ['noun'], isMastered: true }),
   ]
 
-  it('searches across Chinese meanings and definitions', () => {
+  it('searches across synonyms, Chinese meanings, and definitions', () => {
     const base = { tag: '', status: 'all' as const, sort: 'alphabetical' as const }
+    expect(searchAndFilterWords(words, { ...base, query: 'concise' }, now).map((item) => item.word)).toEqual(['laconic'])
     expect(searchAndFilterWords(words, { ...base, query: '簡潔' }, now).map((item) => item.word)).toEqual(['laconic'])
     expect(searchAndFilterWords(words, { ...base, query: 'untruth' }, now).map((item) => item.word)).toEqual(['mendacity'])
   })

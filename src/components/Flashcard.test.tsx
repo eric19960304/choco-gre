@@ -20,6 +20,8 @@ describe('Flashcard', () => {
     render(<Flashcard word={word} revealed onReveal={vi.fn()} onRate={vi.fn()} />)
 
     expect(screen.getByText('Meaningful word parts')).toBeInTheDocument()
+    expect(screen.getByRole('list', { name: 'Synonyms' })).toHaveTextContent('unusual')
+    expect(screen.queryByText('Traditional Chinese')).not.toBeInTheDocument()
     expect(screen.getByText('loqu')).toBeInTheDocument()
     expect(screen.getByText('Meaning:').closest('p')).toHaveTextContent('Meaning: speak; talk.')
     expect(screen.getByText('Memory link:').closest('p')).toHaveTextContent('loquacious means full of conversation.')
@@ -38,6 +40,7 @@ describe('Flashcard', () => {
     render(<Flashcard word={word} revealed={false} onReveal={onReveal} onRate={vi.fn()} />)
 
     expect(screen.queryByText('Meaningful word parts')).not.toBeInTheDocument()
+    expect(screen.queryByRole('list', { name: 'Synonyms' })).not.toBeInTheDocument()
     expect(screen.queryByText('What each rating means')).not.toBeInTheDocument()
     expect(screen.queryByRole('button', { name: 'Play pronunciation for the example sentence' })).not.toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Play pronunciation for the word loquacious' })).toBeInTheDocument()

@@ -4,7 +4,7 @@ import { createId } from '../utils/id'
 import { validateVocabularyImport } from '../utils/importValidation'
 
 const STORAGE_KEY = 'lexilo:vocabulary:v1'
-const SEED_REVISION = 7
+const SEED_REVISION = 8
 
 function storageKey(userId?: string | null): string {
   return userId ? `${STORAGE_KEY}:user:${userId}` : STORAGE_KEY
@@ -20,6 +20,7 @@ function createSeedData(now = new Date()): StoredVocabularyData {
     id: createId(),
     word: seed.word,
     definition: seed.definition,
+    synonyms: seed.synonyms,
     chineseMeaning: seed.chineseMeaning,
     exampleSentence: seed.exampleSentence || undefined,
     notes: undefined,
@@ -63,6 +64,7 @@ export const vocabularyStorage = {
                 return {
                   ...word,
                   definition: seed.definition,
+                  synonyms: seed.synonyms,
                   exampleSentence: seed.exampleSentence || undefined,
                   priorityRank: seed.rank,
                   commonAffixes: seed.commonAffixes,
