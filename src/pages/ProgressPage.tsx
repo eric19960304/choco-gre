@@ -21,7 +21,7 @@ export function ProgressPage() {
   const dueToday = words.filter((word) => isWordReviewEligible(word) && !word.isMastered && new Date(word.nextReviewAt) <= endOfDay(now)).length
   const addedThisWeek = words.filter((word) => new Date(word.createdAt) >= daysAgo(7, now)).length
   const reviewsToday = reviewHistory.filter((review) => isSameDay(new Date(review.reviewedAt), now)).length
-  const mastery = words.length ? Math.round((counts.mastered / words.length) * 100) : 0
+  const mastery = words.length ? Math.round((counts.mastered / words.length) * 1000) / 10 : 0
 
   return (
     <main className="page-container pb-28 md:pb-12">
@@ -33,7 +33,7 @@ export function ProgressPage() {
         <ProgressCard label="Total words" value={words.length.toLocaleString()} detail="In your lexicon" icon={BookOpen} />
         <ProgressCard label="New" value={counts.new.toLocaleString()} detail="Not yet in review" icon={Sparkles} tone="blue" />
         <ProgressCard label="Learning" value={counts.learning.toLocaleString()} detail="In active rotation" icon={Brain} tone="brown" />
-        <ProgressCard label="Mastered" value={counts.mastered.toLocaleString()} detail={`${mastery}% of collection`} icon={CheckCircle2} tone="green" progress={mastery} />
+        <ProgressCard label="Mastered" value={counts.mastered.toLocaleString()} detail={`${mastery.toFixed(1)}% of collection`} icon={CheckCircle2} tone="green" progress={mastery} />
       </section>
 
       <section className="mt-7 grid gap-5 lg:grid-cols-[1.25fr_.75fr]">
