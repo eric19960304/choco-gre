@@ -17,7 +17,7 @@ export function WordCard({ word, onOpen }: { word: VocabularyWord; onOpen: () =>
             <h3 className="truncate font-display text-xl font-bold text-ink dark:text-white">{word.word}</h3>
             <span className={`status-badge status-${status}`}>{status === 'mastered' && <Check size={12} aria-hidden="true" />}{statusLabels[status]}</span>
           </div>
-          <p lang={word.chineseMeaning ? 'zh-Hant' : 'en'} className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted dark:text-stone-300">{word.chineseMeaning || word.definition}</p>
+          <p lang="en" className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted dark:text-stone-300">{word.definition}</p>
           <div className="mt-3 flex items-center gap-2 overflow-hidden">
             <span className="flex shrink-0 items-center gap-1.5 text-[11px] font-semibold text-muted dark:text-stone-400">
               {isReviewEligible ? <Clock3 size={13} /> : word.viewedAt ? <Eye size={13} /> : <BookOpen size={13} />}
