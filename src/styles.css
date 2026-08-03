@@ -47,6 +47,11 @@ select {
   font: inherit;
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
 button {
   cursor: pointer;
 }
